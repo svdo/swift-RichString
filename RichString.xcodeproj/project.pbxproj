@@ -19,10 +19,19 @@
 		02BA12631DCD2ADE00215490 /* NSAttributedStringOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12621DCD2ADE00215490 /* NSAttributedStringOperators.swift */; };
 		02BA12651DCD2B0700215490 /* String+Rich.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12641DCD2B0700215490 /* String+Rich.swift */; };
 		02BA12671DCD2E1F00215490 /* RichText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12661DCD2E1F00215490 /* RichText.swift */; };
+		F8DAC4231DCDEC87002CF542 /* RichStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAC4221DCDEC87002CF542 /* RichStringTests.swift */; };
+		F8DAC4251DCDEC87002CF542 /* RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA123A1DCD206300215490 /* RichString.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		02BA125F1DCD221E00215490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02BA12311DCD206300215490 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02BA12391DCD206300215490;
+			remoteInfo = RichString;
+		};
+		F8DAC4261DCDEC87002CF542 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 02BA12311DCD206300215490 /* Project object */;
 			proxyType = 1;
@@ -60,6 +69,9 @@
 		02BA12621DCD2ADE00215490 /* NSAttributedStringOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringOperators.swift; sourceTree = "<group>"; };
 		02BA12641DCD2B0700215490 /* String+Rich.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Rich.swift"; sourceTree = "<group>"; };
 		02BA12661DCD2E1F00215490 /* RichText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RichText.swift; sourceTree = "<group>"; };
+		F8DAC4201DCDEC87002CF542 /* RichStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RichStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8DAC4221DCDEC87002CF542 /* RichStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichStringTests.swift; sourceTree = "<group>"; };
+		F8DAC4241DCDEC87002CF542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8DAC41D1DCDEC87002CF542 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8DAC4251DCDEC87002CF542 /* RichString.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -86,6 +106,7 @@
 			children = (
 				02BA123C1DCD206300215490 /* RichString */,
 				02BA124C1DCD21E400215490 /* Demo */,
+				F8DAC4211DCDEC87002CF542 /* RichStringTests */,
 				02BA123B1DCD206300215490 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +116,7 @@
 			children = (
 				02BA123A1DCD206300215490 /* RichString.framework */,
 				02BA124B1DCD21E400215490 /* Demo.app */,
+				F8DAC4201DCDEC87002CF542 /* RichStringTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +145,15 @@
 				02BA12591DCD21E400215490 /* Info.plist */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		F8DAC4211DCDEC87002CF542 /* RichStringTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8DAC4221DCDEC87002CF542 /* RichStringTests.swift */,
+				F8DAC4241DCDEC87002CF542 /* Info.plist */,
+			);
+			path = RichStringTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +208,24 @@
 			productReference = 02BA124B1DCD21E400215490 /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F8DAC41F1DCDEC87002CF542 /* RichStringTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8DAC4281DCDEC87002CF542 /* Build configuration list for PBXNativeTarget "RichStringTests" */;
+			buildPhases = (
+				F8DAC41C1DCDEC87002CF542 /* Sources */,
+				F8DAC41D1DCDEC87002CF542 /* Frameworks */,
+				F8DAC41E1DCDEC87002CF542 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8DAC4271DCDEC87002CF542 /* PBXTargetDependency */,
+			);
+			name = RichStringTests;
+			productName = RichStringTests;
+			productReference = F8DAC4201DCDEC87002CF542 /* RichStringTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,6 +247,11 @@
 						DevelopmentTeam = 38HP5T8ATC;
 						ProvisioningStyle = Automatic;
 					};
+					F8DAC41F1DCDEC87002CF542 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 7EQ9KX3BR9;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 02BA12341DCD206300215490 /* Build configuration list for PBXProject "RichString" */;
@@ -215,6 +269,7 @@
 			targets = (
 				02BA12391DCD206300215490 /* RichString */,
 				02BA124A1DCD21E400215490 /* Demo */,
+				F8DAC41F1DCDEC87002CF542 /* RichStringTests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,6 +289,13 @@
 				02BA12581DCD21E400215490 /* LaunchScreen.storyboard in Resources */,
 				02BA12551DCD21E400215490 /* Assets.xcassets in Resources */,
 				02BA12531DCD21E400215490 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8DAC41E1DCDEC87002CF542 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +339,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8DAC41C1DCDEC87002CF542 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8DAC4231DCDEC87002CF542 /* RichStringTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -284,6 +354,11 @@
 			isa = PBXTargetDependency;
 			target = 02BA12391DCD206300215490 /* RichString */;
 			targetProxy = 02BA125F1DCD221E00215490 /* PBXContainerItemProxy */;
+		};
+		F8DAC4271DCDEC87002CF542 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02BA12391DCD206300215490 /* RichString */;
+			targetProxy = F8DAC4261DCDEC87002CF542 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -481,6 +556,30 @@
 			};
 			name = Release;
 		};
+		F8DAC4291DCDEC87002CF542 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7EQ9KX3BR9;
+				INFOPLIST_FILE = RichStringTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vandenoord.RichStringTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F8DAC42A1DCDEC87002CF542 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7EQ9KX3BR9;
+				INFOPLIST_FILE = RichStringTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vandenoord.RichStringTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -510,6 +609,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F8DAC4281DCDEC87002CF542 /* Build configuration list for PBXNativeTarget "RichStringTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8DAC4291DCDEC87002CF542 /* Debug */,
+				F8DAC42A1DCDEC87002CF542 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
