@@ -3,7 +3,7 @@
 import Foundation
 
 public func + (lhs: NSAttributedString, rhs: NSAttributedString) -> NSAttributedString {
-    let l = lhs.mutableCopy() as! NSMutableAttributedString
+    let l = NSMutableAttributedString(attributedString: lhs)
     l.append(rhs)
-    return l
+    return NSAttributedString(attributedString: l)
 }

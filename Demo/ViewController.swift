@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         let text1 = "This is some text".fontSize(17).color(.blue)
         let text2 = "This is some text".fontSize(17).color(.blue).bold
         let text3 = text1 + text2.color(.red)
-        
+
         label1.attributedText = text1
         label2.attributedText = text2
         label3.attributedText = text3

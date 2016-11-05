@@ -9,7 +9,7 @@ extension NSAttributedString: RichText {
         m.addAttribute(NSForegroundColorAttributeName, value: color, range: r)
         return NSAttributedString(attributedString: m)
     }
-    
+
     public func font(_ font: UIFont) -> NSAttributedString {
         let m = makeMutable()
         let r = entireString()
@@ -38,8 +38,7 @@ extension NSAttributedString: RichText {
         let font: UIFont
         if fontAttrs.count > 0, let f = fontAttrs[0].1 as? UIFont {
             font = f
-        }
-        else {
+        } else {
             font = UIFont.systemFont(ofSize: 0)
         }
         let sizedDescriptor = font.fontDescriptor.withSize(size)
@@ -50,7 +49,7 @@ extension NSAttributedString: RichText {
 
 extension NSAttributedString {
     fileprivate func makeMutable() -> NSMutableAttributedString {
-        return self.mutableCopy() as! NSMutableAttributedString
+        return NSMutableAttributedString(attributedString: self)
     }
 
     fileprivate func entireString() -> NSRange {
