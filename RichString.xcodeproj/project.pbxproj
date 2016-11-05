@@ -19,6 +19,8 @@
 		02BA12631DCD2ADE00215490 /* NSAttributedStringOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12621DCD2ADE00215490 /* NSAttributedStringOperators.swift */; };
 		02BA12651DCD2B0700215490 /* String+Rich.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12641DCD2B0700215490 /* String+Rich.swift */; };
 		02BA12671DCD2E1F00215490 /* RichText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12661DCD2E1F00215490 /* RichText.swift */; };
+		9C77D989AC6B4B56AB6CB08E /* Pods_RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC3533D24E1F50D8F3E2AEA /* Pods_RichString.framework */; };
+		B61C33CC01613136B34D516F /* Pods_RichStringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A527B5B0FCC07F4B200B7273 /* Pods_RichStringTests.framework */; };
 		F8DAC4231DCDEC87002CF542 /* RichStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAC4221DCDEC87002CF542 /* RichStringTests.swift */; };
 		F8DAC4251DCDEC87002CF542 /* RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA123A1DCD206300215490 /* RichString.framework */; };
 /* End PBXBuildFile section */
@@ -69,9 +71,15 @@
 		02BA12621DCD2ADE00215490 /* NSAttributedStringOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringOperators.swift; sourceTree = "<group>"; };
 		02BA12641DCD2B0700215490 /* String+Rich.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Rich.swift"; sourceTree = "<group>"; };
 		02BA12661DCD2E1F00215490 /* RichText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RichText.swift; sourceTree = "<group>"; };
+		13EE323B595659691E85D33E /* Pods-RichStringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichStringTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichStringTests/Pods-RichStringTests.release.xcconfig"; sourceTree = "<group>"; };
+		A527B5B0FCC07F4B200B7273 /* Pods_RichStringTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichStringTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A96A164D0AE4251E96CD069F /* Pods-RichStringTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichStringTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichStringTests/Pods-RichStringTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AFC3533D24E1F50D8F3E2AEA /* Pods_RichString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC20DE4531A3E2F8DE0398EE /* Pods-RichString.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichString.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichString/Pods-RichString.debug.xcconfig"; sourceTree = "<group>"; };
 		F8DAC4201DCDEC87002CF542 /* RichStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RichStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8DAC4221DCDEC87002CF542 /* RichStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichStringTests.swift; sourceTree = "<group>"; };
 		F8DAC4241DCDEC87002CF542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF1D8C39E72F02340C18BAB2 /* Pods-RichString.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichString.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichString/Pods-RichString.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C77D989AC6B4B56AB6CB08E /* Pods_RichString.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8DAC4251DCDEC87002CF542 /* RichString.framework in Frameworks */,
+				B61C33CC01613136B34D516F /* Pods_RichStringTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +118,8 @@
 				02BA124C1DCD21E400215490 /* Demo */,
 				F8DAC4211DCDEC87002CF542 /* RichStringTests */,
 				02BA123B1DCD206300215490 /* Products */,
+				23287D3B97EC2CE397674391 /* Pods */,
+				34F3BD1DF7AD14BF5CA7CD05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +159,26 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
+		23287D3B97EC2CE397674391 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC20DE4531A3E2F8DE0398EE /* Pods-RichString.debug.xcconfig */,
+				FF1D8C39E72F02340C18BAB2 /* Pods-RichString.release.xcconfig */,
+				A96A164D0AE4251E96CD069F /* Pods-RichStringTests.debug.xcconfig */,
+				13EE323B595659691E85D33E /* Pods-RichStringTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		34F3BD1DF7AD14BF5CA7CD05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFC3533D24E1F50D8F3E2AEA /* Pods_RichString.framework */,
+				A527B5B0FCC07F4B200B7273 /* Pods_RichStringTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F8DAC4211DCDEC87002CF542 /* RichStringTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,11 +206,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02BA12421DCD206300215490 /* Build configuration list for PBXNativeTarget "RichString" */;
 			buildPhases = (
+				2F94B0123FDC4886FB38F15D /* [CP] Check Pods Manifest.lock */,
 				02BA12351DCD206300215490 /* Sources */,
 				02BA12361DCD206300215490 /* Frameworks */,
 				02BA12371DCD206300215490 /* Headers */,
 				02BA12381DCD206300215490 /* Resources */,
 				F87673381DCDEBB100191D62 /* SwiftLint */,
+				1972C367C1700EF24C316687 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,9 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8DAC4281DCDEC87002CF542 /* Build configuration list for PBXNativeTarget "RichStringTests" */;
 			buildPhases = (
+				536A43D65E3FE95366464784 /* [CP] Check Pods Manifest.lock */,
 				F8DAC41C1DCDEC87002CF542 /* Sources */,
 				F8DAC41D1DCDEC87002CF542 /* Frameworks */,
 				F8DAC41E1DCDEC87002CF542 /* Resources */,
+				C574DE45EA558A0C0B88D561 /* [CP] Embed Pods Frameworks */,
+				16E0048CAB5F71EAD77E9A31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,6 +339,81 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		16E0048CAB5F71EAD77E9A31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichStringTests/Pods-RichStringTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1972C367C1700EF24C316687 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichString/Pods-RichString-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F94B0123FDC4886FB38F15D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		536A43D65E3FE95366464784 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C574DE45EA558A0C0B88D561 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichStringTests/Pods-RichStringTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F87673381DCDEBB100191D62 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -489,6 +601,7 @@
 		};
 		02BA12431DCD206300215490 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC20DE4531A3E2F8DE0398EE /* Pods-RichString.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -510,6 +623,7 @@
 		};
 		02BA12441DCD206300215490 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF1D8C39E72F02340C18BAB2 /* Pods-RichString.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -558,6 +672,7 @@
 		};
 		F8DAC4291DCDEC87002CF542 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A96A164D0AE4251E96CD069F /* Pods-RichStringTests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 7EQ9KX3BR9;
 				INFOPLIST_FILE = RichStringTests/Info.plist;
@@ -570,6 +685,7 @@
 		};
 		F8DAC42A1DCDEC87002CF542 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13EE323B595659691E85D33E /* Pods-RichStringTests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 7EQ9KX3BR9;
 				INFOPLIST_FILE = RichStringTests/Info.plist;
