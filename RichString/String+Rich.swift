@@ -18,8 +18,10 @@ extension String: RichText {
     public func color(_ color: UIColor) -> NSAttributedString {
         return rich.color(color)
     }
+}
 
-    private var rich: NSAttributedString {
+extension String {
+    fileprivate var rich: NSAttributedString {
         return NSAttributedString(string: self)
     }
 }

@@ -4,15 +4,15 @@ import Foundation
 
 extension NSAttributedString: RichText {
     public func color(_ color: UIColor) -> NSAttributedString {
-        let m = self.mutableCopy() as! NSMutableAttributedString
-        let r = NSRange(location: 0, length: self.string.characters.count)
+        let m = makeMutable()
+        let r = entireString()
         m.addAttribute(NSForegroundColorAttributeName, value: color, range: r)
         return NSAttributedString(attributedString: m)
     }
     
     public func font(_ font: UIFont) -> NSAttributedString {
-        let m = self.mutableCopy() as! NSMutableAttributedString
-        let r = NSRange(location: 0, length: self.string.characters.count)
+        let m = makeMutable()
+        let r = entireString()
         m.addAttribute(NSFontAttributeName, value: font, range: r)
         return NSAttributedString(attributedString: m)
     }
@@ -45,5 +45,15 @@ extension NSAttributedString: RichText {
         let sizedDescriptor = font.fontDescriptor.withSize(size)
         let sizedFont = UIFont(descriptor: sizedDescriptor, size: 0)
         return self.font(sizedFont)
+    }
+}
+
+extension NSAttributedString {
+    fileprivate func makeMutable() -> NSMutableAttributedString {
+        return self.mutableCopy() as! NSMutableAttributedString
+    }
+
+    fileprivate func entireString() -> NSRange {
+        return NSRange(location: 0, length: self.string.characters.count)
     }
 }
