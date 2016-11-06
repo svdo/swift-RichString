@@ -1,8 +1,9 @@
 //  Copyright © 2016 Stefan van den Oord. All rights reserved.
 
 import Foundation
+import UIKit
 
-protocol RichText {
+public protocol RichText {
     func color(_ color: UIColor) -> NSAttributedString
     func bold() -> NSAttributedString
     func font(_ font: UIFont) -> NSAttributedString
