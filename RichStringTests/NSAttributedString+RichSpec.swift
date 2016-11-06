@@ -36,5 +36,9 @@ class NSAttributedStringRichSpec: QuickSpec {
         context("when used on string") {
             itBehavesLike("rich string") { ["string": "test"] }
         }
+
+        context("when used on NSString") {
+            itBehavesLike("rich string") { ["string": "test" as NSString] }
+        }
     }
 }
