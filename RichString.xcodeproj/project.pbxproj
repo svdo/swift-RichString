@@ -21,7 +21,7 @@
 		02BA12671DCD2E1F00215490 /* RichText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12661DCD2E1F00215490 /* RichText.swift */; };
 		9C77D989AC6B4B56AB6CB08E /* Pods_RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC3533D24E1F50D8F3E2AEA /* Pods_RichString.framework */; };
 		B61C33CC01613136B34D516F /* Pods_RichStringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A527B5B0FCC07F4B200B7273 /* Pods_RichStringTests.framework */; };
-		F8DAC4231DCDEC87002CF542 /* RichStringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAC4221DCDEC87002CF542 /* RichStringSpec.swift */; };
+		F8DAC4231DCDEC87002CF542 /* NSAttributedStringOperatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAC4221DCDEC87002CF542 /* NSAttributedStringOperatorsSpec.swift */; };
 		F8DAC4251DCDEC87002CF542 /* RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA123A1DCD206300215490 /* RichString.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +77,7 @@
 		AFC3533D24E1F50D8F3E2AEA /* Pods_RichString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC20DE4531A3E2F8DE0398EE /* Pods-RichString.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichString.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichString/Pods-RichString.debug.xcconfig"; sourceTree = "<group>"; };
 		F8DAC4201DCDEC87002CF542 /* RichStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RichStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8DAC4221DCDEC87002CF542 /* RichStringSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichStringSpec.swift; sourceTree = "<group>"; };
+		F8DAC4221DCDEC87002CF542 /* NSAttributedStringOperatorsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringOperatorsSpec.swift; sourceTree = "<group>"; };
 		F8DAC4241DCDEC87002CF542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF1D8C39E72F02340C18BAB2 /* Pods-RichString.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichString.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichString/Pods-RichString.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,7 +182,7 @@
 		F8DAC4211DCDEC87002CF542 /* RichStringTests */ = {
 			isa = PBXGroup;
 			children = (
-				F8DAC4221DCDEC87002CF542 /* RichStringSpec.swift */,
+				F8DAC4221DCDEC87002CF542 /* NSAttributedStringOperatorsSpec.swift */,
 				F8DAC4241DCDEC87002CF542 /* Info.plist */,
 			);
 			path = RichStringTests;
@@ -455,7 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8DAC4231DCDEC87002CF542 /* RichStringSpec.swift in Sources */,
+				F8DAC4231DCDEC87002CF542 /* NSAttributedStringOperatorsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
