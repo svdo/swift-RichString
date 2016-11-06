@@ -10,8 +10,8 @@ import RichString
 class RichSpec: QuickConfiguration {
     override class func configure(_ configuration: Configuration!) {
         sharedExamples("rich string") { (sharedExampleContext: @escaping SharedExampleContext) in
-            var richString: RichText {
-                return sharedExampleContext()["string"] as! RichText
+            var richString: RichString {
+                return sharedExampleContext()["string"] as! RichString
             }
 
             it("can add a color") {

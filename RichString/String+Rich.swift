@@ -2,7 +2,7 @@
 
 import Foundation
 
-extension String: RichText {
+extension String: RichString {
     public func bold() -> NSAttributedString {
         return rich.bold()
     }
@@ -20,7 +20,7 @@ extension String: RichText {
     }
 }
 
-extension NSString: RichText {
+extension NSString: RichString {
     public func bold() -> NSAttributedString {
         return rich.bold()
     }

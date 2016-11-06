@@ -2,7 +2,7 @@
 
 import Foundation
 
-extension NSAttributedString: RichText {
+extension NSAttributedString: RichString {
     public func color(_ color: UIColor) -> NSAttributedString {
         let m = makeMutable()
         let r = entireString()

@@ -3,7 +3,7 @@
 import Foundation
 import UIKit
 
-public protocol RichText {
+public protocol RichString {
     func color(_ color: UIColor) -> NSAttributedString
     func bold() -> NSAttributedString
     func font(_ font: UIFont) -> NSAttributedString
