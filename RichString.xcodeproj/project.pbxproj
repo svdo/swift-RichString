@@ -678,6 +678,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A96A164D0AE4251E96CD069F /* Pods-RichStringTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7EQ9KX3BR9;
 				INFOPLIST_FILE = RichStringTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -691,6 +692,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 13EE323B595659691E85D33E /* Pods-RichStringTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7EQ9KX3BR9;
 				INFOPLIST_FILE = RichStringTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -737,6 +739,7 @@
 				F8DAC42A1DCDEC87002CF542 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
