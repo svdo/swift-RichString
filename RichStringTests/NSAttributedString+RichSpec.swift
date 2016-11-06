@@ -8,14 +8,38 @@ import RichString
 
 class NSAttributedStringRichSpec: QuickSpec {
     override func spec() {
-        it("can add a color") {
-            let s = NSAttributedString(string: "test").color(UIColor.red)
-            expect(s.color) == UIColor.red
+        context("when used on attributed string") {
+            var s: NSAttributedString!
+            beforeEach {
+                s = NSAttributedString(string: "test")
+            }
+
+            it("can add a color") {
+                let result = s.color(UIColor.red)
+                expect(result.color) == UIColor.red
+            }
+
+            it("can add a font size") {
+                let result = s.fontSize(42)
+                expect(result.fontSize) ≈ 42.0
+            }
         }
 
-        it("can add a font size") {
-            let s = NSAttributedString(string: "test").fontSize(42)
-            expect(s.fontSize) ≈ 42.0
+        context("when used on string") {
+            var s: String!
+            beforeEach {
+                s = "test"
+            }
+
+            it("can add a color") {
+                let result = s.color(UIColor.red)
+                expect(result.color) == UIColor.red
+            }
+
+            it("can add a font size") {
+                let result = s.fontSize(42)
+                expect(result.fontSize) ≈ 42.0
+            }
         }
     }
 }
