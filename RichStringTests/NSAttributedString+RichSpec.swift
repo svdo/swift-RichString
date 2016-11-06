@@ -6,40 +6,35 @@ import Quick
 import Nimble
 import RichString
 
-class NSAttributedStringRichSpec: QuickSpec {
-    override func spec() {
-        context("when used on attributed string") {
-            var s: NSAttributedString!
-            beforeEach {
-                s = NSAttributedString(string: "test")
+// swiftlint:disable force_cast
+class RichSpec: QuickConfiguration {
+    override class func configure(_ configuration: Configuration!) {
+        sharedExamples("rich string") { (sharedExampleContext: @escaping SharedExampleContext) in
+            var richString: RichText {
+                return sharedExampleContext()["string"] as! RichText
             }
 
             it("can add a color") {
-                let result = s.color(UIColor.red)
+                let result = richString.color(UIColor.red)
                 expect(result.color) == UIColor.red
             }
 
             it("can add a font size") {
-                let result = s.fontSize(42)
+                let result = richString.fontSize(42)
                 expect(result.fontSize) ≈ 42.0
             }
         }
+    }
+}
+
+class NSAttributedStringRichSpec: QuickSpec {
+    override func spec() {
+        context("when used on attributed string") {
+            itBehavesLike("rich string") { ["string": NSAttributedString(string: "test")] }
+        }
 
         context("when used on string") {
-            var s: String!
-            beforeEach {
-                s = "test"
-            }
-
-            it("can add a color") {
-                let result = s.color(UIColor.red)
-                expect(result.color) == UIColor.red
-            }
-
-            it("can add a font size") {
-                let result = s.fontSize(42)
-                expect(result.fontSize) ≈ 42.0
-            }
+            itBehavesLike("rich string") { ["string": "test"] }
         }
     }
 }
