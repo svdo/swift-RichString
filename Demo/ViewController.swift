@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         let text1 = "This is some text".fontSize(17).color(.blue)
-        let text2 = "This is some text".fontSize(17).color(.blue).bold
+        let text2 = "This is some text".fontSize(17).color(.blue).bold()
         let text3 = text1 + text2.color(.red)
 
         label1.attributedText = text1

@@ -4,7 +4,7 @@ import Foundation
 
 protocol RichText {
     func color(_ color: UIColor) -> NSAttributedString
-    var bold: NSAttributedString { get }
+    func bold() -> NSAttributedString
     func font(_ font: UIFont) -> NSAttributedString
 
     /**

@@ -17,7 +17,7 @@ extension NSAttributedString: RichText {
         return NSAttributedString(attributedString: m)
     }
 
-    public var bold: NSAttributedString {
+    public func bold() -> NSAttributedString {
         let attrs = self.attributes(at: 0, effectiveRange: nil)
         let fontAttrs = attrs.filter { $0.0 == NSFontAttributeName }
 
@@ -54,5 +54,24 @@ extension NSAttributedString {
 
     fileprivate func entireString() -> NSRange {
         return NSRange(location: 0, length: self.string.characters.count)
+    }
+}
+
+extension NSAttributedString {
+    private var attrs: [String:Any] {
+        var range: NSRange = NSRange()
+        let attrs = self.attributes(at: 0, effectiveRange: &range)
+        assert(range.location == 0)
+        assert(range.length == self.length,
+            "StringAttributes is intended for strings that have attributes on the whole range")
+        return attrs
+    }
+
+    public var color: UIColor? {
+        return attrs[NSForegroundColorAttributeName] as? UIColor
+    }
+
+    public var fontSize: CGFloat? {
+        return (attrs[NSFontAttributeName] as? UIFont)?.pointSize
     }
 }

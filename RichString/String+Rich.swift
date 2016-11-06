@@ -3,8 +3,8 @@
 import Foundation
 
 extension String: RichText {
-    public var bold: NSAttributedString {
-        return rich.bold
+    public func bold() -> NSAttributedString {
+        return rich.bold()
     }
 
     public func font(_ font: UIFont) -> NSAttributedString {
