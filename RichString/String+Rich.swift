@@ -23,6 +23,10 @@ extension NonAttributedString {
     public func color(_ color: UIColor) -> NSAttributedString {
         return rich.color(color)
     }
+
+    public func backgroundColor(_ color: UIColor) -> NSAttributedString {
+        return rich.backgroundColor(color)
+    }
 }
 
 extension String: NonAttributedString {

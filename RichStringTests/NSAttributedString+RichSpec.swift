@@ -19,6 +19,11 @@ class RichSpec: QuickConfiguration {
                 expect(result.color) == UIColor.red
             }
 
+            it("can add a background color") {
+                let result = richString.backgroundColor(UIColor.green)
+                expect(result.backgroundColor) == UIColor.green
+            }
+
             it("can add a font size") {
                 let result = richString.fontSize(42)
                 expect(result.fontSize) ≈ 42.0

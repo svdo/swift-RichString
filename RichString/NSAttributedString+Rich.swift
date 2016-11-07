@@ -1,12 +1,20 @@
 //  Copyright © 2016 Stefan van den Oord. All rights reserved.
 
 import Foundation
+import UIKit
 
 extension NSAttributedString: RichString {
     public func color(_ color: UIColor) -> NSAttributedString {
         let m = makeMutable()
         let r = entireString()
         m.addAttribute(NSForegroundColorAttributeName, value: color, range: r)
+        return NSAttributedString(attributedString: m)
+    }
+
+    public func backgroundColor(_ color: UIColor) -> NSAttributedString {
+        let m = makeMutable()
+        let r = entireString()
+        m.addAttribute(NSBackgroundColorAttributeName, value: color, range: r)
         return NSAttributedString(attributedString: m)
     }
 
@@ -69,6 +77,10 @@ extension NSAttributedString {
 
     public var color: UIColor? {
         return attrs[NSForegroundColorAttributeName] as? UIColor
+    }
+
+    public var backgroundColor: UIColor? {
+        return attrs[NSBackgroundColorAttributeName] as? UIColor
     }
 
     public var fontSize: CGFloat? {

@@ -5,6 +5,8 @@ import UIKit
 
 public protocol RichString {
     func color(_ color: UIColor) -> NSAttributedString
+    func backgroundColor(_ color: UIColor) -> NSAttributedString
+
     func bold() -> NSAttributedString
     func font(_ font: UIFont) -> NSAttributedString
 
@@ -15,4 +17,5 @@ public protocol RichString {
      * - returns: Attributed string with the given font size attribute.
      */
     func fontSize(_ size: CGFloat) -> NSAttributedString
+
 }
