@@ -3,6 +3,7 @@
 import Foundation
 import UIKit
 
+// MARK: - Simple attributes
 extension NSAttributedString: RichString {
     public func color(_ color: UIColor) -> NSAttributedString {
         return attributedStringWithAttribute(NSForegroundColorAttributeName, value: color)
@@ -15,7 +16,10 @@ extension NSAttributedString: RichString {
     public func font(_ font: UIFont) -> NSAttributedString {
         return attributedStringWithAttribute(NSFontAttributeName, value: font)
     }
+}
 
+// MARK: - Font attributes
+extension NSAttributedString {
     public func bold() -> NSAttributedString {
         let attrs = self.attributes(at: 0, effectiveRange: nil)
         let fontAttrs = attrs.filter {
@@ -38,6 +42,7 @@ extension NSAttributedString: RichString {
         let fontAttrs = attrs.filter {
             $0.0 == NSFontAttributeName
         }
+
         let font: UIFont
         if fontAttrs.count > 0, let f = fontAttrs[0].1 as? UIFont {
             font = f
@@ -50,6 +55,7 @@ extension NSAttributedString: RichString {
     }
 }
 
+// MARK: - Private helpers
 extension NSAttributedString {
     fileprivate func attributedStringWithAttribute(_ name: String, value: Any)
             -> NSAttributedString {
@@ -58,9 +64,7 @@ extension NSAttributedString {
         m.addAttribute(name, value: value, range: r)
         return NSAttributedString(attributedString: m)
     }
-}
 
-extension NSAttributedString {
     fileprivate func makeMutable() -> NSMutableAttributedString {
         return NSMutableAttributedString(attributedString: self)
     }
@@ -70,6 +74,7 @@ extension NSAttributedString {
     }
 }
 
+// MARK: - Attribute getters
 extension NSAttributedString {
     private var attrs: [String:Any] {
         var range: NSRange = NSRange()
