@@ -5,29 +5,22 @@ import UIKit
 
 extension NSAttributedString: RichString {
     public func color(_ color: UIColor) -> NSAttributedString {
-        let m = makeMutable()
-        let r = entireString()
-        m.addAttribute(NSForegroundColorAttributeName, value: color, range: r)
-        return NSAttributedString(attributedString: m)
+        return attributedStringWithAttribute(NSForegroundColorAttributeName, value: color)
     }
 
     public func backgroundColor(_ color: UIColor) -> NSAttributedString {
-        let m = makeMutable()
-        let r = entireString()
-        m.addAttribute(NSBackgroundColorAttributeName, value: color, range: r)
-        return NSAttributedString(attributedString: m)
+        return attributedStringWithAttribute(NSBackgroundColorAttributeName, value: color)
     }
 
     public func font(_ font: UIFont) -> NSAttributedString {
-        let m = makeMutable()
-        let r = entireString()
-        m.addAttribute(NSFontAttributeName, value: font, range: r)
-        return NSAttributedString(attributedString: m)
+        return attributedStringWithAttribute(NSFontAttributeName, value: font)
     }
 
     public func bold() -> NSAttributedString {
         let attrs = self.attributes(at: 0, effectiveRange: nil)
-        let fontAttrs = attrs.filter { $0.0 == NSFontAttributeName }
+        let fontAttrs = attrs.filter {
+            $0.0 == NSFontAttributeName
+        }
 
         precondition(fontAttrs.count > 0, "making bold requires setting font first")
 
@@ -42,7 +35,9 @@ extension NSAttributedString: RichString {
 
     public func fontSize(_ size: CGFloat) -> NSAttributedString {
         let attrs = self.attributes(at: 0, effectiveRange: nil)
-        let fontAttrs = attrs.filter { $0.0 == NSFontAttributeName }
+        let fontAttrs = attrs.filter {
+            $0.0 == NSFontAttributeName
+        }
         let font: UIFont
         if fontAttrs.count > 0, let f = fontAttrs[0].1 as? UIFont {
             font = f
@@ -52,6 +47,16 @@ extension NSAttributedString: RichString {
         let sizedDescriptor = font.fontDescriptor.withSize(size)
         let sizedFont = UIFont(descriptor: sizedDescriptor, size: 0)
         return self.font(sizedFont)
+    }
+}
+
+extension NSAttributedString {
+    fileprivate func attributedStringWithAttribute(_ name: String, value: Any)
+            -> NSAttributedString {
+        let m = makeMutable()
+        let r = entireString()
+        m.addAttribute(name, value: value, range: r)
+        return NSAttributedString(attributedString: m)
     }
 }
 
