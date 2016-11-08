@@ -74,6 +74,18 @@ class RichSpec: QuickConfiguration {
                 let result = richString.letterPressed()
                 expect(result.isLetterPressed) == true
             }
+
+            it("can add a URL link") {
+                let url = NSURL(string: "https://localhost")!
+                let result = richString.link(url: url)
+                expect(result.link) == url
+            }
+
+            it("can add a string link") {
+                let urlString = "https://localhost"
+                let result = richString.link(string: urlString)
+                expect(result.link) == NSURL(string: urlString)!
+            }
         }
     }
 }

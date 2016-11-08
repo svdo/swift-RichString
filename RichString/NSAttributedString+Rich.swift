@@ -54,6 +54,14 @@ extension NSAttributedString: RichString {
         return addingAttribute(NSTextEffectAttributeName,
                                value: NSTextEffectLetterpressStyle)
     }
+
+    public func link(url: NSURL) -> NSAttributedString {
+        return addingAttribute(NSLinkAttributeName, value: url)
+    }
+
+    public func link(string: String) -> NSAttributedString {
+        return addingAttribute(NSLinkAttributeName, value: string)
+    }
 }
 
 // MARK: - Font attributes
@@ -178,5 +186,13 @@ extension NSAttributedString {
             return false
         }
         return textEffect == NSTextEffectLetterpressStyle
+    }
+
+    public var link: NSURL? {
+        if let string = attrs[NSLinkAttributeName] as? String {
+            return NSURL(string: string)
+        } else {
+            return attrs[NSLinkAttributeName] as? NSURL
+        }
     }
 }

@@ -59,6 +59,14 @@ extension NonAttributedString {
     public func letterPressed() -> NSAttributedString {
         return rich.letterPressed()
     }
+
+    public func link(url: NSURL) -> NSAttributedString {
+        return rich.link(url: url)
+    }
+
+    public func link(string: String) -> NSAttributedString {
+        return rich.link(string: string)
+    }
 }
 
 extension String: NonAttributedString {

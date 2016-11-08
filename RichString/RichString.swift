@@ -33,4 +33,7 @@ public protocol RichString {
     func shadow(_ shadow: NSShadow) -> NSAttributedString
 
     func letterPressed() -> NSAttributedString
+
+    func link(url: NSURL) -> NSAttributedString
+    func link(string: String) -> NSAttributedString
 }
