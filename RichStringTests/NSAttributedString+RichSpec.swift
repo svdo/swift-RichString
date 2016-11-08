@@ -8,6 +8,7 @@ import RichString
 
 // swiftlint:disable force_cast
 class RichSpec: QuickConfiguration {
+    // swiftlint:disable function_body_length
     override class func configure(_ configuration: Configuration!) {
         sharedExamples("rich string") { (sharedExampleContext: @escaping SharedExampleContext) in
             var richString: RichString {
