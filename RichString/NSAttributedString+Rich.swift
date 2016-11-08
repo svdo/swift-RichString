@@ -24,6 +24,9 @@ extension NSAttributedString: RichString {
     public func ligature(_ ligature: Int) -> NSAttributedString {
         return attributedStringWithAttribute(NSLigatureAttributeName, value: ligature)
     }
+    public func kern(_ kern: Float) -> NSAttributedString {
+        return attributedStringWithAttribute(NSKernAttributeName, value: kern)
+    }
 }
 
 // MARK: - Font attributes
@@ -111,5 +114,9 @@ extension NSAttributedString {
 
     public var ligature: Int? {
         return attrs[NSLigatureAttributeName] as? Int
+    }
+
+    public var kern: Float? {
+        return attrs[NSKernAttributeName] as? Float
     }
 }

@@ -35,6 +35,10 @@ extension NonAttributedString {
     public func ligature(_ ligature: Int) -> NSAttributedString {
         return rich.ligature(ligature)
     }
+
+    public func kern(_ kern: Float) -> NSAttributedString {
+        return rich.kern(kern)
+    }
 }
 
 extension String: NonAttributedString {

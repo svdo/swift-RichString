@@ -23,4 +23,5 @@ public protocol RichString {
     func backgroundColor(_ color: UIColor) -> NSAttributedString
 
     func ligature(_ ligature: Int) -> NSAttributedString
+    func kern(_ kern: Float) -> NSAttributedString
 }

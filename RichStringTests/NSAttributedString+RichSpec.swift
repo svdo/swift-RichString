@@ -39,6 +39,11 @@ class RichSpec: QuickConfiguration {
                 let result = richString.ligature(2)
                 expect(result.ligature) == 2
             }
+
+            it("can add a kern") {
+                let result = richString.kern(2)
+                expect(result.kern) == 2
+            }
         }
     }
 }
