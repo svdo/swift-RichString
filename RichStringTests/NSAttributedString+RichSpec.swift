@@ -49,6 +49,11 @@ class RichSpec: QuickConfiguration {
                 let result = richString.strikeThrough(style: .styleDouble)
                 expect(result.strikeThroughStyle) == .styleDouble
             }
+
+            it("can add underline style") {
+                let result = richString.underline(style: .patternDashDot)
+                expect(result.underlineStyle) == .patternDashDot
+            }
         }
     }
 }

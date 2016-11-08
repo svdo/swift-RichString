@@ -33,6 +33,11 @@ extension NSAttributedString: RichString {
         return attributedStringWithAttribute(NSStrikethroughStyleAttributeName,
                                              value: style.rawValue)
     }
+
+    public func underline(style: NSUnderlineStyle) -> NSAttributedString {
+        return attributedStringWithAttribute(NSUnderlineStyleAttributeName,
+                                             value: style.rawValue)
+    }
 }
 
 // MARK: - Font attributes
@@ -128,6 +133,13 @@ extension NSAttributedString {
 
     public var strikeThroughStyle: NSUnderlineStyle? {
         guard let rawValue = attrs[NSStrikethroughStyleAttributeName] as? Int else {
+            return nil
+        }
+        return NSUnderlineStyle(rawValue: rawValue)
+    }
+
+    public var underlineStyle: NSUnderlineStyle? {
+        guard let rawValue = attrs[NSUnderlineStyleAttributeName] as? Int else {
             return nil
         }
         return NSUnderlineStyle(rawValue: rawValue)
