@@ -39,6 +39,10 @@ extension NonAttributedString {
     public func kern(_ kern: Float) -> NSAttributedString {
         return rich.kern(kern)
     }
+
+    public func strikeThrough(style: NSUnderlineStyle) -> NSAttributedString {
+        return rich.strikeThrough(style: style)
+    }
 }
 
 extension String: NonAttributedString {

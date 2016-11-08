@@ -24,4 +24,6 @@ public protocol RichString {
 
     func ligature(_ ligature: Int) -> NSAttributedString
     func kern(_ kern: Float) -> NSAttributedString
+
+    func strikeThrough(style: NSUnderlineStyle) -> NSAttributedString
 }

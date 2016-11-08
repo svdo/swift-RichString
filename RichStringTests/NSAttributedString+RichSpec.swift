@@ -44,6 +44,11 @@ class RichSpec: QuickConfiguration {
                 let result = richString.kern(2)
                 expect(result.kern) == 2
             }
+
+            it("can add strike through style") {
+                let result = richString.strikeThrough(style: .styleDouble)
+                expect(result.strikeThroughStyle) == .styleDouble
+            }
         }
     }
 }

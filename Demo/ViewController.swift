@@ -10,7 +10,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var label3: UILabel!
 
     override func viewWillAppear(_ animated: Bool) {
-        let text1 = "This is some text".fontSize(17).color(.blue)
+        let text1 = "This is some text".fontSize(17).color(.blue).strikeThrough(style: .styleDouble)
         let text2 = "This is some text".fontSize(17).color(.blue).bold()
         let text3 = text1 + text2.color(.red)
 

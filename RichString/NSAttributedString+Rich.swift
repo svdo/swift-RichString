@@ -24,8 +24,14 @@ extension NSAttributedString: RichString {
     public func ligature(_ ligature: Int) -> NSAttributedString {
         return attributedStringWithAttribute(NSLigatureAttributeName, value: ligature)
     }
+
     public func kern(_ kern: Float) -> NSAttributedString {
         return attributedStringWithAttribute(NSKernAttributeName, value: kern)
+    }
+
+    public func strikeThrough(style: NSUnderlineStyle) -> NSAttributedString {
+        return attributedStringWithAttribute(NSStrikethroughStyleAttributeName,
+                                             value: style.rawValue)
     }
 }
 
@@ -118,5 +124,12 @@ extension NSAttributedString {
 
     public var kern: Float? {
         return attrs[NSKernAttributeName] as? Float
+    }
+
+    public var strikeThroughStyle: NSUnderlineStyle? {
+        guard let rawValue = attrs[NSStrikethroughStyleAttributeName] as? Int else {
+            return nil
+        }
+        return NSUnderlineStyle(rawValue: rawValue)
     }
 }
