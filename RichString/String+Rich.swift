@@ -51,6 +51,10 @@ extension NonAttributedString {
     public func stroke(width: Float, color: UIColor) -> NSAttributedString {
         return rich.stroke(width: width, color: color)
     }
+
+    public func shadow(_ shadow: NSShadow) -> NSAttributedString {
+        return rich.shadow(shadow)
+    }
 }
 
 extension String: NonAttributedString {

@@ -45,6 +45,11 @@ extension NSAttributedString: RichString {
             .attributedStringWithAttribute(NSStrokeWidthAttributeName,
                                            value: width)
     }
+
+    public func shadow(_ shadow: NSShadow) -> NSAttributedString {
+        return attributedStringWithAttribute(NSShadowAttributeName, value: shadow)
+    }
+
 }
 
 // MARK: - Font attributes
@@ -160,4 +165,7 @@ extension NSAttributedString {
         return attrs[NSStrokeColorAttributeName] as? UIColor
     }
 
+    public var shadow: NSShadow? {
+        return attrs[NSShadowAttributeName] as? NSShadow
+    }
 }

@@ -15,13 +15,13 @@ class RichSpec: QuickConfiguration {
             }
 
             it("can add a color") {
-                let result = richString.color(UIColor.red)
-                expect(result.color) == UIColor.red
+                let result = richString.color(.red)
+                expect(result.color) == .red
             }
 
             it("can add a background color") {
                 let result = richString.backgroundColor(.green)
-                expect(result.backgroundColor) == UIColor.green
+                expect(result.backgroundColor) == .green
             }
 
             it("can add a font size") {
@@ -59,6 +59,15 @@ class RichSpec: QuickConfiguration {
                 let result = richString.stroke(width: 4, color: .green)
                 expect(result.strokeWidth) == 4
                 expect(result.strokeColor) == .green
+            }
+
+            it("can add shadow") {
+                let shadow = NSShadow()
+                shadow.shadowOffset = CGSize(width: 3, height: 3)
+                shadow.shadowBlurRadius = 2
+                shadow.shadowColor = UIColor.gray
+                let result = richString.shadow(shadow)
+                expect(result.shadow) == shadow
             }
         }
     }

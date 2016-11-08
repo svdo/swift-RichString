@@ -29,4 +29,6 @@ public protocol RichString {
     func underline(style: NSUnderlineStyle) -> NSAttributedString
 
     func stroke(width: Float, color: UIColor) -> NSAttributedString
+
+    func shadow(_ shadow: NSShadow) -> NSAttributedString
 }
