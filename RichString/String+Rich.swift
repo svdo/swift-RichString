@@ -55,6 +55,10 @@ extension NonAttributedString {
     public func shadow(_ shadow: NSShadow) -> NSAttributedString {
         return rich.shadow(shadow)
     }
+
+    public func letterPressed() -> NSAttributedString {
+        return rich.letterPressed()
+    }
 }
 
 extension String: NonAttributedString {

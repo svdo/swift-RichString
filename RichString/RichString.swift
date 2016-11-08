@@ -31,4 +31,6 @@ public protocol RichString {
     func stroke(width: Float, color: UIColor) -> NSAttributedString
 
     func shadow(_ shadow: NSShadow) -> NSAttributedString
+
+    func letterPressed() -> NSAttributedString
 }

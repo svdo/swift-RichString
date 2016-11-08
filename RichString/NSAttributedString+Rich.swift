@@ -50,6 +50,10 @@ extension NSAttributedString: RichString {
         return attributedStringWithAttribute(NSShadowAttributeName, value: shadow)
     }
 
+    public func letterPressed() -> NSAttributedString {
+        return attributedStringWithAttribute(NSTextEffectAttributeName,
+                                             value: NSTextEffectLetterpressStyle)
+    }
 }
 
 // MARK: - Font attributes
@@ -167,5 +171,12 @@ extension NSAttributedString {
 
     public var shadow: NSShadow? {
         return attrs[NSShadowAttributeName] as? NSShadow
+    }
+
+    public var isLetterPressed: Bool {
+        guard let textEffect = attrs[NSTextEffectAttributeName] as? String else {
+            return false
+        }
+        return textEffect == NSTextEffectLetterpressStyle
     }
 }

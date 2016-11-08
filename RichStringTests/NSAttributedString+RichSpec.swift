@@ -69,6 +69,11 @@ class RichSpec: QuickConfiguration {
                 let result = richString.shadow(shadow)
                 expect(result.shadow) == shadow
             }
+
+            it("can add letter press effect") {
+                let result = richString.letterPressed()
+                expect(result.isLetterPressed) == true
+            }
         }
     }
 }
