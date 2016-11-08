@@ -4,10 +4,7 @@ import Foundation
 import UIKit
 
 public protocol RichString {
-    func color(_ color: UIColor) -> NSAttributedString
-    func backgroundColor(_ color: UIColor) -> NSAttributedString
 
-    func bold() -> NSAttributedString
     func font(_ font: UIFont) -> NSAttributedString
 
     /**
@@ -18,4 +15,10 @@ public protocol RichString {
      */
     func fontSize(_ size: CGFloat) -> NSAttributedString
 
+    func paragraphStyle(_ paragraphStyle: NSParagraphStyle) -> NSAttributedString
+
+    func color(_ color: UIColor) -> NSAttributedString
+    func backgroundColor(_ color: UIColor) -> NSAttributedString
+
+    func bold() -> NSAttributedString
 }

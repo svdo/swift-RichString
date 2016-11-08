@@ -28,6 +28,12 @@ class RichSpec: QuickConfiguration {
                 let result = richString.fontSize(42)
                 expect(result.fontSize) ≈ 42.0
             }
+
+            it("can add a paragraph style") {
+                let style = NSParagraphStyle()
+                let result = richString.paragraphStyle(style)
+                expect(result.paragraphStyle) == style
+            }
         }
     }
 }

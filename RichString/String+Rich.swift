@@ -27,6 +27,11 @@ extension NonAttributedString {
     public func backgroundColor(_ color: UIColor) -> NSAttributedString {
         return rich.backgroundColor(color)
     }
+
+    public func paragraphStyle(_ paragraphStyle: NSParagraphStyle) -> NSAttributedString {
+        return rich.paragraphStyle(paragraphStyle)
+    }
+
 }
 
 extension String: NonAttributedString {

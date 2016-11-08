@@ -16,6 +16,11 @@ extension NSAttributedString: RichString {
     public func font(_ font: UIFont) -> NSAttributedString {
         return attributedStringWithAttribute(NSFontAttributeName, value: font)
     }
+
+    public func paragraphStyle(_ paragraphStyle: NSParagraphStyle) -> NSAttributedString {
+        return attributedStringWithAttribute(NSParagraphStyleAttributeName, value: paragraphStyle)
+    }
+
 }
 
 // MARK: - Font attributes
@@ -95,5 +100,9 @@ extension NSAttributedString {
 
     public var fontSize: CGFloat? {
         return (attrs[NSFontAttributeName] as? UIFont)?.pointSize
+    }
+
+    public var paragraphStyle: NSParagraphStyle? {
+        return attrs[NSParagraphStyleAttributeName] as? NSParagraphStyle
     }
 }
