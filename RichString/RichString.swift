@@ -27,4 +27,6 @@ public protocol RichString {
 
     func strikeThrough(style: NSUnderlineStyle) -> NSAttributedString
     func underline(style: NSUnderlineStyle) -> NSAttributedString
+
+    func stroke(width: Float, color: UIColor) -> NSAttributedString
 }

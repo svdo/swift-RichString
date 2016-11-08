@@ -20,7 +20,7 @@ class RichSpec: QuickConfiguration {
             }
 
             it("can add a background color") {
-                let result = richString.backgroundColor(UIColor.green)
+                let result = richString.backgroundColor(.green)
                 expect(result.backgroundColor) == UIColor.green
             }
 
@@ -53,6 +53,12 @@ class RichSpec: QuickConfiguration {
             it("can add underline style") {
                 let result = richString.underline(style: .patternDashDot)
                 expect(result.underlineStyle) == .patternDashDot
+            }
+
+            it("can add stroke") {
+                let result = richString.stroke(width: 4, color: .green)
+                expect(result.strokeWidth) == 4
+                expect(result.strokeColor) == .green
             }
         }
     }

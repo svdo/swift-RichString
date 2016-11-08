@@ -38,6 +38,13 @@ extension NSAttributedString: RichString {
         return attributedStringWithAttribute(NSUnderlineStyleAttributeName,
                                              value: style.rawValue)
     }
+
+    public func stroke(width: Float, color: UIColor) -> NSAttributedString {
+        return attributedStringWithAttribute(NSStrokeColorAttributeName,
+                                             value: color)
+            .attributedStringWithAttribute(NSStrokeWidthAttributeName,
+                                           value: width)
+    }
 }
 
 // MARK: - Font attributes
@@ -144,4 +151,13 @@ extension NSAttributedString {
         }
         return NSUnderlineStyle(rawValue: rawValue)
     }
+
+    public var strokeWidth: Float? {
+        return attrs[NSStrokeWidthAttributeName] as? Float
+    }
+
+    public var strokeColor: UIColor? {
+        return attrs[NSStrokeColorAttributeName] as? UIColor
+    }
+
 }
