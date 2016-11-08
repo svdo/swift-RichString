@@ -33,6 +33,9 @@
           </extensions>
         </Objective-C-extensions>
         <codeStyleSettings language="Swift">
+          <option name="ALIGN_MULTILINE_PARAMETERS_IN_CALLS" value="true" />
+          <option name="ALIGN_MULTILINE_EXTENDS_LIST" value="true" />
+          <option name="ALIGN_GROUP_FIELD_DECLARATIONS" value="true" />
           <indentOptions>
             <option name="CONTINUATION_INDENT_SIZE" value="4" />
           </indentOptions>
