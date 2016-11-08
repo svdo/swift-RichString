@@ -18,7 +18,7 @@
 		02BA125E1DCD221E00215490 /* RichString.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA123A1DCD206300215490 /* RichString.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02BA12631DCD2ADE00215490 /* NSAttributedStringOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12621DCD2ADE00215490 /* NSAttributedStringOperators.swift */; };
 		02BA12651DCD2B0700215490 /* String+Rich.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12641DCD2B0700215490 /* String+Rich.swift */; };
-		02BA12671DCD2E1F00215490 /* RichText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12661DCD2E1F00215490 /* RichText.swift */; };
+		02BA12671DCD2E1F00215490 /* RichString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12661DCD2E1F00215490 /* RichString.swift */; };
 		9C77D989AC6B4B56AB6CB08E /* Pods_RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC3533D24E1F50D8F3E2AEA /* Pods_RichString.framework */; };
 		B61C33CC01613136B34D516F /* Pods_RichStringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A527B5B0FCC07F4B200B7273 /* Pods_RichStringTests.framework */; };
 		CACF63E80D4C40DA9740D468 /* NSAttributedString+RichSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF6A1D3239CDC4183DF5C8 /* NSAttributedString+RichSpec.swift */; };
@@ -71,7 +71,7 @@
 		02BA12591DCD21E400215490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02BA12621DCD2ADE00215490 /* NSAttributedStringOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringOperators.swift; sourceTree = "<group>"; };
 		02BA12641DCD2B0700215490 /* String+Rich.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Rich.swift"; sourceTree = "<group>"; };
-		02BA12661DCD2E1F00215490 /* RichText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RichText.swift; sourceTree = "<group>"; };
+		02BA12661DCD2E1F00215490 /* RichString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RichString.swift; sourceTree = "<group>"; };
 		13EE323B595659691E85D33E /* Pods-RichStringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichStringTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichStringTests/Pods-RichStringTests.release.xcconfig"; sourceTree = "<group>"; };
 		A527B5B0FCC07F4B200B7273 /* Pods_RichStringTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichStringTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96A164D0AE4251E96CD069F /* Pods-RichStringTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichStringTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichStringTests/Pods-RichStringTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 			children = (
 				02BA123D1DCD206300215490 /* RichString.h */,
 				02BA123E1DCD206300215490 /* Info.plist */,
-				02BA12661DCD2E1F00215490 /* RichText.swift */,
+				02BA12661DCD2E1F00215490 /* RichString.swift */,
 				02BA12641DCD2B0700215490 /* String+Rich.swift */,
 				02BA12451DCD214600215490 /* NSAttributedString+Rich.swift */,
 				02BA12621DCD2ADE00215490 /* NSAttributedStringOperators.swift */,
@@ -440,7 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02BA12671DCD2E1F00215490 /* RichText.swift in Sources */,
+				02BA12671DCD2E1F00215490 /* RichString.swift in Sources */,
 				02BA12461DCD214600215490 /* NSAttributedString+Rich.swift in Sources */,
 				02BA12631DCD2ADE00215490 /* NSAttributedStringOperators.swift in Sources */,
 				02BA12651DCD2B0700215490 /* String+Rich.swift in Sources */,
