@@ -6,53 +6,53 @@ import UIKit
 // MARK: - Simple attributes
 extension NSAttributedString: RichString {
     public func color(_ color: UIColor) -> NSAttributedString {
-        return attributedStringWithAttribute(NSForegroundColorAttributeName, value: color)
+        return addingAttribute(NSForegroundColorAttributeName, value: color)
     }
 
     public func backgroundColor(_ color: UIColor) -> NSAttributedString {
-        return attributedStringWithAttribute(NSBackgroundColorAttributeName, value: color)
+        return addingAttribute(NSBackgroundColorAttributeName, value: color)
     }
 
     public func font(_ font: UIFont) -> NSAttributedString {
-        return attributedStringWithAttribute(NSFontAttributeName, value: font)
+        return addingAttribute(NSFontAttributeName, value: font)
     }
 
     public func paragraphStyle(_ paragraphStyle: NSParagraphStyle) -> NSAttributedString {
-        return attributedStringWithAttribute(NSParagraphStyleAttributeName, value: paragraphStyle)
+        return addingAttribute(NSParagraphStyleAttributeName, value: paragraphStyle)
     }
 
     public func ligature(_ ligature: Int) -> NSAttributedString {
-        return attributedStringWithAttribute(NSLigatureAttributeName, value: ligature)
+        return addingAttribute(NSLigatureAttributeName, value: ligature)
     }
 
     public func kern(_ kern: Float) -> NSAttributedString {
-        return attributedStringWithAttribute(NSKernAttributeName, value: kern)
+        return addingAttribute(NSKernAttributeName, value: kern)
     }
 
     public func strikeThrough(style: NSUnderlineStyle) -> NSAttributedString {
-        return attributedStringWithAttribute(NSStrikethroughStyleAttributeName,
-                                             value: style.rawValue)
+        return addingAttribute(NSStrikethroughStyleAttributeName,
+                               value: style.rawValue)
     }
 
     public func underline(style: NSUnderlineStyle) -> NSAttributedString {
-        return attributedStringWithAttribute(NSUnderlineStyleAttributeName,
-                                             value: style.rawValue)
+        return addingAttribute(NSUnderlineStyleAttributeName,
+                               value: style.rawValue)
     }
 
     public func stroke(width: Float, color: UIColor) -> NSAttributedString {
-        return attributedStringWithAttribute(NSStrokeColorAttributeName,
-                                             value: color)
-            .attributedStringWithAttribute(NSStrokeWidthAttributeName,
-                                           value: width)
+        return addingAttribute(NSStrokeColorAttributeName,
+                               value: color)
+            .addingAttribute(NSStrokeWidthAttributeName,
+                             value: width)
     }
 
     public func shadow(_ shadow: NSShadow) -> NSAttributedString {
-        return attributedStringWithAttribute(NSShadowAttributeName, value: shadow)
+        return addingAttribute(NSShadowAttributeName, value: shadow)
     }
 
     public func letterPressed() -> NSAttributedString {
-        return attributedStringWithAttribute(NSTextEffectAttributeName,
-                                             value: NSTextEffectLetterpressStyle)
+        return addingAttribute(NSTextEffectAttributeName,
+                               value: NSTextEffectLetterpressStyle)
     }
 }
 
@@ -95,7 +95,7 @@ extension NSAttributedString {
 
 // MARK: - Private helpers
 extension NSAttributedString {
-    fileprivate func attributedStringWithAttribute(_ name: String, value: Any)
+    fileprivate func addingAttribute(_ name: String, value: Any)
             -> NSAttributedString {
         let m = makeMutable()
         let r = entireString()
