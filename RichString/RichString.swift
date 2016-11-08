@@ -15,10 +15,12 @@ public protocol RichString {
      */
     func fontSize(_ size: CGFloat) -> NSAttributedString
 
+    func bold() -> NSAttributedString
+
     func paragraphStyle(_ paragraphStyle: NSParagraphStyle) -> NSAttributedString
 
     func color(_ color: UIColor) -> NSAttributedString
     func backgroundColor(_ color: UIColor) -> NSAttributedString
 
-    func bold() -> NSAttributedString
+    func ligature(_ ligature: Int) -> NSAttributedString
 }

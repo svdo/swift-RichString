@@ -32,6 +32,9 @@ extension NonAttributedString {
         return rich.paragraphStyle(paragraphStyle)
     }
 
+    public func ligature(_ ligature: Int) -> NSAttributedString {
+        return rich.ligature(ligature)
+    }
 }
 
 extension String: NonAttributedString {

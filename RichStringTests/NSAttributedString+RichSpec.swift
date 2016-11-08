@@ -34,6 +34,11 @@ class RichSpec: QuickConfiguration {
                 let result = richString.paragraphStyle(style)
                 expect(result.paragraphStyle) == style
             }
+
+            it("can add a ligature") {
+                let result = richString.ligature(2)
+                expect(result.ligature) == 2
+            }
         }
     }
 }

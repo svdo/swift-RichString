@@ -21,6 +21,9 @@ extension NSAttributedString: RichString {
         return attributedStringWithAttribute(NSParagraphStyleAttributeName, value: paragraphStyle)
     }
 
+    public func ligature(_ ligature: Int) -> NSAttributedString {
+        return attributedStringWithAttribute(NSLigatureAttributeName, value: ligature)
+    }
 }
 
 // MARK: - Font attributes
@@ -104,5 +107,9 @@ extension NSAttributedString {
 
     public var paragraphStyle: NSParagraphStyle? {
         return attrs[NSParagraphStyleAttributeName] as? NSParagraphStyle
+    }
+
+    public var ligature: Int? {
+        return attrs[NSLigatureAttributeName] as? Int
     }
 }
