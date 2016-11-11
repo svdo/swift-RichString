@@ -67,6 +67,11 @@ extension NonAttributedString {
     public func link(string: String) -> NSAttributedString {
         return rich.link(string: string)
     }
+
+    public func paragraphStyle(configuration: (NSMutableParagraphStyle) -> Void)
+            -> NSAttributedString {
+        return rich.paragraphStyle(configuration: configuration)
+    }
 }
 
 extension String: NonAttributedString {

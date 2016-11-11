@@ -62,6 +62,21 @@ extension NSAttributedString: RichString {
     public func link(string: String) -> NSAttributedString {
         return addingAttribute(NSLinkAttributeName, value: string)
     }
+
+    public func paragraphStyle(configuration: (NSMutableParagraphStyle) -> Void)
+            -> NSAttributedString {
+        let style: NSMutableParagraphStyle
+        if let existingStyle = self.paragraphStyle as? NSMutableParagraphStyle {
+            style = existingStyle
+        } else if let existingStyle = self.paragraphStyle,
+                let mutableCopy = existingStyle.mutableCopy() as? NSMutableParagraphStyle {
+            style = mutableCopy
+        } else {
+            style = NSMutableParagraphStyle()
+        }
+        configuration(style)
+        return addingAttribute(NSParagraphStyleAttributeName, value: style)
+    }
 }
 
 // MARK: - Font attributes

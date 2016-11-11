@@ -87,6 +87,29 @@ class RichSpec: QuickConfiguration {
                 let result = richString.link(string: urlString)
                 expect(result.link) == NSURL(string: urlString)!
             }
+
+            it("can configure new paragraph style") {
+                let result = richString.paragraphStyle {
+                    $0.firstLineHeadIndent = 10
+                }
+                expect(result.paragraphStyle).toNot(beNil())
+                if let style = result.paragraphStyle {
+                    expect(style.firstLineHeadIndent) ≈ 10
+                }
+            }
+
+            it("can add to configuration of existing paragraph style") {
+                let result = richString.paragraphStyle {
+                    $0.firstLineHeadIndent = 10
+                }.paragraphStyle {
+                    $0.lineHeightMultiple = 1.4
+                }
+                expect(result.paragraphStyle).toNot(beNil())
+                if let style = result.paragraphStyle {
+                    expect(style.firstLineHeadIndent) ≈ 10
+                    expect(style.lineHeightMultiple) ≈ 1.4
+                }
+            }
         }
     }
 }

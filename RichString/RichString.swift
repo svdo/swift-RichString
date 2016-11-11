@@ -36,4 +36,7 @@ public protocol RichString {
 
     func link(url: NSURL) -> NSAttributedString
     func link(string: String) -> NSAttributedString
+
+    func paragraphStyle(configuration: (NSMutableParagraphStyle) -> Void)
+            -> NSAttributedString
 }
