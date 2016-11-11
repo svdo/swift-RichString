@@ -72,6 +72,11 @@ extension NonAttributedString {
             -> NSAttributedString {
         return rich.paragraphStyle(configuration: configuration)
     }
+
+    public func attachment(configure: (NSTextAttachment) -> Void)
+            -> NSAttributedString {
+        return rich.attachment(configure: configure)
+    }
 }
 
 extension String: NonAttributedString {

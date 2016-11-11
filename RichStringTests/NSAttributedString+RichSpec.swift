@@ -110,6 +110,17 @@ class RichSpec: QuickConfiguration {
                     expect(style.lineHeightMultiple) ≈ 1.4
                 }
             }
+
+            it("can configure new text attachment") {
+                let rect = CGRect(x: 1, y: 2, width: 3, height: 4)
+                let result = richString.attachment {
+                    $0.bounds = rect
+                }
+                expect(result.attachment).toNot(beNil())
+                if let attachment = result.attachment {
+                    expect(attachment.bounds) == rect
+                }
+            }
         }
     }
 }

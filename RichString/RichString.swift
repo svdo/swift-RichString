@@ -39,4 +39,7 @@ public protocol RichString {
 
     func paragraphStyle(configuration: (NSMutableParagraphStyle) -> Void)
             -> NSAttributedString
+
+    func attachment(configure: (NSTextAttachment) -> Void)
+            -> NSAttributedString
 }

@@ -77,6 +77,13 @@ extension NSAttributedString: RichString {
         configuration(style)
         return addingAttribute(NSParagraphStyleAttributeName, value: style)
     }
+
+    public func attachment(configure: (NSTextAttachment) -> Void)
+            -> NSAttributedString {
+        let attachment = NSTextAttachment()
+        configure(attachment)
+        return addingAttribute(NSAttachmentAttributeName, value: attachment)
+    }
 }
 
 // MARK: - Font attributes
@@ -209,5 +216,9 @@ extension NSAttributedString {
         } else {
             return attrs[NSLinkAttributeName] as? NSURL
         }
+    }
+
+    public var attachment: NSTextAttachment? {
+        return attrs[NSAttachmentAttributeName] as? NSTextAttachment
     }
 }
