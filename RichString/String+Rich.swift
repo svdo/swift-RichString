@@ -32,6 +32,11 @@ extension NonAttributedString {
         return rich.paragraphStyle(paragraphStyle)
     }
 
+    public func paragraphStyle(configuration: (NSMutableParagraphStyle) -> Void)
+            -> NSAttributedString {
+        return rich.paragraphStyle(configuration: configuration)
+    }
+
     public func ligature(_ ligature: Int) -> NSAttributedString {
         return rich.ligature(ligature)
     }
@@ -68,14 +73,13 @@ extension NonAttributedString {
         return rich.link(string: string)
     }
 
-    public func paragraphStyle(configuration: (NSMutableParagraphStyle) -> Void)
-            -> NSAttributedString {
-        return rich.paragraphStyle(configuration: configuration)
-    }
-
     public func attachment(configure: (NSTextAttachment) -> Void)
             -> NSAttributedString {
         return rich.attachment(configure: configure)
+    }
+
+    public func baselineOffset(_ offset: Float) -> NSAttributedString {
+        return rich.baselineOffset(offset)
     }
 }
 

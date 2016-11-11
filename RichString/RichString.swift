@@ -42,4 +42,6 @@ public protocol RichString {
 
     func attachment(configure: (NSTextAttachment) -> Void)
             -> NSAttributedString
+
+    func baselineOffset(_ offset: Float) -> NSAttributedString
 }

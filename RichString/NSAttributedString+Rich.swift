@@ -21,6 +21,21 @@ extension NSAttributedString: RichString {
         return addingAttribute(NSParagraphStyleAttributeName, value: paragraphStyle)
     }
 
+    public func paragraphStyle(configuration: (NSMutableParagraphStyle) -> Void)
+            -> NSAttributedString {
+        let style: NSMutableParagraphStyle
+        if let existingStyle = self.paragraphStyle as? NSMutableParagraphStyle {
+            style = existingStyle
+        } else if let existingStyle = self.paragraphStyle,
+                  let mutableCopy = existingStyle.mutableCopy() as? NSMutableParagraphStyle {
+            style = mutableCopy
+        } else {
+            style = NSMutableParagraphStyle()
+        }
+        configuration(style)
+        return addingAttribute(NSParagraphStyleAttributeName, value: style)
+    }
+
     public func ligature(_ ligature: Int) -> NSAttributedString {
         return addingAttribute(NSLigatureAttributeName, value: ligature)
     }
@@ -63,26 +78,15 @@ extension NSAttributedString: RichString {
         return addingAttribute(NSLinkAttributeName, value: string)
     }
 
-    public func paragraphStyle(configuration: (NSMutableParagraphStyle) -> Void)
-            -> NSAttributedString {
-        let style: NSMutableParagraphStyle
-        if let existingStyle = self.paragraphStyle as? NSMutableParagraphStyle {
-            style = existingStyle
-        } else if let existingStyle = self.paragraphStyle,
-                let mutableCopy = existingStyle.mutableCopy() as? NSMutableParagraphStyle {
-            style = mutableCopy
-        } else {
-            style = NSMutableParagraphStyle()
-        }
-        configuration(style)
-        return addingAttribute(NSParagraphStyleAttributeName, value: style)
-    }
-
     public func attachment(configure: (NSTextAttachment) -> Void)
             -> NSAttributedString {
         let attachment = NSTextAttachment()
         configure(attachment)
         return addingAttribute(NSAttachmentAttributeName, value: attachment)
+    }
+
+    public func baselineOffset(_ offset: Float) -> NSAttributedString {
+        return addingAttribute(NSBaselineOffsetAttributeName, value: offset)
     }
 }
 
@@ -220,5 +224,9 @@ extension NSAttributedString {
 
     public var attachment: NSTextAttachment? {
         return attrs[NSAttachmentAttributeName] as? NSTextAttachment
+    }
+
+    public var baselineOffset: Float? {
+        return attrs[NSBaselineOffsetAttributeName] as? Float
     }
 }

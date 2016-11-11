@@ -36,6 +36,29 @@ class RichSpec: QuickConfiguration {
                 expect(result.paragraphStyle) == style
             }
 
+            it("can configure new paragraph style") {
+                let result = richString.paragraphStyle {
+                    $0.firstLineHeadIndent = 10
+                }
+                expect(result.paragraphStyle).toNot(beNil())
+                if let style = result.paragraphStyle {
+                    expect(style.firstLineHeadIndent) ≈ 10
+                }
+            }
+
+            it("can add to configuration of existing paragraph style") {
+                let result = richString.paragraphStyle {
+                    $0.firstLineHeadIndent = 10
+                }.paragraphStyle {
+                    $0.lineHeightMultiple = 1.4
+                }
+                expect(result.paragraphStyle).toNot(beNil())
+                if let style = result.paragraphStyle {
+                    expect(style.firstLineHeadIndent) ≈ 10
+                    expect(style.lineHeightMultiple) ≈ 1.4
+                }
+            }
+
             it("can add a ligature") {
                 let result = richString.ligature(2)
                 expect(result.ligature) == 2
@@ -88,29 +111,6 @@ class RichSpec: QuickConfiguration {
                 expect(result.link) == NSURL(string: urlString)!
             }
 
-            it("can configure new paragraph style") {
-                let result = richString.paragraphStyle {
-                    $0.firstLineHeadIndent = 10
-                }
-                expect(result.paragraphStyle).toNot(beNil())
-                if let style = result.paragraphStyle {
-                    expect(style.firstLineHeadIndent) ≈ 10
-                }
-            }
-
-            it("can add to configuration of existing paragraph style") {
-                let result = richString.paragraphStyle {
-                    $0.firstLineHeadIndent = 10
-                }.paragraphStyle {
-                    $0.lineHeightMultiple = 1.4
-                }
-                expect(result.paragraphStyle).toNot(beNil())
-                if let style = result.paragraphStyle {
-                    expect(style.firstLineHeadIndent) ≈ 10
-                    expect(style.lineHeightMultiple) ≈ 1.4
-                }
-            }
-
             it("can configure new text attachment") {
                 let rect = CGRect(x: 1, y: 2, width: 3, height: 4)
                 let result = richString.attachment {
@@ -120,6 +120,11 @@ class RichSpec: QuickConfiguration {
                 if let attachment = result.attachment {
                     expect(attachment.bounds) == rect
                 }
+            }
+
+            it("can set baseline offset") {
+                let result = richString.baselineOffset(3.14)
+                expect(result.baselineOffset) ≈ 3.14
             }
         }
     }
