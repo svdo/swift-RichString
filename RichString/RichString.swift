@@ -26,6 +26,7 @@ public protocol RichString {
     func kern(_ kern: Float) -> NSAttributedString
 
     func strikeThrough(style: NSUnderlineStyle) -> NSAttributedString
+    func strikeThrough(color: UIColor) -> NSAttributedString
     func underline(style: NSUnderlineStyle) -> NSAttributedString
     func underline(color: UIColor) -> NSAttributedString
 

@@ -49,6 +49,10 @@ extension NSAttributedString: RichString {
                                value: style.rawValue)
     }
 
+    public func strikeThrough(color: UIColor) -> NSAttributedString {
+        return addingAttribute(NSStrikethroughColorAttributeName, value: color)
+    }
+
     public func underline(style: NSUnderlineStyle) -> NSAttributedString {
         return addingAttribute(NSUnderlineStyleAttributeName,
                                value: style.rawValue)
@@ -152,12 +156,12 @@ extension NSAttributedString {
 
 // MARK: - Attribute getters
 extension NSAttributedString {
-    private var attrs: [String:Any] {
+    private var attrs: [String: Any] {
         var range: NSRange = NSRange()
-        let attrs = self.attributes(at: 0, effectiveRange: &range)
+        let attrs          = self.attributes(at: 0, effectiveRange: &range)
         assert(range.location == 0)
         assert(range.length == self.length,
-            "StringAttributes is intended for strings that have attributes on the whole range")
+               "StringAttributes is intended for strings that have attributes on the whole range")
         return attrs
     }
 
@@ -190,6 +194,10 @@ extension NSAttributedString {
             return nil
         }
         return NSUnderlineStyle(rawValue: rawValue)
+    }
+
+    public var strikeThroughColor: UIColor? {
+        return attrs[NSStrikethroughColorAttributeName] as? UIColor
     }
 
     public var underlineStyle: NSUnderlineStyle? {

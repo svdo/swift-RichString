@@ -49,6 +49,10 @@ extension NonAttributedString {
         return rich.strikeThrough(style: style)
     }
 
+    public func strikeThrough(color: UIColor) -> NSAttributedString {
+        return rich.strikeThrough(color: color)
+    }
+
     public func underline(style: NSUnderlineStyle) -> NSAttributedString {
         return rich.underline(style: style)
     }
