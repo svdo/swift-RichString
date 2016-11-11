@@ -53,6 +53,10 @@ extension NonAttributedString {
         return rich.underline(style: style)
     }
 
+    public func underline(color: UIColor) -> NSAttributedString {
+        return rich.underline(color: color)
+    }
+
     public func stroke(width: Float, color: UIColor) -> NSAttributedString {
         return rich.stroke(width: width, color: color)
     }

@@ -54,6 +54,10 @@ extension NSAttributedString: RichString {
                                value: style.rawValue)
     }
 
+    public func underline(color: UIColor) -> NSAttributedString {
+        return addingAttribute(NSUnderlineColorAttributeName, value: color)
+    }
+
     public func stroke(width: Float, color: UIColor) -> NSAttributedString {
         return addingAttribute(NSStrokeColorAttributeName,
                                value: color)
@@ -193,6 +197,10 @@ extension NSAttributedString {
             return nil
         }
         return NSUnderlineStyle(rawValue: rawValue)
+    }
+
+    public var underlineColor: UIColor? {
+        return attrs[NSUnderlineColorAttributeName] as? UIColor
     }
 
     public var strokeWidth: Float? {

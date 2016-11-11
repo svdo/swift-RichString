@@ -79,6 +79,11 @@ class RichSpec: QuickConfiguration {
                 expect(result.underlineStyle) == .patternDashDot
             }
 
+            it("can add underline color") {
+                let result = richString.underline(color: .purple)
+                expect(result.underlineColor) == .purple
+            }
+
             it("can add stroke") {
                 let result = richString.stroke(width: 4, color: .green)
                 expect(result.strokeWidth) == 4
