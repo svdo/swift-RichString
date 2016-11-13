@@ -89,6 +89,10 @@ extension NonAttributedString {
     public func baselineOffset(_ offset: Float) -> NSAttributedString {
         return rich.baselineOffset(offset)
     }
+
+    public func obliqueness(_ obliqueness: Float) -> NSAttributedString {
+        return rich.obliqueness(obliqueness)
+    }
 }
 
 extension String: NonAttributedString {

@@ -136,6 +136,11 @@ class RichSpec: QuickConfiguration {
                 let result = richString.baselineOffset(3.14)
                 expect(result.baselineOffset) ≈ 3.14
             }
+
+            it("can set obliqueness") {
+                let result = richString.obliqueness(1)
+                expect(result.obliqueness) ≈ 1
+            }
         }
     }
 }

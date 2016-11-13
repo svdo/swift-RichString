@@ -46,4 +46,6 @@ public protocol RichString {
             -> NSAttributedString
 
     func baselineOffset(_ offset: Float) -> NSAttributedString
+
+    func obliqueness(_ obliqueness: Float) -> NSAttributedString
 }

@@ -96,6 +96,10 @@ extension NSAttributedString: RichString {
     public func baselineOffset(_ offset: Float) -> NSAttributedString {
         return addingAttribute(NSBaselineOffsetAttributeName, value: offset)
     }
+
+    public func obliqueness(_ obliqueness: Float) -> NSAttributedString {
+        return addingAttribute(NSObliquenessAttributeName, value: obliqueness)
+    }
 }
 
 // MARK: - Font attributes
@@ -244,5 +248,9 @@ extension NSAttributedString {
 
     public var baselineOffset: Float? {
         return attrs[NSBaselineOffsetAttributeName] as? Float
+    }
+
+    public var obliqueness: Float? {
+        return attrs[NSObliquenessAttributeName] as? Float
     }
 }
