@@ -1,30 +1,21 @@
 //  Copyright © 2016 Stefan van den Oord. All rights reserved.
 
 import Foundation
-import UIKit
 
 protocol NonAttributedString: RichString {
     var rich: RichString { get }
 }
 
 extension NonAttributedString {
-    public func bold() -> NSAttributedString {
-        return rich.bold()
-    }
-
-    public func font(_ font: UIFont) -> NSAttributedString {
+    public func font(_ font: Font) -> NSAttributedString {
         return rich.font(font)
     }
 
-    public func fontSize(_ size: CGFloat) -> NSAttributedString {
-        return rich.fontSize(size)
-    }
-
-    public func color(_ color: UIColor) -> NSAttributedString {
+    public func color(_ color: Color) -> NSAttributedString {
         return rich.color(color)
     }
 
-    public func backgroundColor(_ color: UIColor) -> NSAttributedString {
+    public func backgroundColor(_ color: Color) -> NSAttributedString {
         return rich.backgroundColor(color)
     }
 
@@ -49,7 +40,7 @@ extension NonAttributedString {
         return rich.strikeThrough(style: style)
     }
 
-    public func strikeThrough(color: UIColor) -> NSAttributedString {
+    public func strikeThrough(color: Color) -> NSAttributedString {
         return rich.strikeThrough(color: color)
     }
 
@@ -57,11 +48,11 @@ extension NonAttributedString {
         return rich.underline(style: style)
     }
 
-    public func underline(color: UIColor) -> NSAttributedString {
+    public func underline(color: Color) -> NSAttributedString {
         return rich.underline(color: color)
     }
 
-    public func stroke(width: Float, color: UIColor) -> NSAttributedString {
+    public func stroke(width: Float, color: Color) -> NSAttributedString {
         return rich.stroke(width: width, color: color)
     }
 

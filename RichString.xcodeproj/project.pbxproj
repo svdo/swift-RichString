@@ -30,8 +30,12 @@
 		02BA12901DD9023300215490 /* String+Rich.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12641DCD2B0700215490 /* String+Rich.swift */; };
 		02BA12911DD9023300215490 /* NSAttributedString+Rich.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12451DCD214600215490 /* NSAttributedString+Rich.swift */; };
 		02BA12921DD9023300215490 /* NSAttributedStringOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12621DCD2ADE00215490 /* NSAttributedStringOperators.swift */; };
+		02BA12941DD9055F00215490 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12931DD9055F00215490 /* Font.swift */; };
+		02BA12961DD9057500215490 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12951DD9057500215490 /* Font.swift */; };
 		9C77D989AC6B4B56AB6CB08E /* Pods_RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC3533D24E1F50D8F3E2AEA /* Pods_RichString.framework */; };
 		B61C33CC01613136B34D516F /* Pods_RichStringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A527B5B0FCC07F4B200B7273 /* Pods_RichStringTests.framework */; };
+		C00B55B39FD21EFCBC22FE2F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00B5CECF276E5954DF81A18 /* Color.swift */; };
+		C00B5B7E86F41CB49D6DA350 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00B56A23B1D053EEEC92307 /* Color.swift */; };
 		CACF63E80D4C40DA9740D468 /* NSAttributedString+RichSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF6A1D3239CDC4183DF5C8 /* NSAttributedString+RichSpec.swift */; };
 		F8DAC4231DCDEC87002CF542 /* NSAttributedStringOperatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAC4221DCDEC87002CF542 /* NSAttributedStringOperatorsSpec.swift */; };
 		F8DAC4251DCDEC87002CF542 /* RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA123A1DCD206300215490 /* RichString.framework */; };
@@ -110,10 +114,14 @@
 		02BA12821DD900AE00215490 /* RichString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RichString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02BA12841DD900AF00215490 /* RichString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RichString.h; sourceTree = "<group>"; };
 		02BA12851DD900AF00215490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02BA12931DD9055F00215490 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		02BA12951DD9057500215490 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		13EE323B595659691E85D33E /* Pods-RichStringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichStringTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichStringTests/Pods-RichStringTests.release.xcconfig"; sourceTree = "<group>"; };
 		A527B5B0FCC07F4B200B7273 /* Pods_RichStringTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichStringTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96A164D0AE4251E96CD069F /* Pods-RichStringTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichStringTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichStringTests/Pods-RichStringTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AFC3533D24E1F50D8F3E2AEA /* Pods_RichString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C00B56A23B1D053EEEC92307 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		C00B5CECF276E5954DF81A18 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		CACF62F2E3390676CF9524D3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CACF6A1D3239CDC4183DF5C8 /* NSAttributedString+RichSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+RichSpec.swift"; sourceTree = "<group>"; };
 		DC20DE4531A3E2F8DE0398EE /* Pods-RichString.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichString.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichString/Pods-RichString.debug.xcconfig"; sourceTree = "<group>"; };
@@ -237,6 +245,8 @@
 			children = (
 				02BA123E1DCD206300215490 /* Info.plist */,
 				02BA123D1DCD206300215490 /* RichString.h */,
+				C00B5CECF276E5954DF81A18 /* Color.swift */,
+				02BA12931DD9055F00215490 /* Font.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -244,8 +254,10 @@
 		02BA127C1DD9005A00215490 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				02BA12841DD900AF00215490 /* RichString.h */,
 				02BA12851DD900AF00215490 /* Info.plist */,
+				02BA12841DD900AF00215490 /* RichString.h */,
+				C00B56A23B1D053EEEC92307 /* Color.swift */,
+				02BA12951DD9057500215490 /* Font.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -602,8 +614,10 @@
 			files = (
 				02BA12671DCD2E1F00215490 /* RichString.swift in Sources */,
 				02BA12461DCD214600215490 /* NSAttributedString+Rich.swift in Sources */,
+				02BA12941DD9055F00215490 /* Font.swift in Sources */,
 				02BA12631DCD2ADE00215490 /* NSAttributedStringOperators.swift in Sources */,
 				02BA12651DCD2B0700215490 /* String+Rich.swift in Sources */,
+				C00B55B39FD21EFCBC22FE2F /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,8 +645,10 @@
 			files = (
 				02BA12901DD9023300215490 /* String+Rich.swift in Sources */,
 				02BA12921DD9023300215490 /* NSAttributedStringOperators.swift in Sources */,
+				02BA12961DD9057500215490 /* Font.swift in Sources */,
 				02BA12911DD9023300215490 /* NSAttributedString+Rich.swift in Sources */,
 				02BA128F1DD9023300215490 /* RichString.swift in Sources */,
+				C00B5B7E86F41CB49D6DA350 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

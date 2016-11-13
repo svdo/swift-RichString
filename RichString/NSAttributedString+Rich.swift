@@ -1,19 +1,18 @@
 //  Copyright © 2016 Stefan van den Oord. All rights reserved.
 
 import Foundation
-import UIKit
 
 // MARK: - Simple attributes
 extension NSAttributedString: RichString {
-    public func color(_ color: UIColor) -> NSAttributedString {
+    public func color(_ color: Color) -> NSAttributedString {
         return addingAttribute(NSForegroundColorAttributeName, value: color)
     }
 
-    public func backgroundColor(_ color: UIColor) -> NSAttributedString {
+    public func backgroundColor(_ color: Color) -> NSAttributedString {
         return addingAttribute(NSBackgroundColorAttributeName, value: color)
     }
 
-    public func font(_ font: UIFont) -> NSAttributedString {
+    public func font(_ font: Font) -> NSAttributedString {
         return addingAttribute(NSFontAttributeName, value: font)
     }
 
@@ -49,7 +48,7 @@ extension NSAttributedString: RichString {
                                value: style.rawValue)
     }
 
-    public func strikeThrough(color: UIColor) -> NSAttributedString {
+    public func strikeThrough(color: Color) -> NSAttributedString {
         return addingAttribute(NSStrikethroughColorAttributeName, value: color)
     }
 
@@ -58,11 +57,11 @@ extension NSAttributedString: RichString {
                                value: style.rawValue)
     }
 
-    public func underline(color: UIColor) -> NSAttributedString {
+    public func underline(color: Color) -> NSAttributedString {
         return addingAttribute(NSUnderlineColorAttributeName, value: color)
     }
 
-    public func stroke(width: Float, color: UIColor) -> NSAttributedString {
+    public func stroke(width: Float, color: Color) -> NSAttributedString {
         return addingAttribute(NSStrokeColorAttributeName,
                                value: color)
             .addingAttribute(NSStrokeWidthAttributeName,
@@ -106,46 +105,9 @@ extension NSAttributedString: RichString {
     }
 }
 
-// MARK: - Font attributes
-extension NSAttributedString {
-    public func bold() -> NSAttributedString {
-        let attrs = self.attributes(at: 0, effectiveRange: nil)
-        let fontAttrs = attrs.filter {
-            $0.0 == NSFontAttributeName
-        }
-
-        precondition(fontAttrs.count > 0, "making bold requires setting font first")
-
-        let font = fontAttrs[0].1 as? UIFont
-        let boldDescriptor = font?.fontDescriptor.withSymbolicTraits(.traitBold)
-
-        precondition(boldDescriptor != nil, "failed to create bold font descriptor")
-
-        let boldFont = UIFont(descriptor: boldDescriptor!, size: 0)
-        return self.font(boldFont)
-    }
-
-    public func fontSize(_ size: CGFloat) -> NSAttributedString {
-        let attrs = self.attributes(at: 0, effectiveRange: nil)
-        let fontAttrs = attrs.filter {
-            $0.0 == NSFontAttributeName
-        }
-
-        let font: UIFont
-        if fontAttrs.count > 0, let f = fontAttrs[0].1 as? UIFont {
-            font = f
-        } else {
-            font = UIFont.systemFont(ofSize: 0)
-        }
-        let sizedDescriptor = font.fontDescriptor.withSize(size)
-        let sizedFont = UIFont(descriptor: sizedDescriptor, size: 0)
-        return self.font(sizedFont)
-    }
-}
-
 // MARK: - Private helpers
 extension NSAttributedString {
-    fileprivate func addingAttribute(_ name: String, value: Any)
+    func addingAttribute(_ name: String, value: Any)
             -> NSAttributedString {
         let m = makeMutable()
         let r = entireString()
@@ -153,11 +115,11 @@ extension NSAttributedString {
         return NSAttributedString(attributedString: m)
     }
 
-    fileprivate func makeMutable() -> NSMutableAttributedString {
+    func makeMutable() -> NSMutableAttributedString {
         return NSMutableAttributedString(attributedString: self)
     }
 
-    fileprivate func entireString() -> NSRange {
+    func entireString() -> NSRange {
         return NSRange(location: 0, length: self.string.characters.count)
     }
 }
@@ -173,16 +135,16 @@ extension NSAttributedString {
         return attrs
     }
 
-    public var color: UIColor? {
-        return attrs[NSForegroundColorAttributeName] as? UIColor
+    public var color: Color? {
+        return attrs[NSForegroundColorAttributeName] as? Color
     }
 
-    public var backgroundColor: UIColor? {
-        return attrs[NSBackgroundColorAttributeName] as? UIColor
+    public var backgroundColor: Color? {
+        return attrs[NSBackgroundColorAttributeName] as? Color
     }
 
     public var fontSize: CGFloat? {
-        return (attrs[NSFontAttributeName] as? UIFont)?.pointSize
+        return (attrs[NSFontAttributeName] as? Font)?.pointSize
     }
 
     public var paragraphStyle: NSParagraphStyle? {
@@ -204,8 +166,8 @@ extension NSAttributedString {
         return NSUnderlineStyle(rawValue: rawValue)
     }
 
-    public var strikeThroughColor: UIColor? {
-        return attrs[NSStrikethroughColorAttributeName] as? UIColor
+    public var strikeThroughColor: Color? {
+        return attrs[NSStrikethroughColorAttributeName] as? Color
     }
 
     public var underlineStyle: NSUnderlineStyle? {
@@ -215,16 +177,16 @@ extension NSAttributedString {
         return NSUnderlineStyle(rawValue: rawValue)
     }
 
-    public var underlineColor: UIColor? {
-        return attrs[NSUnderlineColorAttributeName] as? UIColor
+    public var underlineColor: Color? {
+        return attrs[NSUnderlineColorAttributeName] as? Color
     }
 
     public var strokeWidth: Float? {
         return attrs[NSStrokeWidthAttributeName] as? Float
     }
 
-    public var strokeColor: UIColor? {
-        return attrs[NSStrokeColorAttributeName] as? UIColor
+    public var strokeColor: Color? {
+        return attrs[NSStrokeColorAttributeName] as? Color
     }
 
     public var shadow: NSShadow? {
