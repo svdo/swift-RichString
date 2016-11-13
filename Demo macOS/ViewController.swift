@@ -9,7 +9,8 @@ class ViewController: NSViewController {
 
     override func viewWillAppear() {
         super.viewWillAppear()
-        if let text1 = "This is some text".fontSize(17)?.color(.blue).strikeThrough(style: .styleDouble) {
+        if let text1 = "This is some text"
+            .fontSize(17)?.color(.blue).strikeThrough(style: .styleDouble) {
             label1.attributedStringValue = text1
         }
     }
