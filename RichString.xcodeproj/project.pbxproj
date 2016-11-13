@@ -23,6 +23,9 @@
 		02BA12711DD8FDE400215490 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12701DD8FDE400215490 /* ViewController.swift */; };
 		02BA12731DD8FDE400215490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02BA12721DD8FDE400215490 /* Assets.xcassets */; };
 		02BA12761DD8FDE400215490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BA12741DD8FDE400215490 /* Main.storyboard */; };
+		02BA12861DD900AF00215490 /* RichString macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 02BA12841DD900AF00215490 /* RichString macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02BA12891DD900AF00215490 /* RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA12821DD900AE00215490 /* RichString.framework */; };
+		02BA128A1DD900AF00215490 /* RichString.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA12821DD900AE00215490 /* RichString.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9C77D989AC6B4B56AB6CB08E /* Pods_RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC3533D24E1F50D8F3E2AEA /* Pods_RichString.framework */; };
 		B61C33CC01613136B34D516F /* Pods_RichStringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A527B5B0FCC07F4B200B7273 /* Pods_RichStringTests.framework */; };
 		CACF63E80D4C40DA9740D468 /* NSAttributedString+RichSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF6A1D3239CDC4183DF5C8 /* NSAttributedString+RichSpec.swift */; };
@@ -37,6 +40,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 02BA12391DCD206300215490;
 			remoteInfo = RichString;
+		};
+		02BA12871DD900AF00215490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02BA12311DCD206300215490 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02BA12811DD900AE00215490;
+			remoteInfo = "RichString macOS";
 		};
 		F8DAC4261DCDEC87002CF542 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -55,6 +65,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				02BA125E1DCD221E00215490 /* RichString.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BA128E1DD900AF00215490 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				02BA128A1DD900AF00215490 /* RichString.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +103,9 @@
 		02BA12721DD8FDE400215490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02BA12751DD8FDE400215490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02BA12771DD8FDE400215490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02BA12821DD900AE00215490 /* RichString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RichString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BA12841DD900AF00215490 /* RichString macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RichString macOS.h"; sourceTree = "<group>"; };
+		02BA12851DD900AF00215490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13EE323B595659691E85D33E /* Pods-RichStringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichStringTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichStringTests/Pods-RichStringTests.release.xcconfig"; sourceTree = "<group>"; };
 		A527B5B0FCC07F4B200B7273 /* Pods_RichStringTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichStringTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96A164D0AE4251E96CD069F /* Pods-RichStringTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichStringTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichStringTests/Pods-RichStringTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +137,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		02BA12691DD8FDE400215490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BA12891DD900AF00215490 /* RichString.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BA127E1DD900AE00215490 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -152,6 +184,7 @@
 				02BA124B1DCD21E400215490 /* Demo iOS.app */,
 				F8DAC4201DCDEC87002CF542 /* RichStringTests.xctest */,
 				02BA126C1DD8FDE400215490 /* Demo macOS.app */,
+				02BA12821DD900AE00215490 /* RichString.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,8 +192,8 @@
 		02BA123C1DCD206300215490 /* RichString */ = {
 			isa = PBXGroup;
 			children = (
-				02BA123D1DCD206300215490 /* RichString.h */,
-				02BA123E1DCD206300215490 /* Info.plist */,
+				02BA127B1DD8FEFA00215490 /* iOS */,
+				02BA127C1DD9005A00215490 /* macOS */,
 				02BA12661DCD2E1F00215490 /* RichString.swift */,
 				02BA12641DCD2B0700215490 /* String+Rich.swift */,
 				02BA12451DCD214600215490 /* NSAttributedString+Rich.swift */,
@@ -193,6 +226,24 @@
 				02BA12771DD8FDE400215490 /* Info.plist */,
 			);
 			path = "Demo macOS";
+			sourceTree = "<group>";
+		};
+		02BA127B1DD8FEFA00215490 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				02BA123E1DCD206300215490 /* Info.plist */,
+				02BA123D1DCD206300215490 /* RichString.h */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		02BA127C1DD9005A00215490 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				02BA12841DD900AF00215490 /* RichString macOS.h */,
+				02BA12851DD900AF00215490 /* Info.plist */,
+			);
+			path = macOS;
 			sourceTree = "<group>";
 		};
 		23287D3B97EC2CE397674391 /* Pods */ = {
@@ -236,12 +287,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		02BA127F1DD900AE00215490 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BA12861DD900AF00215490 /* RichString macOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		02BA12391DCD206300215490 /* RichString */ = {
+		02BA12391DCD206300215490 /* RichString iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02BA12421DCD206300215490 /* Build configuration list for PBXNativeTarget "RichString" */;
+			buildConfigurationList = 02BA12421DCD206300215490 /* Build configuration list for PBXNativeTarget "RichString iOS" */;
 			buildPhases = (
 				2F94B0123FDC4886FB38F15D /* [CP] Check Pods Manifest.lock */,
 				02BA12351DCD206300215490 /* Sources */,
@@ -255,7 +314,7 @@
 			);
 			dependencies = (
 			);
-			name = RichString;
+			name = "RichString iOS";
 			productName = RichString;
 			productReference = 02BA123A1DCD206300215490 /* RichString.framework */;
 			productType = "com.apple.product-type.framework";
@@ -286,15 +345,35 @@
 				02BA12681DD8FDE400215490 /* Sources */,
 				02BA12691DD8FDE400215490 /* Frameworks */,
 				02BA126A1DD8FDE400215490 /* Resources */,
+				02BA128E1DD900AF00215490 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				02BA12881DD900AF00215490 /* PBXTargetDependency */,
 			);
 			name = "Demo macOS";
 			productName = "Demo macOS";
 			productReference = 02BA126C1DD8FDE400215490 /* Demo macOS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		02BA12811DD900AE00215490 /* RichString macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02BA128B1DD900AF00215490 /* Build configuration list for PBXNativeTarget "RichString macOS" */;
+			buildPhases = (
+				02BA127D1DD900AE00215490 /* Sources */,
+				02BA127E1DD900AE00215490 /* Frameworks */,
+				02BA127F1DD900AE00215490 /* Headers */,
+				02BA12801DD900AE00215490 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RichString macOS";
+			productName = "RichString macOS";
+			productReference = 02BA12821DD900AE00215490 /* RichString.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		F8DAC41F1DCDEC87002CF542 /* RichStringTests */ = {
 			isa = PBXNativeTarget;
@@ -343,6 +422,11 @@
 						DevelopmentTeam = 38HP5T8ATC;
 						ProvisioningStyle = Automatic;
 					};
+					02BA12811DD900AE00215490 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 38HP5T8ATC;
+						ProvisioningStyle = Automatic;
+					};
 					F8DAC41F1DCDEC87002CF542 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 7EQ9KX3BR9;
@@ -363,8 +447,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				02BA12391DCD206300215490 /* RichString */,
+				02BA12391DCD206300215490 /* RichString iOS */,
 				F8DAC41F1DCDEC87002CF542 /* RichStringTests */,
+				02BA12811DD900AE00215490 /* RichString macOS */,
 				02BA124A1DCD21E400215490 /* Demo iOS */,
 				02BA126B1DD8FDE400215490 /* Demo macOS */,
 			);
@@ -395,6 +480,13 @@
 			files = (
 				02BA12731DD8FDE400215490 /* Assets.xcassets in Resources */,
 				02BA12761DD8FDE400215490 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BA12801DD900AE00215490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +621,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		02BA127D1DD900AE00215490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8DAC41C1DCDEC87002CF542 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -543,12 +642,17 @@
 /* Begin PBXTargetDependency section */
 		02BA12601DCD221E00215490 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 02BA12391DCD206300215490 /* RichString */;
+			target = 02BA12391DCD206300215490 /* RichString iOS */;
 			targetProxy = 02BA125F1DCD221E00215490 /* PBXContainerItemProxy */;
+		};
+		02BA12881DD900AF00215490 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02BA12811DD900AE00215490 /* RichString macOS */;
+			targetProxy = 02BA12871DD900AF00215490 /* PBXContainerItemProxy */;
 		};
 		F8DAC4271DCDEC87002CF542 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 02BA12391DCD206300215490 /* RichString */;
+			target = 02BA12391DCD206300215490 /* RichString iOS */;
 			targetProxy = F8DAC4261DCDEC87002CF542 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -697,11 +801,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RichString/Info.plist;
+				INFOPLIST_FILE = RichString/iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vandenoord.RichString;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vandenoord.RichString_iOS;
+				PRODUCT_NAME = RichString;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -719,11 +823,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RichString/Info.plist;
+				INFOPLIST_FILE = RichString/iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vandenoord.RichString;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vandenoord.RichString_iOS;
+				PRODUCT_NAME = RichString;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -791,6 +895,52 @@
 			};
 			name = Release;
 		};
+		02BA128C1DD900AF00215490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 38HP5T8ATC;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = RichString/macOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.RichString-macOS";
+				PRODUCT_NAME = RichString;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		02BA128D1DD900AF00215490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 38HP5T8ATC;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = RichString/macOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.RichString-macOS";
+				PRODUCT_NAME = RichString;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		F8DAC4291DCDEC87002CF542 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A96A164D0AE4251E96CD069F /* Pods-RichStringTests.debug.xcconfig */;
@@ -831,7 +981,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02BA12421DCD206300215490 /* Build configuration list for PBXNativeTarget "RichString" */ = {
+		02BA12421DCD206300215490 /* Build configuration list for PBXNativeTarget "RichString iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02BA12431DCD206300215490 /* Debug */,
@@ -854,6 +1004,15 @@
 			buildConfigurations = (
 				02BA12791DD8FDE400215490 /* Debug */,
 				02BA127A1DD8FDE400215490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02BA128B1DD900AF00215490 /* Build configuration list for PBXNativeTarget "RichString macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02BA128C1DD900AF00215490 /* Debug */,
+				02BA128D1DD900AF00215490 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

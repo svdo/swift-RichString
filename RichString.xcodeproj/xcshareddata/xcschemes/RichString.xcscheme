@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "02BA12391DCD206300215490"
-               BuildableName = "RichString.framework"
-               BlueprintName = "RichString"
+               BuildableName = "RichString iOS.framework"
+               BlueprintName = "RichString iOS"
                ReferencedContainer = "container:RichString.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02BA12391DCD206300215490"
-            BuildableName = "RichString.framework"
-            BlueprintName = "RichString"
+            BuildableName = "RichString iOS.framework"
+            BlueprintName = "RichString iOS"
             ReferencedContainer = "container:RichString.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -79,8 +79,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02BA12391DCD206300215490"
-            BuildableName = "RichString.framework"
-            BlueprintName = "RichString"
+            BuildableName = "RichString iOS.framework"
+            BlueprintName = "RichString iOS"
             ReferencedContainer = "container:RichString.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -97,8 +97,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02BA12391DCD206300215490"
-            BuildableName = "RichString.framework"
-            BlueprintName = "RichString"
+            BuildableName = "RichString iOS.framework"
+            BlueprintName = "RichString iOS"
             ReferencedContainer = "container:RichString.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
