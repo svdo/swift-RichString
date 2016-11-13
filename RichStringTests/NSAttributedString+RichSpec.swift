@@ -1,7 +1,6 @@
 // Copyright (c) 2016 Stefan van den Oord. All rights reserved.
 
 import Foundation
-import UIKit
 import Quick
 import Nimble
 import RichString

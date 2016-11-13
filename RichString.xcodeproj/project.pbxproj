@@ -35,7 +35,11 @@
 		02BA12A01DD90B5C00215490 /* RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA12821DD900AE00215490 /* RichString.framework */; };
 		02BA12A61DD90C2B00215490 /* NSAttributedStringOperatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAC4221DCDEC87002CF542 /* NSAttributedStringOperatorsSpec.swift */; };
 		02BA12A71DD90C2B00215490 /* NSAttributedString+RichSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF6A1D3239CDC4183DF5C8 /* NSAttributedString+RichSpec.swift */; };
+		3E20F57F901A1BC803DF096F /* Pods_RichString_RichString_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0173AEFD56E9D0E20541AB8 /* Pods_RichString_RichString_macOS.framework */; };
+		645844E8496D4F0917158CFD /* Pods_RichStringTests_RichStringTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D0D88E23F1A811DE842C02 /* Pods_RichStringTests_RichStringTests_iOS.framework */; };
 		9C77D989AC6B4B56AB6CB08E /* Pods_RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC3533D24E1F50D8F3E2AEA /* Pods_RichString.framework */; };
+		A8DBB0F40D7616322DBCB785 /* Pods_RichString_RichString_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A4D6122C20B5C3A6378593 /* Pods_RichString_RichString_iOS.framework */; };
+		B1F0437C6CAEB167F1BE87E4 /* Pods_RichStringTests_RichStringTests_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A449EAAB3667051EF849D1C /* Pods_RichStringTests_RichStringTests_macOS.framework */; };
 		B61C33CC01613136B34D516F /* Pods_RichStringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A527B5B0FCC07F4B200B7273 /* Pods_RichStringTests.framework */; };
 		C00B55B39FD21EFCBC22FE2F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00B5CECF276E5954DF81A18 /* Color.swift */; };
 		C00B5B7E86F41CB49D6DA350 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00B56A23B1D053EEEC92307 /* Color.swift */; };
@@ -127,10 +131,19 @@
 		02BA12931DD9055F00215490 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		02BA12951DD9057500215490 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		02BA129B1DD90B5C00215490 /* RichStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RichStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D83E528988E2571CEA1C38D /* Pods-RichString-RichString macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichString-RichString macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichString-RichString macOS/Pods-RichString-RichString macOS.release.xcconfig"; sourceTree = "<group>"; };
 		13EE323B595659691E85D33E /* Pods-RichStringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichStringTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichStringTests/Pods-RichStringTests.release.xcconfig"; sourceTree = "<group>"; };
+		3A449EAAB3667051EF849D1C /* Pods_RichStringTests_RichStringTests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichStringTests_RichStringTests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D9AD590CFEA30EF55F8534D /* Pods-RichStringTests-RichStringTests macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichStringTests-RichStringTests macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichStringTests-RichStringTests macOS/Pods-RichStringTests-RichStringTests macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		44357A50A1179BCBD69463F8 /* Pods-RichStringTests-RichStringTests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichStringTests-RichStringTests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichStringTests-RichStringTests iOS/Pods-RichStringTests-RichStringTests iOS.release.xcconfig"; sourceTree = "<group>"; };
+		89D0D88E23F1A811DE842C02 /* Pods_RichStringTests_RichStringTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichStringTests_RichStringTests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		942679E7B400C7FF0D6D9C99 /* Pods-RichStringTests-RichStringTests macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichStringTests-RichStringTests macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichStringTests-RichStringTests macOS/Pods-RichStringTests-RichStringTests macOS.release.xcconfig"; sourceTree = "<group>"; };
+		9959468F475B606482B87F04 /* Pods-RichString-RichString macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichString-RichString macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichString-RichString macOS/Pods-RichString-RichString macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A527B5B0FCC07F4B200B7273 /* Pods_RichStringTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichStringTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5A80A1A8C9AC7274418C49D /* Pods-RichString-RichString iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichString-RichString iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichString-RichString iOS/Pods-RichString-RichString iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A96A164D0AE4251E96CD069F /* Pods-RichStringTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichStringTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichStringTests/Pods-RichStringTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AFC3533D24E1F50D8F3E2AEA /* Pods_RichString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B64508B170E1B3B348D8576B /* Pods-RichStringTests-RichStringTests iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichStringTests-RichStringTests iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichStringTests-RichStringTests iOS/Pods-RichStringTests-RichStringTests iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C00B56A23B1D053EEEC92307 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		C00B5802C81C5F60B4591E22 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		C00B5CECF276E5954DF81A18 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -138,6 +151,9 @@
 		CACF62F2E3390676CF9524D3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CACF6A1D3239CDC4183DF5C8 /* NSAttributedString+RichSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+RichSpec.swift"; sourceTree = "<group>"; };
 		DC20DE4531A3E2F8DE0398EE /* Pods-RichString.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichString.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichString/Pods-RichString.debug.xcconfig"; sourceTree = "<group>"; };
+		E0173AEFD56E9D0E20541AB8 /* Pods_RichString_RichString_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichString_RichString_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2A4D6122C20B5C3A6378593 /* Pods_RichString_RichString_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichString_RichString_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1AB1A5AB913BEEC50D0563A /* Pods-RichString-RichString iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichString-RichString iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichString-RichString iOS/Pods-RichString-RichString iOS.release.xcconfig"; sourceTree = "<group>"; };
 		F8DAC4201DCDEC87002CF542 /* RichStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RichStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8DAC4221DCDEC87002CF542 /* NSAttributedStringOperatorsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringOperatorsSpec.swift; sourceTree = "<group>"; };
 		FF1D8C39E72F02340C18BAB2 /* Pods-RichString.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichString.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichString/Pods-RichString.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C77D989AC6B4B56AB6CB08E /* Pods_RichString.framework in Frameworks */,
+				A8DBB0F40D7616322DBCB785 /* Pods_RichString_RichString_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E20F57F901A1BC803DF096F /* Pods_RichString_RichString_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02BA12A01DD90B5C00215490 /* RichString.framework in Frameworks */,
+				B1F0437C6CAEB167F1BE87E4 /* Pods_RichStringTests_RichStringTests_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +208,7 @@
 			files = (
 				F8DAC4251DCDEC87002CF542 /* RichString.framework in Frameworks */,
 				B61C33CC01613136B34D516F /* Pods_RichStringTests.framework in Frameworks */,
+				645844E8496D4F0917158CFD /* Pods_RichStringTests_RichStringTests_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +310,14 @@
 				FF1D8C39E72F02340C18BAB2 /* Pods-RichString.release.xcconfig */,
 				A96A164D0AE4251E96CD069F /* Pods-RichStringTests.debug.xcconfig */,
 				13EE323B595659691E85D33E /* Pods-RichStringTests.release.xcconfig */,
+				A5A80A1A8C9AC7274418C49D /* Pods-RichString-RichString iOS.debug.xcconfig */,
+				F1AB1A5AB913BEEC50D0563A /* Pods-RichString-RichString iOS.release.xcconfig */,
+				9959468F475B606482B87F04 /* Pods-RichString-RichString macOS.debug.xcconfig */,
+				0D83E528988E2571CEA1C38D /* Pods-RichString-RichString macOS.release.xcconfig */,
+				B64508B170E1B3B348D8576B /* Pods-RichStringTests-RichStringTests iOS.debug.xcconfig */,
+				44357A50A1179BCBD69463F8 /* Pods-RichStringTests-RichStringTests iOS.release.xcconfig */,
+				3D9AD590CFEA30EF55F8534D /* Pods-RichStringTests-RichStringTests macOS.debug.xcconfig */,
+				942679E7B400C7FF0D6D9C99 /* Pods-RichStringTests-RichStringTests macOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -299,6 +327,10 @@
 			children = (
 				AFC3533D24E1F50D8F3E2AEA /* Pods_RichString.framework */,
 				A527B5B0FCC07F4B200B7273 /* Pods_RichStringTests.framework */,
+				E2A4D6122C20B5C3A6378593 /* Pods_RichString_RichString_iOS.framework */,
+				E0173AEFD56E9D0E20541AB8 /* Pods_RichString_RichString_macOS.framework */,
+				89D0D88E23F1A811DE842C02 /* Pods_RichStringTests_RichStringTests_iOS.framework */,
+				3A449EAAB3667051EF849D1C /* Pods_RichStringTests_RichStringTests_macOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -415,10 +447,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02BA128B1DD900AF00215490 /* Build configuration list for PBXNativeTarget "RichString macOS" */;
 			buildPhases = (
+				252107BC04A6503FCEF5BF68 /* [CP] Check Pods Manifest.lock */,
 				02BA127D1DD900AE00215490 /* Sources */,
 				02BA127E1DD900AE00215490 /* Frameworks */,
 				02BA127F1DD900AE00215490 /* Headers */,
 				02BA12801DD900AE00215490 /* Resources */,
+				E5E4D71312B0C803F75CD2E3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -433,9 +467,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02BA12A31DD90B5C00215490 /* Build configuration list for PBXNativeTarget "RichStringTests macOS" */;
 			buildPhases = (
+				008E58AA518A9531D1243F02 /* [CP] Check Pods Manifest.lock */,
 				02BA12971DD90B5C00215490 /* Sources */,
 				02BA12981DD90B5C00215490 /* Frameworks */,
 				02BA12991DD90B5C00215490 /* Resources */,
+				16E514317D1E6C6C1455B789 /* [CP] Embed Pods Frameworks */,
+				22EB1051EE189E8266C9BAB7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -585,6 +622,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		008E58AA518A9531D1243F02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		16E0048CAB5F71EAD77E9A31 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -597,7 +649,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichStringTests/Pods-RichStringTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichStringTests-RichStringTests iOS/Pods-RichStringTests-RichStringTests iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16E514317D1E6C6C1455B789 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichStringTests-RichStringTests macOS/Pods-RichStringTests-RichStringTests macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1972C367C1700EF24C316687 /* [CP] Copy Pods Resources */ = {
@@ -612,7 +679,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichString/Pods-RichString-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichString-RichString iOS/Pods-RichString-RichString iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22EB1051EE189E8266C9BAB7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichStringTests-RichStringTests macOS/Pods-RichStringTests-RichStringTests macOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		252107BC04A6503FCEF5BF68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2F94B0123FDC4886FB38F15D /* [CP] Check Pods Manifest.lock */ = {
@@ -657,7 +754,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichStringTests/Pods-RichStringTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichStringTests-RichStringTests iOS/Pods-RichStringTests-RichStringTests iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5E4D71312B0C803F75CD2E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichString-RichString macOS/Pods-RichString-RichString macOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F87673381DCDEBB100191D62 /* SwiftLint */ = {
@@ -899,7 +1011,7 @@
 		};
 		02BA12431DCD206300215490 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC20DE4531A3E2F8DE0398EE /* Pods-RichString.debug.xcconfig */;
+			baseConfigurationReference = A5A80A1A8C9AC7274418C49D /* Pods-RichString-RichString iOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -921,7 +1033,7 @@
 		};
 		02BA12441DCD206300215490 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF1D8C39E72F02340C18BAB2 /* Pods-RichString.release.xcconfig */;
+			baseConfigurationReference = F1AB1A5AB913BEEC50D0563A /* Pods-RichString-RichString iOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1006,6 +1118,7 @@
 		};
 		02BA128C1DD900AF00215490 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9959468F475B606482B87F04 /* Pods-RichString-RichString macOS.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1029,6 +1142,7 @@
 		};
 		02BA128D1DD900AF00215490 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D83E528988E2571CEA1C38D /* Pods-RichString-RichString macOS.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1052,6 +1166,7 @@
 		};
 		02BA12A41DD90B5C00215490 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D9AD590CFEA30EF55F8534D /* Pods-RichStringTests-RichStringTests macOS.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1068,6 +1183,7 @@
 		};
 		02BA12A51DD90B5C00215490 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 942679E7B400C7FF0D6D9C99 /* Pods-RichStringTests-RichStringTests macOS.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1084,7 +1200,7 @@
 		};
 		F8DAC4291DCDEC87002CF542 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A96A164D0AE4251E96CD069F /* Pods-RichStringTests.debug.xcconfig */;
+			baseConfigurationReference = B64508B170E1B3B348D8576B /* Pods-RichStringTests-RichStringTests iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7EQ9KX3BR9;
@@ -1098,7 +1214,7 @@
 		};
 		F8DAC42A1DCDEC87002CF542 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13EE323B595659691E85D33E /* Pods-RichStringTests.release.xcconfig */;
+			baseConfigurationReference = 44357A50A1179BCBD69463F8 /* Pods-RichStringTests-RichStringTests iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7EQ9KX3BR9;
