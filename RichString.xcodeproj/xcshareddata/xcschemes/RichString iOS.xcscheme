@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F8DAC41F1DCDEC87002CF542"
-               BuildableName = "RichStringTests.xctest"
-               BlueprintName = "RichStringTests"
+               BuildableName = "RichStringTests iOS.xctest"
+               BlueprintName = "RichStringTests iOS"
                ReferencedContainer = "container:RichString.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,8 +47,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F8DAC41F1DCDEC87002CF542"
-               BuildableName = "RichStringTests.xctest"
-               BlueprintName = "RichStringTests"
+               BuildableName = "RichStringTests iOS.xctest"
+               BlueprintName = "RichStringTests iOS"
                ReferencedContainer = "container:RichString.xcodeproj">
             </BuildableReference>
          </TestableReference>

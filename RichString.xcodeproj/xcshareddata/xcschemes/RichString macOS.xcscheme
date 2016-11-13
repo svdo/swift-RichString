@@ -20,6 +20,20 @@
                ReferencedContainer = "container:RichString.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "02BA129A1DD90B5C00215490"
+               BuildableName = "RichStringTests.xctest"
+               BlueprintName = "RichStringTests macOS"
+               ReferencedContainer = "container:RichString.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,7 +42,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "02BA129A1DD90B5C00215490"
+               BuildableName = "RichStringTests.xctest"
+               BlueprintName = "RichStringTests macOS"
+               ReferencedContainer = "container:RichString.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "02BA12811DD900AE00215490"
+            BuildableName = "RichString.framework"
+            BlueprintName = "RichString macOS"
+            ReferencedContainer = "container:RichString.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
