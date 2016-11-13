@@ -62,7 +62,7 @@
 		02BA123D1DCD206300215490 /* RichString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RichString.h; sourceTree = "<group>"; };
 		02BA123E1DCD206300215490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02BA12451DCD214600215490 /* NSAttributedString+Rich.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Rich.swift"; sourceTree = "<group>"; };
-		02BA124B1DCD21E400215490 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BA124B1DCD21E400215490 /* Demo iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02BA124D1DCD21E400215490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02BA124F1DCD21E400215490 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		02BA12521DCD21E400215490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				02BA123C1DCD206300215490 /* RichString */,
-				02BA124C1DCD21E400215490 /* Demo */,
+				02BA124C1DCD21E400215490 /* Demo iOS */,
 				F8DAC4211DCDEC87002CF542 /* RichStringTests */,
 				02BA123B1DCD206300215490 /* Products */,
 				23287D3B97EC2CE397674391 /* Pods */,
@@ -131,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				02BA123A1DCD206300215490 /* RichString.framework */,
-				02BA124B1DCD21E400215490 /* Demo.app */,
+				02BA124B1DCD21E400215490 /* Demo iOS.app */,
 				F8DAC4201DCDEC87002CF542 /* RichStringTests.xctest */,
 			);
 			name = Products;
@@ -150,7 +150,7 @@
 			path = RichString;
 			sourceTree = "<group>";
 		};
-		02BA124C1DCD21E400215490 /* Demo */ = {
+		02BA124C1DCD21E400215490 /* Demo iOS */ = {
 			isa = PBXGroup;
 			children = (
 				02BA124D1DCD21E400215490 /* AppDelegate.swift */,
@@ -160,7 +160,8 @@
 				02BA12561DCD21E400215490 /* LaunchScreen.storyboard */,
 				02BA12591DCD21E400215490 /* Info.plist */,
 			);
-			path = Demo;
+			name = "Demo iOS";
+			path = Demo_iOS;
 			sourceTree = "<group>";
 		};
 		23287D3B97EC2CE397674391 /* Pods */ = {
@@ -228,9 +229,9 @@
 			productReference = 02BA123A1DCD206300215490 /* RichString.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		02BA124A1DCD21E400215490 /* Demo */ = {
+		02BA124A1DCD21E400215490 /* Demo iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02BA125A1DCD21E400215490 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildConfigurationList = 02BA125A1DCD21E400215490 /* Build configuration list for PBXNativeTarget "Demo iOS" */;
 			buildPhases = (
 				02BA12471DCD21E400215490 /* Sources */,
 				02BA12481DCD21E400215490 /* Frameworks */,
@@ -242,9 +243,9 @@
 			dependencies = (
 				02BA12601DCD221E00215490 /* PBXTargetDependency */,
 			);
-			name = Demo;
+			name = "Demo iOS";
 			productName = Demo;
-			productReference = 02BA124B1DCD21E400215490 /* Demo.app */;
+			productReference = 02BA124B1DCD21E400215490 /* Demo iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F8DAC41F1DCDEC87002CF542 /* RichStringTests */ = {
@@ -310,7 +311,7 @@
 			projectRoot = "";
 			targets = (
 				02BA12391DCD206300215490 /* RichString */,
-				02BA124A1DCD21E400215490 /* Demo */,
+				02BA124A1DCD21E400215490 /* Demo iOS */,
 				F8DAC41F1DCDEC87002CF542 /* RichStringTests */,
 			);
 		};
@@ -654,9 +655,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 38HP5T8ATC;
-				INFOPLIST_FILE = Demo/Info.plist;
+				INFOPLIST_FILE = Demo_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vandenoord.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vandenoord.Demo_iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -668,9 +669,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 38HP5T8ATC;
-				INFOPLIST_FILE = Demo/Info.plist;
+				INFOPLIST_FILE = Demo_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vandenoord.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vandenoord.Demo_iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -725,7 +726,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02BA125A1DCD21E400215490 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+		02BA125A1DCD21E400215490 /* Build configuration list for PBXNativeTarget "Demo iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02BA125B1DCD21E400215490 /* Debug */,
