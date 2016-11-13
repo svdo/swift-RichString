@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "02BA12391DCD206300215490"
-               BuildableName = "RichString iOS.framework"
+               BuildableName = "RichString.framework"
                BlueprintName = "RichString iOS"
                ReferencedContainer = "container:RichString.xcodeproj">
             </BuildableReference>

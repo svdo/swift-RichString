@@ -23,9 +23,13 @@
 		02BA12711DD8FDE400215490 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12701DD8FDE400215490 /* ViewController.swift */; };
 		02BA12731DD8FDE400215490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02BA12721DD8FDE400215490 /* Assets.xcassets */; };
 		02BA12761DD8FDE400215490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BA12741DD8FDE400215490 /* Main.storyboard */; };
-		02BA12861DD900AF00215490 /* RichString macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 02BA12841DD900AF00215490 /* RichString macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02BA12861DD900AF00215490 /* RichString.h in Headers */ = {isa = PBXBuildFile; fileRef = 02BA12841DD900AF00215490 /* RichString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02BA12891DD900AF00215490 /* RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA12821DD900AE00215490 /* RichString.framework */; };
 		02BA128A1DD900AF00215490 /* RichString.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA12821DD900AE00215490 /* RichString.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		02BA128F1DD9023300215490 /* RichString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12661DCD2E1F00215490 /* RichString.swift */; };
+		02BA12901DD9023300215490 /* String+Rich.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12641DCD2B0700215490 /* String+Rich.swift */; };
+		02BA12911DD9023300215490 /* NSAttributedString+Rich.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12451DCD214600215490 /* NSAttributedString+Rich.swift */; };
+		02BA12921DD9023300215490 /* NSAttributedStringOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12621DCD2ADE00215490 /* NSAttributedStringOperators.swift */; };
 		9C77D989AC6B4B56AB6CB08E /* Pods_RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC3533D24E1F50D8F3E2AEA /* Pods_RichString.framework */; };
 		B61C33CC01613136B34D516F /* Pods_RichStringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A527B5B0FCC07F4B200B7273 /* Pods_RichStringTests.framework */; };
 		CACF63E80D4C40DA9740D468 /* NSAttributedString+RichSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF6A1D3239CDC4183DF5C8 /* NSAttributedString+RichSpec.swift */; };
@@ -104,7 +108,7 @@
 		02BA12751DD8FDE400215490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02BA12771DD8FDE400215490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02BA12821DD900AE00215490 /* RichString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RichString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		02BA12841DD900AF00215490 /* RichString macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RichString macOS.h"; sourceTree = "<group>"; };
+		02BA12841DD900AF00215490 /* RichString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RichString.h; sourceTree = "<group>"; };
 		02BA12851DD900AF00215490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13EE323B595659691E85D33E /* Pods-RichStringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichStringTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichStringTests/Pods-RichStringTests.release.xcconfig"; sourceTree = "<group>"; };
 		A527B5B0FCC07F4B200B7273 /* Pods_RichStringTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichStringTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,7 +244,7 @@
 		02BA127C1DD9005A00215490 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				02BA12841DD900AF00215490 /* RichString macOS.h */,
+				02BA12841DD900AF00215490 /* RichString.h */,
 				02BA12851DD900AF00215490 /* Info.plist */,
 			);
 			path = macOS;
@@ -291,7 +295,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02BA12861DD900AF00215490 /* RichString macOS.h in Headers */,
+				02BA12861DD900AF00215490 /* RichString.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +629,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02BA12901DD9023300215490 /* String+Rich.swift in Sources */,
+				02BA12921DD9023300215490 /* NSAttributedStringOperators.swift in Sources */,
+				02BA12911DD9023300215490 /* NSAttributedString+Rich.swift in Sources */,
+				02BA128F1DD9023300215490 /* RichString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -864,6 +872,7 @@
 		02BA12791DD8FDE400215490 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -881,6 +890,7 @@
 		02BA127A1DD8FDE400215490 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1015,6 +1025,7 @@
 				02BA128D1DD900AF00215490 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8DAC4281DCDEC87002CF542 /* Build configuration list for PBXNativeTarget "RichStringTests" */ = {
 			isa = XCConfigurationList;
