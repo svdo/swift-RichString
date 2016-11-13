@@ -147,6 +147,13 @@ extension NSAttributedString {
         return (attrs[NSFontAttributeName] as? Font)?.pointSize
     }
 
+    public var isBold: Bool {
+        guard let font = attrs[NSFontAttributeName] as? Font else {
+            return false
+        }
+        return font.fontDescriptor.hasBoldTrait
+    }
+
     public var paragraphStyle: NSParagraphStyle? {
         return attrs[NSParagraphStyleAttributeName] as? NSParagraphStyle
     }

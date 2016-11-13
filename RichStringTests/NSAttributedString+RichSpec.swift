@@ -26,7 +26,22 @@ class RichSpec: QuickConfiguration {
 
             it("can add a font size") {
                 let result = richString.fontSize(42)
-                expect(result.fontSize) ≈ 42.0
+                #if os(iOS)
+                    let actualFontSize = result.fontSize
+                #elseif os(macOS)
+                    let actualFontSize = result!.fontSize
+                #endif
+                expect(actualFontSize) ≈ 42.0
+            }
+
+            it("can make it bold") {
+                let result = richString.font(.systemFont(ofSize: 10)).bold()
+                #if os(iOS)
+                    let actualResult = result.isBold
+                #elseif os(macOS)
+                    let actualResult = result!.isBold
+                #endif
+                expect(actualResult).to(beTrue())
             }
 
             it("can add a paragraph style") {
@@ -98,7 +113,7 @@ class RichSpec: QuickConfiguration {
                 let shadow = NSShadow()
                 shadow.shadowOffset = CGSize(width: 3, height: 3)
                 shadow.shadowBlurRadius = 2
-                shadow.shadowColor = UIColor.gray
+                shadow.shadowColor = Color.gray
                 let result = richString.shadow(shadow)
                 expect(result.shadow) == shadow
             }

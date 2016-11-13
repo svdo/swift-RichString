@@ -33,14 +33,12 @@
 		02BA12941DD9055F00215490 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12931DD9055F00215490 /* Font.swift */; };
 		02BA12961DD9057500215490 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA12951DD9057500215490 /* Font.swift */; };
 		02BA12A01DD90B5C00215490 /* RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA12821DD900AE00215490 /* RichString.framework */; };
-		02BA12A61DD90C2B00215490 /* NSAttributedStringOperatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAC4221DCDEC87002CF542 /* NSAttributedStringOperatorsSpec.swift */; };
-		02BA12A71DD90C2B00215490 /* NSAttributedString+RichSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF6A1D3239CDC4183DF5C8 /* NSAttributedString+RichSpec.swift */; };
+		02BA12A81DD9110500215490 /* NSAttributedStringOperatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAC4221DCDEC87002CF542 /* NSAttributedStringOperatorsSpec.swift */; };
+		02BA12A91DD9110900215490 /* NSAttributedString+RichSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF6A1D3239CDC4183DF5C8 /* NSAttributedString+RichSpec.swift */; };
 		3E20F57F901A1BC803DF096F /* Pods_RichString_RichString_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0173AEFD56E9D0E20541AB8 /* Pods_RichString_RichString_macOS.framework */; };
 		645844E8496D4F0917158CFD /* Pods_RichStringTests_RichStringTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D0D88E23F1A811DE842C02 /* Pods_RichStringTests_RichStringTests_iOS.framework */; };
-		9C77D989AC6B4B56AB6CB08E /* Pods_RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC3533D24E1F50D8F3E2AEA /* Pods_RichString.framework */; };
 		A8DBB0F40D7616322DBCB785 /* Pods_RichString_RichString_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A4D6122C20B5C3A6378593 /* Pods_RichString_RichString_iOS.framework */; };
 		B1F0437C6CAEB167F1BE87E4 /* Pods_RichStringTests_RichStringTests_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A449EAAB3667051EF849D1C /* Pods_RichStringTests_RichStringTests_macOS.framework */; };
-		B61C33CC01613136B34D516F /* Pods_RichStringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A527B5B0FCC07F4B200B7273 /* Pods_RichStringTests.framework */; };
 		C00B55B39FD21EFCBC22FE2F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00B5CECF276E5954DF81A18 /* Color.swift */; };
 		C00B5B7E86F41CB49D6DA350 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00B56A23B1D053EEEC92307 /* Color.swift */; };
 		CACF63E80D4C40DA9740D468 /* NSAttributedString+RichSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF6A1D3239CDC4183DF5C8 /* NSAttributedString+RichSpec.swift */; };
@@ -130,7 +128,7 @@
 		02BA12851DD900AF00215490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02BA12931DD9055F00215490 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		02BA12951DD9057500215490 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		02BA129B1DD90B5C00215490 /* RichStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RichStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BA129B1DD90B5C00215490 /* RichStringTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RichStringTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D83E528988E2571CEA1C38D /* Pods-RichString-RichString macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichString-RichString macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichString-RichString macOS/Pods-RichString-RichString macOS.release.xcconfig"; sourceTree = "<group>"; };
 		13EE323B595659691E85D33E /* Pods-RichStringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichStringTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichStringTests/Pods-RichStringTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A449EAAB3667051EF849D1C /* Pods_RichStringTests_RichStringTests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichStringTests_RichStringTests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +152,7 @@
 		E0173AEFD56E9D0E20541AB8 /* Pods_RichString_RichString_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichString_RichString_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A4D6122C20B5C3A6378593 /* Pods_RichString_RichString_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichString_RichString_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AB1A5AB913BEEC50D0563A /* Pods-RichString-RichString iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichString-RichString iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichString-RichString iOS/Pods-RichString-RichString iOS.release.xcconfig"; sourceTree = "<group>"; };
-		F8DAC4201DCDEC87002CF542 /* RichStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RichStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8DAC4201DCDEC87002CF542 /* RichStringTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RichStringTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8DAC4221DCDEC87002CF542 /* NSAttributedStringOperatorsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringOperatorsSpec.swift; sourceTree = "<group>"; };
 		FF1D8C39E72F02340C18BAB2 /* Pods-RichString.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichString.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichString/Pods-RichString.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,7 +162,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C77D989AC6B4B56AB6CB08E /* Pods_RichString.framework in Frameworks */,
 				A8DBB0F40D7616322DBCB785 /* Pods_RichString_RichString_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,7 +204,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8DAC4251DCDEC87002CF542 /* RichString.framework in Frameworks */,
-				B61C33CC01613136B34D516F /* Pods_RichStringTests.framework in Frameworks */,
 				645844E8496D4F0917158CFD /* Pods_RichStringTests_RichStringTests_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,10 +230,10 @@
 			children = (
 				02BA123A1DCD206300215490 /* RichString.framework */,
 				02BA124B1DCD21E400215490 /* Demo iOS.app */,
-				F8DAC4201DCDEC87002CF542 /* RichStringTests.xctest */,
+				F8DAC4201DCDEC87002CF542 /* RichStringTests-iOS.xctest */,
 				02BA126C1DD8FDE400215490 /* Demo macOS.app */,
 				02BA12821DD900AE00215490 /* RichString.framework */,
-				02BA129B1DD90B5C00215490 /* RichStringTests.xctest */,
+				02BA129B1DD90B5C00215490 /* RichStringTests-macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -481,7 +477,7 @@
 			);
 			name = "RichStringTests macOS";
 			productName = "RichStringTests macOS";
-			productReference = 02BA129B1DD90B5C00215490 /* RichStringTests.xctest */;
+			productReference = 02BA129B1DD90B5C00215490 /* RichStringTests-macOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		F8DAC41F1DCDEC87002CF542 /* RichStringTests iOS */ = {
@@ -502,7 +498,7 @@
 			);
 			name = "RichStringTests iOS";
 			productName = RichStringTests;
-			productReference = F8DAC4201DCDEC87002CF542 /* RichStringTests.xctest */;
+			productReference = F8DAC4201DCDEC87002CF542 /* RichStringTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -824,8 +820,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02BA12A71DD90C2B00215490 /* NSAttributedString+RichSpec.swift in Sources */,
-				02BA12A61DD90C2B00215490 /* NSAttributedStringOperatorsSpec.swift in Sources */,
 				02BA12901DD9023300215490 /* String+Rich.swift in Sources */,
 				02BA12921DD9023300215490 /* NSAttributedStringOperators.swift in Sources */,
 				02BA12961DD9057500215490 /* Font.swift in Sources */,
@@ -839,6 +833,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02BA12A91DD9110900215490 /* NSAttributedString+RichSpec.swift in Sources */,
+				02BA12A81DD9110500215490 /* NSAttributedStringOperatorsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1175,7 +1171,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.RichStringTests-macOS";
-				PRODUCT_NAME = RichStringTests;
+				PRODUCT_NAME = "RichStringTests-macOS";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1192,7 +1188,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.RichStringTests-macOS";
-				PRODUCT_NAME = RichStringTests;
+				PRODUCT_NAME = "RichStringTests-macOS";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1207,7 +1203,7 @@
 				INFOPLIST_FILE = RichStringTests/iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.RichStringTests-iOS";
-				PRODUCT_NAME = RichStringTests;
+				PRODUCT_NAME = "RichStringTests-iOS";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1221,7 +1217,7 @@
 				INFOPLIST_FILE = RichStringTests/iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.RichStringTests-iOS";
-				PRODUCT_NAME = RichStringTests;
+				PRODUCT_NAME = "RichStringTests-iOS";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

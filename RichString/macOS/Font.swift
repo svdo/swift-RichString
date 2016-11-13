@@ -6,6 +6,12 @@ public typealias Font = NSFont
 
 let fontBoldTrait = NSFontSymbolicTraits(NSFontBoldTrait)
 
+extension NSFontDescriptor {
+    var hasBoldTrait: Bool {
+        return (symbolicTraits & fontBoldTrait) == fontBoldTrait
+    }
+}
+
 // MARK: - Font attributes
 extension NSAttributedString {
     public func bold() -> NSAttributedString? {

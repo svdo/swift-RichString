@@ -6,6 +6,12 @@ public typealias Font = UIFont
 
 let fontBoldTrait = UIFontDescriptorSymbolicTraits.traitBold
 
+extension UIFontDescriptor {
+    var hasBoldTrait: Bool {
+        return symbolicTraits.contains(.traitBold)
+    }
+}
+
 // MARK: - Font attributes
 extension NSAttributedString {
     public func bold() -> NSAttributedString {
