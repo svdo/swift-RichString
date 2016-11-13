@@ -141,6 +141,11 @@ class RichSpec: QuickConfiguration {
                 let result = richString.obliqueness(1)
                 expect(result.obliqueness) ≈ 1
             }
+
+            it("can set expansion") {
+                let result = richString.expansion(1.23)
+                expect(result.expansion) ≈ 1.23
+            }
         }
     }
 }

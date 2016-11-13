@@ -100,6 +100,10 @@ extension NSAttributedString: RichString {
     public func obliqueness(_ obliqueness: Float) -> NSAttributedString {
         return addingAttribute(NSObliquenessAttributeName, value: obliqueness)
     }
+
+    public func expansion(_ expansion: Float) -> NSAttributedString {
+        return addingAttribute(NSExpansionAttributeName, value: expansion)
+    }
 }
 
 // MARK: - Font attributes
@@ -252,5 +256,9 @@ extension NSAttributedString {
 
     public var obliqueness: Float? {
         return attrs[NSObliquenessAttributeName] as? Float
+    }
+
+    public var expansion: Float? {
+        return attrs[NSExpansionAttributeName] as? Float
     }
 }

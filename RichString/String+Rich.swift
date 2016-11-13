@@ -93,6 +93,10 @@ extension NonAttributedString {
     public func obliqueness(_ obliqueness: Float) -> NSAttributedString {
         return rich.obliqueness(obliqueness)
     }
+
+    public func expansion(_ expansion: Float) -> NSAttributedString {
+        return rich.expansion(expansion)
+    }
 }
 
 extension String: NonAttributedString {
