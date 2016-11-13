@@ -7,25 +7,25 @@ public protocol RichString {
     func font(_ font: Font) -> NSAttributedString
 
     #if os(iOS)
-    /**
-     * Applies the given font size to the attributed string. If no font was set on the
-     * attributed string yet, UIFont.systemFont will be assumed.
-     * - parameter size: The desired point size of the attributed string.
-     * - returns: Attributed string with the given font size attribute.
-     */
-    func fontSize(_ size: CGFloat) -> NSAttributedString
+        /**
+         * Applies the given font size to the attributed string. If no font was set on the
+         * attributed string yet, UIFont.systemFont will be assumed.
+         * - parameter size: The desired point size of the attributed string.
+         * - returns: Attributed string with the given font size attribute.
+         */
+        func fontSize(_ size: CGFloat) -> NSAttributedString
 
-    func bold() -> NSAttributedString
+        func bold() -> NSAttributedString
     #elseif os(macOS)
-    /**
-     * Applies the given font size to the attributed string. If no font was set on the
-     * attributed string yet, UIFont.systemFont will be assumed.
-     * - parameter size: The desired point size of the attributed string.
-     * - returns: Attributed string with the given font size attribute.
-     */
-    func fontSize(_ size: CGFloat) -> NSAttributedString?
+        /**
+         * Applies the given font size to the attributed string. If no font was set on the
+         * attributed string yet, UIFont.systemFont will be assumed.
+         * - parameter size: The desired point size of the attributed string.
+         * - returns: Attributed string with the given font size attribute.
+         */
+        func fontSize(_ size: CGFloat) -> NSAttributedString?
 
-    func bold() -> NSAttributedString?
+        func bold() -> NSAttributedString?
     #endif
 
     func paragraphStyle(_ paragraphStyle: NSParagraphStyle) -> NSAttributedString
