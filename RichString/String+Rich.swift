@@ -44,6 +44,10 @@ extension NonAttributedString {
         return rich.strikeThrough(color: color)
     }
 
+    public func strikeThrough(color: Color, style: NSUnderlineStyle) -> NSAttributedString {
+        return rich.strikeThrough(color: color, style: style)
+    }
+
     public func underline(style: NSUnderlineStyle) -> NSAttributedString {
         return rich.underline(style: style)
     }
@@ -52,12 +56,21 @@ extension NonAttributedString {
         return rich.underline(color: color)
     }
 
+    public func underline(color: Color, style: NSUnderlineStyle)
+            -> NSAttributedString {
+        return rich.underline(color: color, style: style)
+    }
+
     public func stroke(width: Float, color: Color) -> NSAttributedString {
         return rich.stroke(width: width, color: color)
     }
 
     public func shadow(_ shadow: NSShadow) -> NSAttributedString {
         return rich.shadow(shadow)
+    }
+
+    public func shadow(configure: (NSShadow) -> Void) -> NSAttributedString {
+        return rich.shadow(configure: configure)
     }
 
     public func letterPressed() -> NSAttributedString {

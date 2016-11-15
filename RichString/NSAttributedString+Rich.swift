@@ -52,6 +52,10 @@ extension NSAttributedString: RichString {
         return addingAttribute(NSStrikethroughColorAttributeName, value: color)
     }
 
+    public func strikeThrough(color: Color, style: NSUnderlineStyle) -> NSAttributedString {
+        return strikeThrough(color: color).strikeThrough(style: style)
+    }
+
     public func underline(style: NSUnderlineStyle) -> NSAttributedString {
         return addingAttribute(NSUnderlineStyleAttributeName,
                                value: style.rawValue)
@@ -59,6 +63,11 @@ extension NSAttributedString: RichString {
 
     public func underline(color: Color) -> NSAttributedString {
         return addingAttribute(NSUnderlineColorAttributeName, value: color)
+    }
+
+    public func underline(color: Color, style: NSUnderlineStyle)
+            -> NSAttributedString {
+        return underline(color: color).underline(style: style)
     }
 
     public func stroke(width: Float, color: Color) -> NSAttributedString {
@@ -70,6 +79,18 @@ extension NSAttributedString: RichString {
 
     public func shadow(_ shadow: NSShadow) -> NSAttributedString {
         return addingAttribute(NSShadowAttributeName, value: shadow)
+    }
+
+    public func shadow(configure: (NSShadow) -> Void) -> NSAttributedString {
+        let shadow: NSShadow
+        if let s = self.shadow {
+            shadow = s
+        }
+        else {
+            shadow = NSShadow()
+        }
+        configure(shadow)
+        return self.shadow(shadow)
     }
 
     public func letterPressed() -> NSAttributedString {

@@ -38,12 +38,15 @@ public protocol RichString {
 
     func strikeThrough(style: NSUnderlineStyle) -> NSAttributedString
     func strikeThrough(color: Color) -> NSAttributedString
+    func strikeThrough(color: Color, style: NSUnderlineStyle) -> NSAttributedString
     func underline(style: NSUnderlineStyle) -> NSAttributedString
     func underline(color: Color) -> NSAttributedString
+    func underline(color: Color, style: NSUnderlineStyle) -> NSAttributedString
 
     func stroke(width: Float, color: Color) -> NSAttributedString
 
     func shadow(_ shadow: NSShadow) -> NSAttributedString
+    func shadow(configure: (NSShadow) -> Void) -> NSAttributedString
 
     func letterPressed() -> NSAttributedString
 

@@ -93,6 +93,12 @@ class RichSpec: QuickConfiguration {
                 expect(result.strikeThroughColor) == .cyan
             }
 
+            it("can add strike through style and color") {
+                let result = richString.strikeThrough(color: .cyan, style: .styleDouble)
+                expect(result.strikeThroughColor) == .cyan
+                expect(result.strikeThroughStyle) == .styleDouble
+            }
+
             it("can add underline style") {
                 let result = richString.underline(style: .patternDashDot)
                 expect(result.underlineStyle) == .patternDashDot
@@ -100,6 +106,12 @@ class RichSpec: QuickConfiguration {
 
             it("can add underline color") {
                 let result = richString.underline(color: .purple)
+                expect(result.underlineColor) == .purple
+            }
+
+            it("can add underline style and color") {
+                let result = richString.underline(color: .purple, style: .patternDashDot)
+                expect(result.underlineStyle) == .patternDashDot
                 expect(result.underlineColor) == .purple
             }
 
@@ -116,6 +128,20 @@ class RichSpec: QuickConfiguration {
                 shadow.shadowColor = .gray
                 let result = richString.shadow(shadow)
                 expect(result.shadow) == shadow
+            }
+
+            it("can configure shadow") {
+                let result = richString.shadow {
+                    $0.shadowOffset = CGSize(width: 3, height: 3)
+                    $0.shadowBlurRadius = 2
+                    $0.shadowColor = .gray
+                }
+                expect(result.shadow).toNot(beNil())
+                if let actualShadow = result.shadow {
+                    expect(actualShadow.shadowOffset) == CGSize(width: 3, height: 3)
+                    expect(actualShadow.shadowBlurRadius) == 2
+                    expect(actualShadow.shadowColor) == .gray
+                }
             }
 
             it("can add letter press effect") {
