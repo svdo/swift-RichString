@@ -62,7 +62,24 @@ public protocol RichString {
         func bold() -> NSAttributedString?
     #endif
 
+    /**
+     * Applies the given paragraph style.
+     *
+     * - Parameter paragraphStyle: The paragraph style that is applied.
+     * - Returns: A new attributed string that has the paragraph style applied.
+     */
     func paragraphStyle(_ paragraphStyle: NSParagraphStyle) -> NSAttributedString
+
+    /**
+     * Applies a paragraph style, configuring it with the given closure. If the attributed
+     * string already had a paragraph style attribute, the `configure` closure is called
+     * on that paragraph style; otherwise a new `NSMutableParagraphStyle` is used.
+     *
+     * - Parameter configure: The closure that you can use to configure the paragraph style.
+     * - Returns: A new attributed string that has the configured paragraph style applied.
+     */
+    func paragraphStyle(configure: (NSMutableParagraphStyle) -> Void)
+            -> NSAttributedString
 
     func color(_ color: Color) -> NSAttributedString
     func backgroundColor(_ color: Color) -> NSAttributedString
@@ -86,9 +103,6 @@ public protocol RichString {
 
     func link(url: NSURL) -> NSAttributedString
     func link(string: String) -> NSAttributedString
-
-    func paragraphStyle(configure: (NSMutableParagraphStyle) -> Void)
-            -> NSAttributedString
 
     func attachment(configure: (NSTextAttachment) -> Void)
             -> NSAttributedString
