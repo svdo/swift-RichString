@@ -113,7 +113,7 @@ class RichSpec: QuickConfiguration {
                 let shadow = NSShadow()
                 shadow.shadowOffset = CGSize(width: 3, height: 3)
                 shadow.shadowBlurRadius = 2
-                shadow.shadowColor = Color.gray
+                shadow.shadowColor = .gray
                 let result = richString.shadow(shadow)
                 expect(result.shadow) == shadow
             }
