@@ -16,20 +16,26 @@ extension NSFontDescriptor {
 extension NSAttributedString {
     public func bold() -> NSAttributedString? {
         let attrs = self.attributes(at: 0, effectiveRange: nil)
+        dump(attrs)
         let fontAttrs = attrs.filter {
             $0.0 == NSFontAttributeName
         }
+        dump(fontAttrs)
 
         precondition(fontAttrs.count > 0, "making bold requires setting font first")
 
         let font = fontAttrs[0].1 as? Font
+        dump(font)
         let boldDescriptor = font?.fontDescriptor.withSymbolicTraits(fontBoldTrait)
+        dump(boldDescriptor)
 
         precondition(boldDescriptor != nil, "failed to create bold font descriptor")
 
         guard let boldFont = Font(descriptor: boldDescriptor!, size: 0) else {
+            print("bold font not available")
             return nil
         }
+        dump(boldFont)
         return self.font(boldFont)
     }
 
