@@ -50,7 +50,7 @@ public protocol RichString {
     func link(url: NSURL) -> NSAttributedString
     func link(string: String) -> NSAttributedString
 
-    func paragraphStyle(configuration: (NSMutableParagraphStyle) -> Void)
+    func paragraphStyle(configure: (NSMutableParagraphStyle) -> Void)
             -> NSAttributedString
 
     func attachment(configure: (NSTextAttachment) -> Void)

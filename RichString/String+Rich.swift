@@ -23,9 +23,9 @@ extension NonAttributedString {
         return rich.paragraphStyle(paragraphStyle)
     }
 
-    public func paragraphStyle(configuration: (NSMutableParagraphStyle) -> Void)
+    public func paragraphStyle(configure: (NSMutableParagraphStyle) -> Void)
             -> NSAttributedString {
-        return rich.paragraphStyle(configuration: configuration)
+        return rich.paragraphStyle(configure: configure)
     }
 
     public func ligature(_ ligature: Int) -> NSAttributedString {

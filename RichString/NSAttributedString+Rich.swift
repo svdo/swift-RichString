@@ -20,7 +20,7 @@ extension NSAttributedString: RichString {
         return addingAttribute(NSParagraphStyleAttributeName, value: paragraphStyle)
     }
 
-    public func paragraphStyle(configuration: (NSMutableParagraphStyle) -> Void)
+    public func paragraphStyle(configure: (NSMutableParagraphStyle) -> Void)
             -> NSAttributedString {
         let style: NSMutableParagraphStyle
         if let existingStyle = self.paragraphStyle as? NSMutableParagraphStyle {
@@ -31,7 +31,7 @@ extension NSAttributedString: RichString {
         } else {
             style = NSMutableParagraphStyle()
         }
-        configuration(style)
+        configure(style)
         return addingAttribute(NSParagraphStyleAttributeName, value: style)
     }
 
