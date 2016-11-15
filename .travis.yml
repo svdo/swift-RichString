@@ -7,4 +7,4 @@ branches:
 osx_image: xcode8
 
 script:
-  - xcodebuild -workspace RichString.xcworkspace -scheme "RichString iOS" -destination "platform=iOS Simulator,name=iPhone 6s" test
+  - xcodebuild -workspace RichString.xcworkspace -scheme "RichString iOS" -destination "platform=iOS Simulator,name=Generic iOS Simulator Device" test
