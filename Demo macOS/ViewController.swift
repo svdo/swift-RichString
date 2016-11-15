@@ -6,6 +6,7 @@ import RichString
 class ViewController: NSViewController {
 
     @IBOutlet weak var label1: NSTextField!
+    @IBOutlet weak var label2: NSTextField!
 
     override func viewWillAppear() {
         super.viewWillAppear()
@@ -13,5 +14,8 @@ class ViewController: NSViewController {
             .fontSize(17)?.color(.blue).strikeThrough(style: .styleDouble) {
             label1.attributedStringValue = text1
         }
+
+        let text2 = "This is some text".verticalGlyphForm(1)
+        label2.attributedStringValue = text2
     }
 }
