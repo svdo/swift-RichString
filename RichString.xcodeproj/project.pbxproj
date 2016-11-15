@@ -1056,7 +1056,7 @@
 				DEVELOPMENT_TEAM = 38HP5T8ATC;
 				INFOPLIST_FILE = Demo_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vandenoord.Demo_iOS;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.Demo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1070,7 +1070,7 @@
 				DEVELOPMENT_TEAM = 38HP5T8ATC;
 				INFOPLIST_FILE = Demo_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vandenoord.Demo_iOS;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.Demo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
