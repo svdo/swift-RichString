@@ -61,4 +61,6 @@ public protocol RichString {
     func obliqueness(_ obliqueness: Float) -> NSAttributedString
 
     func expansion(_ expansion: Float) -> NSAttributedString
+
+    func verticalGlyphForm(_ form: Int) -> NSAttributedString
 }
