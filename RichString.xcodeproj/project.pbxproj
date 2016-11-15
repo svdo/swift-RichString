@@ -449,6 +449,7 @@
 				02BA127F1DD900AE00215490 /* Headers */,
 				02BA12801DD900AE00215490 /* Resources */,
 				E5E4D71312B0C803F75CD2E3 /* [CP] Copy Pods Resources */,
+				F85671BE1DDAF6E8009640D3 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -767,6 +768,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichString-RichString macOS/Pods-RichString-RichString macOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		F85671BE1DDAF6E8009640D3 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PATH=/usr/local/bin:$PATH\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		F87673381DCDEBB100191D62 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
