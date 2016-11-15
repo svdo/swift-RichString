@@ -1,0 +1,11 @@
+language: objective-c
+
+branches:
+  only:
+    - master
+
+osx_image: xcode8
+
+script:
+  - xcodebuild -workspace RichString.xcworkspace -scheme "RichString macOS" test
+  - xcodebuild -workspace RichString.xcworkspace -scheme "RichString iOS" -destination "platform=iOS Simulator,name=iPhone SE,OS=10.1" test
