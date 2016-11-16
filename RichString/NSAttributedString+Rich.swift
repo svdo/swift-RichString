@@ -85,8 +85,7 @@ extension NSAttributedString: RichString {
         let shadow: NSShadow
         if let s = self.shadow {
             shadow = s
-        }
-        else {
+        } else {
             shadow = NSShadow()
         }
         configure(shadow)
