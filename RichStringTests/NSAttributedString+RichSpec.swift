@@ -140,7 +140,11 @@ class RichSpec: QuickConfiguration {
                 if let actualShadow = result.shadow {
                     expect(actualShadow.shadowOffset) == CGSize(width: 3, height: 3)
                     expect(actualShadow.shadowBlurRadius) == 2
-                    expect(actualShadow.shadowColor as? Color) == Color.gray
+                    #if os(iOS)
+                        expect(actualShadow.shadowColor as? Color) == Color.gray
+                    #elseif os(macOS)
+                        expect(actualShadow.shadowColor as Color?) == Color.gray
+                    #endif
                 }
             }
 
