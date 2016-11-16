@@ -81,7 +81,20 @@ public protocol RichString {
     func paragraphStyle(configure: (NSMutableParagraphStyle) -> Void)
             -> NSAttributedString
 
+    /**
+     * Applies the given (foreground) color.
+     *
+     * - Parameter color: The foreground color that is applied.
+     * - Returns: A new attributed string that has the given foreground color.
+     */
     func color(_ color: Color) -> NSAttributedString
+
+    /**
+     * Applies the given background color.
+     *
+     * - Parameter color: the background color that is applied
+     * - Returns: a new attributed string that has the given background color.
+     */
     func backgroundColor(_ color: Color) -> NSAttributedString
 
     func ligature(_ ligature: Int) -> NSAttributedString
