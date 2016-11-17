@@ -143,7 +143,7 @@ class RichSpec: QuickConfiguration {
                     #if os(iOS)
                         expect(actualShadow.shadowColor as? Color) == Color.gray
                     #elseif os(macOS)
-                        expect(actualShadow.shadowColor as Color?) == Color.gray
+                        expect(actualShadow.shadowColor) == .gray
                     #endif
                 }
             }
