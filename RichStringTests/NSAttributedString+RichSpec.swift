@@ -190,13 +190,6 @@ class RichSpec: QuickConfiguration {
                 let result = richString.expansion(1.23)
                 expect(result.expansion) ≈ 1.23
             }
-
-            #if os(macOS)
-                it("can set vertical glyph format") {
-                    let result = richString.verticalGlyphForm(1)
-                    expect(result.verticalGlyphForm) == 1
-                }
-            #endif
         }
     }
 }

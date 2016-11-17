@@ -123,11 +123,6 @@ extension NSAttributedString: RichString {
     public func expansion(_ expansion: Float) -> NSAttributedString {
         return addingAttribute(NSExpansionAttributeName, value: expansion)
     }
-
-    @available(iOS, unavailable)
-    public func verticalGlyphForm(_ form: Int) -> NSAttributedString {
-        return addingAttribute(NSVerticalGlyphFormAttributeName, value: form)
-    }
 }
 
 // MARK: - Private helpers
@@ -257,10 +252,5 @@ extension NSAttributedString {
 
     public var expansion: Float? {
         return attrs[NSExpansionAttributeName] as? Float
-    }
-
-    @available(iOS, unavailable)
-    public var verticalGlyphForm: Int? {
-        return attrs[NSVerticalGlyphFormAttributeName] as? Int
     }
 }

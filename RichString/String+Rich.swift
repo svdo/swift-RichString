@@ -101,11 +101,6 @@ extension NonAttributedString {
     public func expansion(_ expansion: Float) -> NSAttributedString {
         return rich.expansion(expansion)
     }
-
-    @available(iOS, unavailable)
-    public func verticalGlyphForm(_ form: Int) -> NSAttributedString {
-        return rich.verticalGlyphForm(form)
-    }
 }
 
 extension String: NonAttributedString {

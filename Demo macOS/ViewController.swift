@@ -15,7 +15,7 @@ class ViewController: NSViewController {
             label1.attributedStringValue = text1
         }
 
-        let text2 = "This is some text".verticalGlyphForm(1)
+        let text2 = "This is some text".letterPressed()
         label2.attributedStringValue = text2
     }
 }
