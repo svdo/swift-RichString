@@ -75,6 +75,14 @@ public protocol RichString {
      * string already had a paragraph style attribute, the `configure` closure is called
      * on that paragraph style; otherwise a new `NSMutableParagraphStyle` is used.
      *
+     * For example:
+     *
+     * ```swift
+     *    let result = "Hello World".paragraphStyle {
+     *         $0.firstLineHeadIndent = 10
+     *    }
+     * ```
+     *
      * - Parameter configure: The closure that you can use to configure the paragraph style.
      * - Returns: A new attributed string that has the configured paragraph style applied.
      */
@@ -194,7 +202,7 @@ public protocol RichString {
      * For example:
      *
      * ```swift
-     *    richString.shadow {
+     *    let result = "Hello World".shadow {
      *        $0.shadowOffset = CGSize(width: 3, height: 3)
      *        $0.shadowBlurRadius = 2
      *        $0.shadowColor = Color.gray
@@ -207,17 +215,60 @@ public protocol RichString {
      */
     func shadow(configure: (NSShadow) -> Void) -> NSAttributedString
 
+    /**
+     * Adds the "letter pressed" text effect.
+     *
+     * - Returns: A new attributed string that has the "letter pressed" text effect applied.
+     */
     func letterPressed() -> NSAttributedString
 
+    /**
+     * Creates hyperlink to the given URL with the receiver as text.
+     *
+     * - Parameter url: The URL to which the hyperlink points.
+     * - Returns: A new attributed string that is the receiver converted to a hyperlink.
+     */
     func link(url: NSURL) -> NSAttributedString
+
+    /**
+     * Creates hyperlink to the given URL with the receiver as text.
+     *
+     * - Parameter string: The URL string to which the hyperlink points.
+     * - Returns: A new attributed string that is the receiver converted to a hyperlink.
+     */
     func link(string: String) -> NSAttributedString
 
+    /**
+     * Creates a new `NSTextAttachment` and passes it to the `configure` closure.
+     *
+     * - Parameter configure: the closure that you can use to configure the
+     *                        `NSTextAttachment` instance.
+     * - Returns: A new attributed string that has the configured text attachment.
+     */
     func attachment(configure: (NSTextAttachment) -> Void)
             -> NSAttributedString
 
+    /**
+     * Configures the baseline offset.
+     *
+     * - Parameter offset: The number of points the text is offset from the baseline.
+     * - Returns: A new attributed string that has the given baseline offset configured.
+     */
     func baselineOffset(_ offset: Float) -> NSAttributedString
 
+    /**
+     * Configures the skew to be applied to glyphs.
+     *
+     * - Parameter obliqueness: The skew that is applied to glyphs; `0` means no skew.
+     * - Returns: A new attributed string that has the given obliqueness configured.
+     */
     func obliqueness(_ obliqueness: Float) -> NSAttributedString
 
+    /**
+     * Configures the expansion to be applied to glyphs.
+     *
+     * - Parameter expansion: The log of the expansion factor to be applied to glyphs.
+     * - Returns: A new attributed string that has the given expansion configured.
+     */
     func expansion(_ expansion: Float) -> NSAttributedString
 }
