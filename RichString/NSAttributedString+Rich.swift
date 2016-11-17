@@ -35,8 +35,8 @@ extension NSAttributedString: RichString {
         return addingAttribute(NSParagraphStyleAttributeName, value: style)
     }
 
-    public func ligature(_ ligature: Int) -> NSAttributedString {
-        return addingAttribute(NSLigatureAttributeName, value: ligature)
+    public func ligature(_ ligature: Bool) -> NSAttributedString {
+        return addingAttribute(NSLigatureAttributeName, value: ligature ? 1 : 0)
     }
 
     public func kern(_ kern: Float) -> NSAttributedString {
@@ -183,8 +183,11 @@ extension NSAttributedString {
         return attrs[NSParagraphStyleAttributeName] as? NSParagraphStyle
     }
 
-    public var ligature: Int? {
-        return attrs[NSLigatureAttributeName] as? Int
+    public var ligature: Bool? {
+        guard let ligatureNumber = attrs[NSLigatureAttributeName] as? Int else {
+            return nil
+        }
+        return ligatureNumber == 1
     }
 
     public var kern: Float? {

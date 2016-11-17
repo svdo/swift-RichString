@@ -97,7 +97,7 @@ public protocol RichString {
      */
     func backgroundColor(_ color: Color) -> NSAttributedString
 
-    func ligature(_ ligature: Int) -> NSAttributedString
+    func ligature(_ ligature: Bool) -> NSAttributedString
     func kern(_ kern: Float) -> NSAttributedString
 
     func strikeThrough(style: NSUnderlineStyle) -> NSAttributedString

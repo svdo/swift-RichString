@@ -28,7 +28,7 @@ extension NonAttributedString {
         return rich.paragraphStyle(configure: configure)
     }
 
-    public func ligature(_ ligature: Int) -> NSAttributedString {
+    public func ligature(_ ligature: Bool) -> NSAttributedString {
         return rich.ligature(ligature)
     }
 

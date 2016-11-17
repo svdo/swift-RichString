@@ -74,8 +74,8 @@ class RichSpec: QuickConfiguration {
             }
 
             it("can add a ligature") {
-                let result = richString.ligature(2)
-                expect(result.ligature) == 2
+                let result = richString.ligature(false)
+                expect(result.ligature) == false
             }
 
             it("can add a kern") {
