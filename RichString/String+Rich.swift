@@ -2,10 +2,18 @@
 
 import Foundation
 
+/**
+ * Protocol used to add all functionality to both `String` and `NSString`.
+ * You normally don't need to use this directly yourself.
+ */
 protocol NonAttributedString: RichString {
     var rich: RichString { get }
 }
 
+/**
+ * Protocol used to add all functionality to both `String` and `NSString`.
+ * You normally don't need to use this protocol directly yourself.
+ */
 extension NonAttributedString {
     public func font(_ font: Font) -> NSAttributedString {
         return rich.font(font)

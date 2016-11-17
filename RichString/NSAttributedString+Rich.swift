@@ -3,6 +3,10 @@
 import Foundation
 
 // MARK: - Simple attributes
+
+/**
+ * Extension to add all RichString functionality to `NSAttributedString`.
+ */
 extension NSAttributedString: RichString {
     public func color(_ color: Color) -> NSAttributedString {
         return addingAttribute(NSForegroundColorAttributeName, value: color)
@@ -145,6 +149,10 @@ extension NSAttributedString {
 }
 
 // MARK: - Attribute getters
+
+/**
+ * Extension to add attribute getters to `NSAttributedString`.
+ */
 extension NSAttributedString {
     var attrs: [String: Any] {
         var range: NSRange = NSRange()
@@ -155,18 +163,34 @@ extension NSAttributedString {
         return attrs
     }
 
+    /**
+     * - Returns: The configured color, if any.
+     * - See: `RichString.color(_:)`
+     */
     public var color: Color? {
         return attrs[NSForegroundColorAttributeName] as? Color
     }
 
+    /**
+     * - Returns: The configured background color, if any.
+     * - See: `RichString.backgroundColor(_:)`
+     */
     public var backgroundColor: Color? {
         return attrs[NSBackgroundColorAttributeName] as? Color
     }
 
+    /**
+     * - Returns: The configured font size, if any.
+     * - See: `RichString.fontSize(_:)`
+     */
     public var fontSize: CGFloat? {
         return (attrs[NSFontAttributeName] as? Font)?.pointSize
     }
 
+    /**
+     * - Returns: Whether or not the configured font (if any) is bold.
+     * - See: `RichString.bold()`
+     */
     public var isBold: Bool {
         guard let font = attrs[NSFontAttributeName] as? Font else {
             return false
@@ -174,10 +198,19 @@ extension NSAttributedString {
         return font.fontDescriptor.hasBoldTrait
     }
 
+    /**
+     * - Returns: The configured paragraph style.
+     * - See: `RichString.paragraphStyle(_:)`
+     * - See: `RichString.paragraphStyle(configure:)`
+     */
     public var paragraphStyle: NSParagraphStyle? {
         return attrs[NSParagraphStyleAttributeName] as? NSParagraphStyle
     }
 
+    /**
+     * - Returns: Whether or not ligatures are enabled (if configured).
+     * - See: `RichString.ligature(_:)`
+     */
     public var ligature: Bool? {
         guard let ligatureNumber = attrs[NSLigatureAttributeName] as? Int else {
             return nil
@@ -185,10 +218,19 @@ extension NSAttributedString {
         return ligatureNumber == 1
     }
 
+    /**
+     * - Returns: The configured kerning, if any.
+     * - See: `RichString.kern(_:)`
+     */
     public var kern: Float? {
         return attrs[NSKernAttributeName] as? Float
     }
 
+    /**
+     * - Returns: The configured strike through style, if any.
+     * - See: `RichString.strikeThrough(style:)`
+     * - See: `RichString.strikeThrough(color:,style:)`
+     */
     public var strikeThroughStyle: NSUnderlineStyle? {
         guard let rawValue = attrs[NSStrikethroughStyleAttributeName] as? Int else {
             return nil
@@ -196,10 +238,20 @@ extension NSAttributedString {
         return NSUnderlineStyle(rawValue: rawValue)
     }
 
+    /**
+     * - Returns: The configured strike through color, if any.
+     * - See: `RichString.strikeThrough(color:)`
+     * - See: `RichString.strikeThrough(color:,style:)`
+     */
     public var strikeThroughColor: Color? {
         return attrs[NSStrikethroughColorAttributeName] as? Color
     }
 
+    /**
+     * - Returns: The configured underline style, if any.
+     * - See: `RichString.underline(style:)`
+     * - See: `RichString.underline(color:,style:)`
+     */
     public var underlineStyle: NSUnderlineStyle? {
         guard let rawValue = attrs[NSUnderlineStyleAttributeName] as? Int else {
             return nil
@@ -207,29 +259,56 @@ extension NSAttributedString {
         return NSUnderlineStyle(rawValue: rawValue)
     }
 
+    /**
+     * - Returns: The configured underline color, if any.
+     * - See: `RichString.underline(color:)`
+     * - See: `RichString.underline(color:,style:)`
+     */
     public var underlineColor: Color? {
         return attrs[NSUnderlineColorAttributeName] as? Color
     }
 
+    /**
+     * - Returns: The configured stroke width, if any.
+     * - See: `RichString.stoke(width:,color:)`
+     */
     public var strokeWidth: Float? {
         return attrs[NSStrokeWidthAttributeName] as? Float
     }
 
+    /**
+     * - Returns: The configured stroke color, if any.
+     * - See: `RichString.stroke(width:,color:)`
+     */
     public var strokeColor: Color? {
         return attrs[NSStrokeColorAttributeName] as? Color
     }
 
+    /**
+     * - Returns: The configured shadow, if any.
+     * - See: `RichString.shadow(_:)`
+     * - See: `RichString.shadow(configure:)`
+     */
     public var shadow: NSShadow? {
         return attrs[NSShadowAttributeName] as? NSShadow
     }
 
-    public var isLetterPressed: Bool {
+    /**
+     * - Returns: Whether or not the letter pressed text effect is configured.
+     * - See: `RichString.letterPressed()`
+     */
+    public var isLetterPressed: Bool? {
         guard let textEffect = attrs[NSTextEffectAttributeName] as? String else {
-            return false
+            return nil
         }
         return textEffect == NSTextEffectLetterpressStyle
     }
 
+    /**
+     * - Returns: The configured URL, if any.
+     * - See: `RichString.link(string:)`
+     * - See: `RichString.link(url:)`
+     */
     public var link: NSURL? {
         if let string = attrs[NSLinkAttributeName] as? String {
             return NSURL(string: string)
@@ -238,18 +317,34 @@ extension NSAttributedString {
         }
     }
 
+    /**
+     * - Returns: The configured attachment, if any.
+     * - See: `RichString.attachment(configure:)`
+     */
     public var attachment: NSTextAttachment? {
         return attrs[NSAttachmentAttributeName] as? NSTextAttachment
     }
 
+    /**
+     * - Returns: The configured baseline offset, if any.
+     * - See: `RichString.baselineOffset(_:)`
+     */
     public var baselineOffset: Float? {
         return attrs[NSBaselineOffsetAttributeName] as? Float
     }
 
+    /**
+     * - Returns: The configured obliqueness (skew), if any.
+     * - See: `RichString.obliqueness(_:)`
+     */
     public var obliqueness: Float? {
         return attrs[NSObliquenessAttributeName] as? Float
     }
 
+    /**
+     * - Returns: The configured expansion, if any.
+     * - See: `RichString.expansion(_:)`
+     */
     public var expansion: Float? {
         return attrs[NSExpansionAttributeName] as? Float
     }
