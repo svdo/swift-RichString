@@ -97,19 +97,114 @@ public protocol RichString {
      */
     func backgroundColor(_ color: Color) -> NSAttributedString
 
+    /**
+     * Configures whether or not to use ligatures. Default is that they are used.
+     *
+     * - Parameter ligature: Indicates whether or not ligatures should be used.
+     * - Returns: A new attributed string that has the given ligature attribute.
+     */
     func ligature(_ ligature: Bool) -> NSAttributedString
+
+    /**
+     * Configures the amount with wich to modify the default kerning. The default `0`
+     * means that no kerning change is applied.
+     *
+     * - Parameter kern: The amount to modify the default kerning.
+     *                   `0` means kerning is disabled.
+     * - Returns: A new attributed string that has the given kerning applied.
+     */
     func kern(_ kern: Float) -> NSAttributedString
 
+    /**
+     * Configures the strike through style.
+     *
+     * - Parameter style: The `NSUnderlineStyle` to apply. Please note that depending on
+     *                    OS and version not all styles may actually work.
+     * - Returns: A new attributed string that has the given strike through style applied.
+     */
     func strikeThrough(style: NSUnderlineStyle) -> NSAttributedString
+
+    /**
+     * Configures the strike through color.
+     *
+     * - Parameter color: The color to apply. Please note that only setting the color
+     *                    has no effect, the style must be configured as well.
+     * - Returns: A new attributed string that has the given strike through color applied.
+     */
     func strikeThrough(color: Color) -> NSAttributedString
+
+    /**
+     * Configures both the strike through color and style.
+     *
+     * - Parameter color: The color to apply.
+     * - Parameter style: The `NSUnderlineStyle` to apply. Please note that depending on
+     *                    OS and version not all styles may actually work.
+     * - Returns: A new attributed string that has the given strike through color and style applied.
+     */
     func strikeThrough(color: Color, style: NSUnderlineStyle) -> NSAttributedString
+
+    /**
+     * Configures the underline style.
+     *
+     * - Parameter style: The `NSUnderlineStyle` to apply. Please note that depending on
+     *                    OS and version not all styles may actually work.
+     * - Returns: A new attributed string that has the given underline style applied.
+     */
     func underline(style: NSUnderlineStyle) -> NSAttributedString
+
+    /**
+     * Configures the underline color.
+     *
+     * - Parameter color: The color to apply. Please note that only setting the color
+     *                    has no effect, the style must be configured as well.
+     * - Returns: A new attributed string that has the given underline color applied.
+     */
     func underline(color: Color) -> NSAttributedString
+
+    /**
+     * Configures both the underline color and style.
+     *
+     * - Parameter color: The color to apply.
+     * - Parameter style: The `NSUnderlineStyle` to apply. Please note that depending on
+     *                    OS and version not all styles may actually work.
+     * - Returns: A new attributed string that has the given underline color and style applied.
+     */
     func underline(color: Color, style: NSUnderlineStyle) -> NSAttributedString
 
+    /**
+     * Configures the stroke.
+     * 
+     * - Parameter width: The width of the stroke.
+     * - Parameter color: The color of the stroke.
+     * - Returns: A new attributed string that has the given stroke attributes applied.
+     */
     func stroke(width: Float, color: Color) -> NSAttributedString
 
+    /**
+     * Configures the shadow by setting an `NSShadow` instance.
+     *
+     * - Parameter shadow: The `NSShadow` to apply.
+     * - Returns: A new attributed string that has the given shadow applied.
+     */
     func shadow(_ shadow: NSShadow) -> NSAttributedString
+
+    /**
+     * Configures the shadow using a closure that receives an `NSShadow` instance.
+     *
+     * For example:
+     *
+     * ```swift
+     *    richString.shadow {
+     *        $0.shadowOffset = CGSize(width: 3, height: 3)
+     *        $0.shadowBlurRadius = 2
+     *        $0.shadowColor = Color.gray
+     *    }
+     * ```
+     *
+     * - Parameter configure: The closure that you use to configure the shadow; it is passed
+     *                        an `NSShadow` instance that you can change and is then applied.
+     * - Returns: A new attributed string that has the configured shadow applied.
+     */
     func shadow(configure: (NSShadow) -> Void) -> NSAttributedString
 
     func letterPressed() -> NSAttributedString
