@@ -114,7 +114,7 @@ public protocol RichString {
     func ligature(_ ligature: Bool) -> NSAttributedString
 
     /**
-     * Configures the amount with wich to modify the default kerning. The default `0`
+     * Configures the amount with which to modify the default kerning. The default `0`
      * means that no kerning change is applied.
      *
      * - Parameter kern: The amount to modify the default kerning.
