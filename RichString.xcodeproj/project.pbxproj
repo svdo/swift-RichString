@@ -274,7 +274,8 @@
 				02BA12741DD8FDE400215490 /* Main.storyboard */,
 				02BA12771DD8FDE400215490 /* Info.plist */,
 			);
-			path = "Demo macOS";
+			name = "Demo macOS";
+			path = Demo_macOS;
 			sourceTree = "<group>";
 		};
 		02BA127B1DD8FEFA00215490 /* iOS */ = {
@@ -1099,7 +1100,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7EQ9KX3BR9;
-				INFOPLIST_FILE = "Demo macOS/Info.plist";
+				INFOPLIST_FILE = Demo_macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.Demo-macOS";
@@ -1117,7 +1118,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7EQ9KX3BR9;
-				INFOPLIST_FILE = "Demo macOS/Info.plist";
+				INFOPLIST_FILE = Demo_macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.Demo-macOS";
