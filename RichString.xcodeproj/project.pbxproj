@@ -103,6 +103,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02535E5D1DDFAAEC00FB4734 /* RichString.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = RichString.podspec; sourceTree = "<group>"; };
 		02BA123A1DCD206300215490 /* RichString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RichString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02BA123D1DCD206300215490 /* RichString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RichString.h; sourceTree = "<group>"; };
 		02BA123E1DCD206300215490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -222,6 +223,7 @@
 				23287D3B97EC2CE397674391 /* Pods */,
 				34F3BD1DF7AD14BF5CA7CD05 /* Frameworks */,
 				CACF62F2E3390676CF9524D3 /* README.md */,
+				02535E5D1DDFAAEC00FB4734 /* RichString.podspec */,
 			);
 			sourceTree = "<group>";
 		};
