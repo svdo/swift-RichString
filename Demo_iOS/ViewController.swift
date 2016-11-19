@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         let text1 = "This is some text".fontSize(17).color(.blue).strikeThrough(style: .styleDouble)
-        let text2 = "This is some text".fontSize(17).color(.blue).bold().obliqueness(0.5)
+        let text2 = "This is some text".fontSize(17).color(.red).obliqueness(0.5).expansion(0.5)
         let text3 = text1 + text2.color(.red)
         let text4 = loremIpsum.paragraphStyle {
             $0.lineHeightMultiple = 1.2

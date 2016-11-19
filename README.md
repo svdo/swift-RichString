@@ -59,18 +59,6 @@ Note: unlike on iOS, on macOS this returns an
 let attributedString = "text".fontSize(12)
 ```
 
-#### bold()
-Makes the font bold. The attributed string must
-already have a font applied at this point, because
-otherwise we don't know what to make bold.
-
-Note: unlike on iOS, on macOS this returns an
-*optional* attributed string instead.
-
-```swift
-let attributedString = "text".fontSize(12).bold()
-```
-
 #### paragraphStyle(configure:)
 Applies a paragraph style, configuring it with the
 given closure. If the attributed string already had
@@ -278,7 +266,6 @@ The getters are:
 - `color: Color?`
 - `backgroundColor: Color?`
 - `fontSize: CGFloat?`
-- `isBold: Bool`
 - `paragraphStyle: NSParagraphStyle?`
 - `ligature: Bool?`
 - `kern: Float?`
@@ -320,10 +307,4 @@ source code. It only supports iOS, not macOS.
 
 
 ## Open Issues
-There is a method `bold()` which returns the bold variant of a font. On iOS it is working fine,
-but on macOS it has issues. On OS X 10.11 (El Capitan), it fails: getting the bold version of
-the system font returns the regular font. On macOS 10.12 (Sierra) it succeeds for the system font,
-but fails for fonts named "Helvetica" and "Arial". This needs to be investigated, and I want to do
-that before adding other font variants such as `italics()`.
-
-Furthermore, I plan to add Swift package manager support for platforms that support it (currently not iOS unfortunately).
+I plan to add Swift package manager support for platforms that support it (currently not iOS unfortunately).

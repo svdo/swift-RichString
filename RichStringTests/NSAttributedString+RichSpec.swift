@@ -34,16 +34,6 @@ class RichSpec: QuickConfiguration {
                 expect(actualFontSize) ≈ 42.0
             }
 
-            it("can make it bold") {
-                let result = richString.font(.systemFont(ofSize: 10)).bold()
-                #if os(iOS)
-                    let actualResult = result.isBold
-                #elseif os(macOS)
-                    let actualResult = result!.isBold
-                #endif
-                expect(actualResult).to(beTrue())
-            }
-
             it("can add a paragraph style") {
                 let style = NSParagraphStyle()
                 let result = richString.paragraphStyle(style)

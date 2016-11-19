@@ -14,25 +14,6 @@ extension NSFontDescriptor {
 
 // MARK: - Font attributes
 extension NSAttributedString {
-    public func bold() -> NSAttributedString? {
-        let attrs = self.attributes(at: 0, effectiveRange: nil)
-        let fontAttrs = attrs.filter {
-            $0.0 == NSFontAttributeName
-        }
-
-        precondition(fontAttrs.count > 0, "making bold requires setting font first")
-
-        let font = fontAttrs[0].1 as? Font
-        let boldDescriptor = font?.fontDescriptor.withSymbolicTraits(fontBoldTrait)
-
-        precondition(boldDescriptor != nil, "failed to create bold font descriptor")
-
-        guard let boldFont = Font(descriptor: boldDescriptor!, size: 0) else {
-            return nil
-        }
-        return self.font(boldFont)
-    }
-
     public func fontSize(_ size: CGFloat) -> NSAttributedString? {
         let attrs = self.attributes(at: 0, effectiveRange: nil)
         let fontAttrs = attrs.filter {
@@ -54,10 +35,6 @@ extension NSAttributedString {
 }
 
 extension NonAttributedString {
-    public func bold() -> NSAttributedString? {
-        return rich.bold()
-    }
-
     public func fontSize(_ size: CGFloat) -> NSAttributedString? {
         return rich.fontSize(size)
     }

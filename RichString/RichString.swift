@@ -29,17 +29,6 @@ public protocol RichString {
          * - Returns: A new attributed string that has the given font size attribute.
          */
         func fontSize(_ size: CGFloat) -> NSAttributedString
-
-        /**
-         * Makes the font bold. The attributed string must already have a font applied
-         * at this point, because otherwise we don't know what to make bold.
-         *
-         * - Precondition: a font must already have been configured, for example using
-         *                 `font(_:)` or `fontSize(_:)`.
-         *
-         * - Returns: A new attributed string that has the bold version of its font applied.
-         */
-        func bold() -> NSAttributedString
     #elseif os(macOS)
         /**
          * Applies the given font size. If no font was set on the
@@ -49,17 +38,6 @@ public protocol RichString {
          * - Returns: A new attributed string that has the given font size attribute.
          */
         func fontSize(_ size: CGFloat) -> NSAttributedString?
-
-        /**
-         * Makes the font bold. The attributed string must already have a font applied
-         * at this point, because otherwise we don't know what to make bold.
-         *
-         * - Precondition: a font must already have been configured, for example using
-         *                 `font(_:)` or `fontSize(_:)`.
-         *
-         * - Returns: A new attributed string that has the bold version of its font applied.
-         */
-        func bold() -> NSAttributedString?
     #endif
 
     /**

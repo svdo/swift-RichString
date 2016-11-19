@@ -188,17 +188,6 @@ extension NSAttributedString {
     }
 
     /**
-     * - Returns: Whether or not the configured font (if any) is bold.
-     * - See: `RichString.bold()`
-     */
-    public var isBold: Bool {
-        guard let font = attrs[NSFontAttributeName] as? Font else {
-            return false
-        }
-        return font.fontDescriptor.hasBoldTrait
-    }
-
-    /**
      * - Returns: The configured paragraph style.
      * - See: `RichString.paragraphStyle(_:)`
      * - See: `RichString.paragraphStyle(configure:)`
