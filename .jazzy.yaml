@@ -5,6 +5,6 @@ author_url: https://github.com/svdo
 github_url: https://github.com/svdo/swift-RichText
 github_file_prefix: https://github.com/svdo/swift-RichText/tree/master
 module: RichString
-module_version: 0.0.1
+module_version: 1.0.0
 readme: README.md
 copyright: Copyright © 2016 [Stefan van den Oord](https://github.com/svdo). All rights reserved
