@@ -1,4 +1,4 @@
-# RichText
+# RichString
 *The easiest way to work with attributed strings in Swift*
 
 [![Percentage Documented Badge](https://img.shields.io/cocoapods/metrics/doc-percent/RichString.svg)](http://cocoadocs.org/docsets/RichString)
