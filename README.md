@@ -2,7 +2,7 @@
 *The easiest way to work with attributed strings in Swift*
 
 [![Percentage Documented Badge](https://img.shields.io/cocoapods/metrics/doc-percent/RichString.svg)](http://cocoadocs.org/docsets/RichString)
-[![CocoaPods Version Badge](https://img.shields.io/cocoapods/v/RichString.svg)](https://cocoapods.org/pods/SecurityExtensions)
+[![CocoaPods Version Badge](https://img.shields.io/cocoapods/v/RichString.svg)](https://cocoapods.org/pods/RichString)
 ![Supported Platforms Badge](https://img.shields.io/cocoapods/p/RichString.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
