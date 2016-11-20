@@ -2,6 +2,10 @@
 
 import Foundation
 
+#if SWIFT_PACKAGE
+    import AppKit
+#endif
+
 /**
  * Concatenates two attributed strings. Has the same behavior as NSMutableAttributedString.append().
  */

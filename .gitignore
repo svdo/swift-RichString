@@ -1,5 +1,6 @@
 docs
 build
+.build
 xcuserdata
 .idea/workspace.xml
 .idea/runConfigurations/*

@@ -2,6 +2,10 @@
 
 import Foundation
 
+#if SWIFT_PACKAGE
+    import AppKit
+#endif
+
 /**
  * Protocol used to add all functionality to both `String` and `NSString`.
  * You normally don't need to use this directly yourself.

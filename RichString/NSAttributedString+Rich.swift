@@ -2,6 +2,10 @@
 
 import Foundation
 
+#if SWIFT_PACKAGE
+    import AppKit
+#endif
+
 // MARK: - Simple attributes
 
 /**

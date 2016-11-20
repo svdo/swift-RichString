@@ -308,7 +308,3 @@ Pull requests are wellcome of course.
 [TextAttributesUtil](https://github.com/muukii/TextAttributesUtil) also introduces a new type
 for setting up the attributes. Also, it's API forces you to have more levels of nesting in your
 source code. It only supports iOS, not macOS.
-
-
-## Open Issues
-I plan to add Swift package manager support for platforms that support it (currently not iOS unfortunately).
