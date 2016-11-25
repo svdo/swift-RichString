@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RichString"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "The easiest way to work with attributed strings in Swift."
   s.description  = <<-DESC
                    This Swift framework was built to simplify working with `NSAttributedString`. It does
