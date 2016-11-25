@@ -32,7 +32,7 @@ extension NSAttributedString: RichString {
             -> NSAttributedString {
         let style: NSMutableParagraphStyle
         if let existingStyle = self.paragraphStyle,
-                  let mutableCopy = existingStyle.mutableCopy() as? NSMutableParagraphStyle {
+           let mutableCopy = existingStyle.mutableCopy() as? NSMutableParagraphStyle {
             style = mutableCopy
         } else {
             style = NSMutableParagraphStyle()
@@ -157,11 +157,12 @@ extension NSAttributedString {
  */
 extension NSAttributedString {
     var attrs: [String: Any] {
+        guard self.length > 0 else {
+            return [:]
+        }
+
         var range: NSRange = NSRange()
-        let attrs          = self.attributes(at: 0, effectiveRange: &range)
-        assert(range.location == 0)
-        assert(range.length == self.length,
-               "StringAttributes is intended for strings that have attributes on the whole range")
+        let attrs = self.attributes(at: self.length - 1, effectiveRange: &range)
         return attrs
     }
 

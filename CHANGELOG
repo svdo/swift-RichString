@@ -1,4 +1,8 @@
+1.1.0
+=====
+When querying attributes, it is no longer required that they were applied to the entire range of the attributed string. Instead, the attribute value *at the end of the string* is used.
+
+
 1.0.0
 =====
-
 First version of the RichString framework.
