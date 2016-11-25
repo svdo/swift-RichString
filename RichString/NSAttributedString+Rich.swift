@@ -31,9 +31,7 @@ extension NSAttributedString: RichString {
     public func paragraphStyle(configure: (NSMutableParagraphStyle) -> Void)
             -> NSAttributedString {
         let style: NSMutableParagraphStyle
-        if let existingStyle = self.paragraphStyle as? NSMutableParagraphStyle {
-            style = existingStyle
-        } else if let existingStyle = self.paragraphStyle,
+        if let existingStyle = self.paragraphStyle,
                   let mutableCopy = existingStyle.mutableCopy() as? NSMutableParagraphStyle {
             style = mutableCopy
         } else {
