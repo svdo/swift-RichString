@@ -26,10 +26,10 @@
             if fontAttrs.count > 0, let f = fontAttrs[0].1 as? Font {
                 font = f
             } else {
-                font = Font.systemFont(ofSize: 0)
+                font = Font.systemFont(ofSize: size)
             }
             let sizedDescriptor = font.fontDescriptor.withSize(size)
-            let sizedFont = Font(descriptor: sizedDescriptor, size: 0)
+            let sizedFont = Font(descriptor: sizedDescriptor, size: size)
             return self.font(sizedFont)
         }
     }
