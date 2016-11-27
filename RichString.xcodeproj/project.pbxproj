@@ -71,6 +71,10 @@
 		F8D2EB351DEAF4C200A57F42 /* Font_PlatformDependent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D71CB1DE1B032007E0867 /* Font_PlatformDependent.swift */; };
 		F8D2EB361DEAF4C800A57F42 /* NSAttributedStringOperatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAC4221DCDEC87002CF542 /* NSAttributedStringOperatorsSpec.swift */; };
 		F8D2EB371DEAF4C800A57F42 /* NSAttributedString+RichSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF6A1D3239CDC4183DF5C8 /* NSAttributedString+RichSpec.swift */; };
+		F8D2EB401DEAF6C100A57F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D2EB3F1DEAF6C100A57F42 /* AppDelegate.swift */; };
+		F8D2EB421DEAF6C100A57F42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D2EB411DEAF6C100A57F42 /* ViewController.swift */; };
+		F8D2EB451DEAF6C100A57F42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D2EB431DEAF6C100A57F42 /* Main.storyboard */; };
+		F8D2EB471DEAF6C100A57F42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D2EB461DEAF6C100A57F42 /* Assets.xcassets */; };
 		F8DAC4231DCDEC87002CF542 /* NSAttributedStringOperatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAC4221DCDEC87002CF542 /* NSAttributedStringOperatorsSpec.swift */; };
 		F8DAC4251DCDEC87002CF542 /* RichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA123A1DCD206300215490 /* RichString.framework */; };
 /* End PBXBuildFile section */
@@ -269,6 +273,12 @@
 		F8D2EB1A1DEAF3B500A57F42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8D2EB1F1DEAF3B500A57F42 /* RichStringTests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RichStringTests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D2EB261DEAF3B600A57F42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8D2EB3D1DEAF6C100A57F42 /* Demo tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8D2EB3F1DEAF6C100A57F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F8D2EB411DEAF6C100A57F42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F8D2EB441DEAF6C100A57F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8D2EB461DEAF6C100A57F42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8D2EB481DEAF6C100A57F42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8DAC4201DCDEC87002CF542 /* RichStringTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RichStringTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8DAC4221DCDEC87002CF542 /* NSAttributedStringOperatorsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringOperatorsSpec.swift; sourceTree = "<group>"; };
 		FF1D8C39E72F02340C18BAB2 /* Pods-RichString.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichString.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichString/Pods-RichString.release.xcconfig"; sourceTree = "<group>"; };
@@ -356,6 +366,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8D2EB3A1DEAF6C100A57F42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8DAC41D1DCDEC87002CF542 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -378,6 +395,7 @@
 				F8D2EAD91DEAE1B200A57F42 /* RichString watchOS */,
 				F8D2EAEA1DEAE75600A57F42 /* Demo watchOS */,
 				F8D2EAF91DEAE75700A57F42 /* Demo watchOS Extension */,
+				F8D2EB3E1DEAF6C100A57F42 /* Demo tvOS */,
 				02BA123B1DCD206300215490 /* Products */,
 				23287D3B97EC2CE397674391 /* Pods */,
 				34F3BD1DF7AD14BF5CA7CD05 /* Frameworks */,
@@ -402,6 +420,7 @@
 				F8D2EAF51DEAE75700A57F42 /* Demo watchOS Extension.appex */,
 				F8D2EB171DEAF3B500A57F42 /* RichString.framework */,
 				F8D2EB1F1DEAF3B500A57F42 /* RichStringTests tvOS.xctest */,
+				F8D2EB3D1DEAF6C100A57F42 /* Demo tvOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -577,6 +596,18 @@
 				F8D2EB261DEAF3B600A57F42 /* Info.plist */,
 			);
 			path = tvOS;
+			sourceTree = "<group>";
+		};
+		F8D2EB3E1DEAF6C100A57F42 /* Demo tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				F8D2EB3F1DEAF6C100A57F42 /* AppDelegate.swift */,
+				F8D2EB411DEAF6C100A57F42 /* ViewController.swift */,
+				F8D2EB431DEAF6C100A57F42 /* Main.storyboard */,
+				F8D2EB461DEAF6C100A57F42 /* Assets.xcassets */,
+				F8D2EB481DEAF6C100A57F42 /* Info.plist */,
+			);
+			path = "Demo tvOS";
 			sourceTree = "<group>";
 		};
 		F8DAC4211DCDEC87002CF542 /* RichStringTests */ = {
@@ -830,6 +861,23 @@
 			productReference = F8D2EB1F1DEAF3B500A57F42 /* RichStringTests tvOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F8D2EB3C1DEAF6C100A57F42 /* Demo tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8D2EB4B1DEAF6C100A57F42 /* Build configuration list for PBXNativeTarget "Demo tvOS" */;
+			buildPhases = (
+				F8D2EB391DEAF6C100A57F42 /* Sources */,
+				F8D2EB3A1DEAF6C100A57F42 /* Frameworks */,
+				F8D2EB3B1DEAF6C100A57F42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Demo tvOS";
+			productName = "Demo tvOS";
+			productReference = F8D2EB3D1DEAF6C100A57F42 /* Demo tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F8DAC41F1DCDEC87002CF542 /* RichStringTests iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8DAC4281DCDEC87002CF542 /* Build configuration list for PBXNativeTarget "RichStringTests iOS" */;
@@ -910,6 +958,10 @@
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
 					};
+					F8D2EB3C1DEAF6C100A57F42 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
 					F8DAC41F1DCDEC87002CF542 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 7EQ9KX3BR9;
@@ -941,6 +993,7 @@
 				02BA126B1DD8FDE400215490 /* Demo macOS */,
 				F8D2EAE81DEAE75600A57F42 /* Demo watchOS */,
 				F8D2EAF41DEAE75700A57F42 /* Demo watchOS Extension */,
+				F8D2EB3C1DEAF6C100A57F42 /* Demo tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -1021,6 +1074,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8D2EB3B1DEAF6C100A57F42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8D2EB471DEAF6C100A57F42 /* Assets.xcassets in Resources */,
+				F8D2EB451DEAF6C100A57F42 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1417,6 +1479,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8D2EB391DEAF6C100A57F42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8D2EB421DEAF6C100A57F42 /* ViewController.swift in Sources */,
+				F8D2EB401DEAF6C100A57F42 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8DAC41C1DCDEC87002CF542 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1502,6 +1573,14 @@
 				F8D2EAEC1DEAE75600A57F42 /* Base */,
 			);
 			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		F8D2EB431DEAF6C100A57F42 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8D2EB441DEAF6C100A57F42 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1997,6 +2076,38 @@
 			};
 			name = Release;
 		};
+		F8D2EB491DEAF6C100A57F42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Demo tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.Demo-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		F8D2EB4A1DEAF6C100A57F42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Demo tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.Demo-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
 		F8DAC4291DCDEC87002CF542 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B64508B170E1B3B348D8576B /* Pods-RichStringTests-RichStringTests iOS.debug.xcconfig */;
@@ -2126,6 +2237,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F8D2EB4B1DEAF6C100A57F42 /* Build configuration list for PBXNativeTarget "Demo tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8D2EB491DEAF6C100A57F42 /* Debug */,
+				F8D2EB4A1DEAF6C100A57F42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		F8DAC4281DCDEC87002CF542 /* Build configuration list for PBXNativeTarget "RichStringTests iOS" */ = {
 			isa = XCConfigurationList;
