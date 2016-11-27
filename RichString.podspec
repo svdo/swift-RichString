@@ -16,10 +16,12 @@ Pod::Spec.new do |s|
   # Just to be on the safe side; I haven't tested this with older versions of macOS:
   s.osx.deployment_target     = "10.11"
   s.watchos.deployment_target = "2.0"
+  s.tvos.deployment_target    = "10.0"
 
   s.source                    = { :git => "https://github.com/svdo/swift-RichString.git",
                                   :tag => "#{s.version}" }
   s.ios.source_files          = "RichString/*.swift", "RichString/iOS/*.swift"
   s.osx.source_files          = "RichString/*.swift", "RichString/macOS/*.swift"
   s.watchos.source_files      = "RichString/*.swift", "RichString/watchos/*.swift"
+  s.tvos.source_files         = "RichString/*.swift", "RichString/tvos/*.swift"
 end
