@@ -112,7 +112,7 @@ class RichSpec: QuickConfiguration {
             }
 
             #if !os(watchOS)
-                
+
                 it("can add shadow") {
                     let shadow = NSShadow()
                     shadow.shadowOffset = CGSize(width: 3, height: 3)
@@ -150,7 +150,7 @@ class RichSpec: QuickConfiguration {
                         expect(attachment.bounds) == rect
                     }
                 }
-                
+
             #endif
 
             it("can add letter press effect") {
