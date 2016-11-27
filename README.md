@@ -179,7 +179,7 @@ let attributedString = "text".stroke(width: 2, color: .green)
 
 #### shadow(configure:)
 Configures the shadow using a closure that receives
-an `NSShadow` instance.
+an `NSShadow` instance. Not available on watchOS.
 
 ```swift
 let result = "Hello World".shadow {
@@ -191,7 +191,7 @@ let result = "Hello World".shadow {
 
 #### shadow(_:)
 Configures the shadow by setting an `NSShadow`
-instance.
+instance. Not available on watchOS.
 
 ```swift
 let shadow = NSShadow()
@@ -228,7 +228,7 @@ let attributedString = "text".link(string: urlString)
 
 #### attachment(configure:)
 Creates a new `NSTextAttachment` and passes it to the
-`configure` closure.
+`configure` closure. Not available on watchOS.
 
 ```swift
 let attributedString = NSAttributedString().attachment {
@@ -267,25 +267,25 @@ is not configured on the attributed string, `nil`
 will be returned.
 
 The getters are:
-- `color: Color?`
+- `attachment: NSTextAttachment?` (not available on watchOS)
 - `backgroundColor: Color?`
-- `fontSize: CGFloat?`
-- `paragraphStyle: NSParagraphStyle?`
-- `ligature: Bool?`
-- `kern: Float?`
-- `strikeThroughStyle: NSUnderlineStyle?`
-- `strikeThroughColor: Color?`
-- `underlineStyle: NSUnderlineStyle?`
-- `underlineColor: Color?`
-- `strokeWidth: Float?`
-- `strokeColor: Color?`
-- `shadow: NSShadow?`
-- `isLetterPressed: Bool?`
-- `link: NSURL?`
-- `attachment: NSTextAttachment?`
 - `baselineOffset: Float?`
-- `obliqueness: Float?`
+- `color: Color?`
 - `expansion: Float?`
+- `fontSize: CGFloat?`
+- `isLetterPressed: Bool?`
+- `kern: Float?`
+- `ligature: Bool?`
+- `link: NSURL?`
+- `obliqueness: Float?`
+- `paragraphStyle: NSParagraphStyle?`
+- `shadow: NSShadow?` (not available on watchOS)
+- `strikeThroughColor: Color?`
+- `strikeThroughStyle: NSUnderlineStyle?`
+- `strokeColor: Color?`
+- `strokeWidth: Float?`
+- `underlineColor: Color?`
+- `underlineStyle: NSUnderlineStyle?`
 
 ## Usage
 You can use the library any way you like, but two
