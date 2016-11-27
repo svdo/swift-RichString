@@ -26,7 +26,7 @@ public protocol RichString {
      */
     func font(_ font: Font) -> NSAttributedString
 
-    #if os(iOS) || os(watchOS)
+    #if os(iOS) || os(watchOS) || os(tvOS)
         /**
          * Applies the given font size. If no font was set on the
          * attributed string yet, `Font.systemFont` will be assumed.

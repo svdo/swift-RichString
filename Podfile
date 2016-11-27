@@ -7,6 +7,12 @@ abstract_target 'RichString' do
   target 'RichString macOS' do
     platform :osx, '10.12'
   end
+  target 'RichString watchOS' do
+    platform :watchos, '2.0'
+  end
+  target 'RichString tvOS' do
+    platform :tvos, '10.0'
+  end
 
   abstract_target 'RichStringTests' do
     inherit! :search_paths
@@ -18,6 +24,9 @@ abstract_target 'RichString' do
     end
     target 'RichStringTests macOS' do
       platform :osx, '10.12'
+    end
+    target 'RichStringTests tvOS' do
+      platform :tvos, '10.0'
     end
   end
 

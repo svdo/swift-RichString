@@ -26,7 +26,7 @@ class RichSpec: QuickConfiguration {
 
             it("can add a font size") {
                 let result = richString.fontSize(42)
-                #if os(iOS) || os(watchOS)
+                #if os(iOS) || os(watchOS) || os(tvOS)
                     let actualFontSize = result.fontSize
                 #elseif os(macOS)
                     let actualFontSize = result!.fontSize
@@ -111,32 +111,47 @@ class RichSpec: QuickConfiguration {
                 expect(result.strokeColor) == .green
             }
 
-            it("can add shadow") {
-                let shadow = NSShadow()
-                shadow.shadowOffset = CGSize(width: 3, height: 3)
-                shadow.shadowBlurRadius = 2
-                shadow.shadowColor = Color.gray
-                let result = richString.shadow(shadow)
-                expect(result.shadow) == shadow
-            }
+            #if !os(watchOS)
+                
+                it("can add shadow") {
+                    let shadow = NSShadow()
+                    shadow.shadowOffset = CGSize(width: 3, height: 3)
+                    shadow.shadowBlurRadius = 2
+                    shadow.shadowColor = Color.gray
+                    let result = richString.shadow(shadow)
+                    expect(result.shadow) == shadow
+                }
 
-            it("can configure shadow") {
-                let result = richString.shadow {
-                    $0.shadowOffset = CGSize(width: 3, height: 3)
-                    $0.shadowBlurRadius = 2
-                    $0.shadowColor = Color.gray
+                it("can configure shadow") {
+                    let result = richString.shadow {
+                        $0.shadowOffset = CGSize(width: 3, height: 3)
+                        $0.shadowBlurRadius = 2
+                        $0.shadowColor = Color.gray
+                    }
+                    expect(result.shadow).toNot(beNil())
+                    if let actualShadow = result.shadow {
+                        expect(actualShadow.shadowOffset) == CGSize(width: 3, height: 3)
+                        expect(actualShadow.shadowBlurRadius) == 2
+                        #if os(iOS) || os(watchOS) || os(tvOS)
+                            expect(actualShadow.shadowColor as? Color) == Color.gray
+                        #elseif os(macOS)
+                            expect(actualShadow.shadowColor) == .gray
+                        #endif
+                    }
                 }
-                expect(result.shadow).toNot(beNil())
-                if let actualShadow = result.shadow {
-                    expect(actualShadow.shadowOffset) == CGSize(width: 3, height: 3)
-                    expect(actualShadow.shadowBlurRadius) == 2
-                    #if os(iOS) || os(watchOS)
-                        expect(actualShadow.shadowColor as? Color) == Color.gray
-                    #elseif os(macOS)
-                        expect(actualShadow.shadowColor) == .gray
-                    #endif
+
+                it("can configure new text attachment") {
+                    let rect = CGRect(x: 1, y: 2, width: 3, height: 4)
+                    let result = richString.attachment {
+                        $0.bounds = rect
+                    }
+                    expect(result.attachment).toNot(beNil())
+                    if let attachment = result.attachment {
+                        expect(attachment.bounds) == rect
+                    }
                 }
-            }
+                
+            #endif
 
             it("can add letter press effect") {
                 let result = richString.letterPressed()
@@ -153,17 +168,6 @@ class RichSpec: QuickConfiguration {
                 let urlString = "https://localhost"
                 let result = richString.link(string: urlString)
                 expect(result.link) == NSURL(string: urlString)!
-            }
-
-            it("can configure new text attachment") {
-                let rect = CGRect(x: 1, y: 2, width: 3, height: 4)
-                let result = richString.attachment {
-                    $0.bounds = rect
-                }
-                expect(result.attachment).toNot(beNil())
-                if let attachment = result.attachment {
-                    expect(attachment.bounds) == rect
-                }
             }
 
             it("can set baseline offset") {
