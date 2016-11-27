@@ -2,8 +2,10 @@
 
 import Foundation
 
-#if SWIFT_PACKAGE
+#if SWIFT_PACKAGE || os(macOS)
     import AppKit
+#else
+    import UIKit
 #endif
 
 // MARK: - Simple attributes
@@ -83,20 +85,31 @@ extension NSAttributedString: RichString {
                              value: width)
     }
 
-    public func shadow(_ shadow: NSShadow) -> NSAttributedString {
-        return addingAttribute(NSShadowAttributeName, value: shadow)
-    }
+    #if !os(watchOS)
 
-    public func shadow(configure: (NSShadow) -> Void) -> NSAttributedString {
-        let shadow: NSShadow
-        if let s = self.shadow {
-            shadow = s
-        } else {
-            shadow = NSShadow()
+        public func shadow(_ shadow: NSShadow) -> NSAttributedString {
+            return addingAttribute(NSShadowAttributeName, value: shadow)
         }
-        configure(shadow)
-        return self.shadow(shadow)
-    }
+
+        public func shadow(configure: (NSShadow) -> Void) -> NSAttributedString {
+            let shadow: NSShadow
+            if let s = self.shadow {
+                shadow = s
+            } else {
+                shadow = NSShadow()
+            }
+            configure(shadow)
+            return self.shadow(shadow)
+        }
+
+        public func attachment(configure: (NSTextAttachment) -> Void)
+            -> NSAttributedString {
+                let attachment = NSTextAttachment()
+                configure(attachment)
+                return addingAttribute(NSAttachmentAttributeName, value: attachment)
+        }
+
+    #endif
 
     public func letterPressed() -> NSAttributedString {
         return addingAttribute(NSTextEffectAttributeName,
@@ -109,13 +122,6 @@ extension NSAttributedString: RichString {
 
     public func link(string: String) -> NSAttributedString {
         return addingAttribute(NSLinkAttributeName, value: string)
-    }
-
-    public func attachment(configure: (NSTextAttachment) -> Void)
-            -> NSAttributedString {
-        let attachment = NSTextAttachment()
-        configure(attachment)
-        return addingAttribute(NSAttachmentAttributeName, value: attachment)
     }
 
     public func baselineOffset(_ offset: Float) -> NSAttributedString {
@@ -276,14 +282,26 @@ extension NSAttributedString {
         return attrs[NSStrokeColorAttributeName] as? Color
     }
 
-    /**
-     * - Returns: The configured shadow, if any.
-     * - See: `RichString.shadow(_:)`
-     * - See: `RichString.shadow(configure:)`
-     */
-    public var shadow: NSShadow? {
-        return attrs[NSShadowAttributeName] as? NSShadow
-    }
+    #if !os(watchOS)
+
+        /**
+         * - Returns: The configured shadow, if any.
+         * - See: `RichString.shadow(_:)`
+         * - See: `RichString.shadow(configure:)`
+         */
+        public var shadow: NSShadow? {
+            return attrs[NSShadowAttributeName] as? NSShadow
+        }
+
+        /**
+         * - Returns: The configured attachment, if any.
+         * - See: `RichString.attachment(configure:)`
+         */
+        public var attachment: NSTextAttachment? {
+            return attrs[NSAttachmentAttributeName] as? NSTextAttachment
+        }
+
+    #endif
 
     /**
      * - Returns: Whether or not the letter pressed text effect is configured.
@@ -307,14 +325,6 @@ extension NSAttributedString {
         } else {
             return attrs[NSLinkAttributeName] as? NSURL
         }
-    }
-
-    /**
-     * - Returns: The configured attachment, if any.
-     * - See: `RichString.attachment(configure:)`
-     */
-    public var attachment: NSTextAttachment? {
-        return attrs[NSAttachmentAttributeName] as? NSTextAttachment
     }
 
     /**

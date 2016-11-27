@@ -2,8 +2,10 @@
 
 import Foundation
 
-#if SWIFT_PACKAGE
+#if SWIFT_PACKAGE || os(macOS)
     import AppKit
+#else
+    import UIKit
 #endif
 
 /**
@@ -77,13 +79,22 @@ extension NonAttributedString {
         return rich.stroke(width: width, color: color)
     }
 
-    public func shadow(_ shadow: NSShadow) -> NSAttributedString {
-        return rich.shadow(shadow)
-    }
+    #if !os(watchOS)
 
-    public func shadow(configure: (NSShadow) -> Void) -> NSAttributedString {
-        return rich.shadow(configure: configure)
-    }
+        public func shadow(_ shadow: NSShadow) -> NSAttributedString {
+            return rich.shadow(shadow)
+        }
+
+        public func shadow(configure: (NSShadow) -> Void) -> NSAttributedString {
+            return rich.shadow(configure: configure)
+        }
+
+        public func attachment(configure: (NSTextAttachment) -> Void)
+            -> NSAttributedString {
+                return rich.attachment(configure: configure)
+        }
+
+    #endif
 
     public func letterPressed() -> NSAttributedString {
         return rich.letterPressed()
@@ -95,11 +106,6 @@ extension NonAttributedString {
 
     public func link(string: String) -> NSAttributedString {
         return rich.link(string: string)
-    }
-
-    public func attachment(configure: (NSTextAttachment) -> Void)
-            -> NSAttributedString {
-        return rich.attachment(configure: configure)
     }
 
     public func baselineOffset(_ offset: Float) -> NSAttributedString {

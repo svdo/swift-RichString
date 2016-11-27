@@ -26,7 +26,7 @@ class RichSpec: QuickConfiguration {
 
             it("can add a font size") {
                 let result = richString.fontSize(42)
-                #if os(iOS)
+                #if os(iOS) || os(watchOS)
                     let actualFontSize = result.fontSize
                 #elseif os(macOS)
                     let actualFontSize = result!.fontSize
@@ -130,7 +130,7 @@ class RichSpec: QuickConfiguration {
                 if let actualShadow = result.shadow {
                     expect(actualShadow.shadowOffset) == CGSize(width: 3, height: 3)
                     expect(actualShadow.shadowBlurRadius) == 2
-                    #if os(iOS)
+                    #if os(iOS) || os(watchOS)
                         expect(actualShadow.shadowColor as? Color) == Color.gray
                     #elseif os(macOS)
                         expect(actualShadow.shadowColor) == .gray

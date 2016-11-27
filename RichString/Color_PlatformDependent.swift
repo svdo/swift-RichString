@@ -1,6 +1,6 @@
 //  Copyright © 2016 Stefan van den Oord. All rights reserved.
 
-#if os(iOS)
+#if os(iOS) || os(watchOS)
 
     import UIKit
 

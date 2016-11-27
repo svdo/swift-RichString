@@ -2,8 +2,10 @@
 
 import Foundation
 
-#if SWIFT_PACKAGE
+#if SWIFT_PACKAGE || os(macOS)
     import AppKit
+#else
+    import UIKit
 #endif
 
 /**
@@ -24,7 +26,7 @@ public protocol RichString {
      */
     func font(_ font: Font) -> NSAttributedString
 
-    #if os(iOS)
+    #if os(iOS) || os(watchOS)
         /**
          * Applies the given font size. If no font was set on the
          * attributed string yet, `Font.systemFont` will be assumed.
@@ -170,32 +172,46 @@ public protocol RichString {
      */
     func stroke(width: Float, color: Color) -> NSAttributedString
 
-    /**
-     * Configures the shadow by setting an `NSShadow` instance.
-     *
-     * - Parameter shadow: The `NSShadow` to apply.
-     * - Returns: A new attributed string that has the given shadow applied.
-     */
-    func shadow(_ shadow: NSShadow) -> NSAttributedString
+    #if !os(watchOS)
 
-    /**
-     * Configures the shadow using a closure that receives an `NSShadow` instance.
-     *
-     * For example:
-     *
-     * ```swift
-     *    let result = "Hello World".shadow {
-     *        $0.shadowOffset = CGSize(width: 3, height: 3)
-     *        $0.shadowBlurRadius = 2
-     *        $0.shadowColor = Color.gray
-     *    }
-     * ```
-     *
-     * - Parameter configure: The closure that you use to configure the shadow; it is passed
-     *                        an `NSShadow` instance that you can change and is then applied.
-     * - Returns: A new attributed string that has the configured shadow applied.
-     */
-    func shadow(configure: (NSShadow) -> Void) -> NSAttributedString
+        /**
+         * Configures the shadow by setting an `NSShadow` instance.
+         *
+         * - Parameter shadow: The `NSShadow` to apply.
+         * - Returns: A new attributed string that has the given shadow applied.
+         */
+        func shadow(_ shadow: NSShadow) -> NSAttributedString
+
+        /**
+         * Configures the shadow using a closure that receives an `NSShadow` instance.
+         *
+         * For example:
+         *
+         * ```swift
+         *    let result = "Hello World".shadow {
+         *        $0.shadowOffset = CGSize(width: 3, height: 3)
+         *        $0.shadowBlurRadius = 2
+         *        $0.shadowColor = Color.gray
+         *    }
+         * ```
+         *
+         * - Parameter configure: The closure that you use to configure the shadow; it is passed
+         *                        an `NSShadow` instance that you can change and is then applied.
+         * - Returns: A new attributed string that has the configured shadow applied.
+         */
+        func shadow(configure: (NSShadow) -> Void) -> NSAttributedString
+
+        /**
+         * Creates a new `NSTextAttachment` and passes it to the `configure` closure.
+         *
+         * - Parameter configure: the closure that you can use to configure the
+         *                        `NSTextAttachment` instance.
+         * - Returns: A new attributed string that has the configured text attachment.
+         */
+        func attachment(configure: (NSTextAttachment) -> Void)
+            -> NSAttributedString
+
+    #endif
 
     /**
      * Adds the "letter pressed" text effect.
@@ -219,16 +235,6 @@ public protocol RichString {
      * - Returns: A new attributed string that is the receiver converted to a hyperlink.
      */
     func link(string: String) -> NSAttributedString
-
-    /**
-     * Creates a new `NSTextAttachment` and passes it to the `configure` closure.
-     *
-     * - Parameter configure: the closure that you can use to configure the
-     *                        `NSTextAttachment` instance.
-     * - Returns: A new attributed string that has the configured text attachment.
-     */
-    func attachment(configure: (NSTextAttachment) -> Void)
-            -> NSAttributedString
 
     /**
      * Configures the baseline offset.
