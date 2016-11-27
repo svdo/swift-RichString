@@ -7,6 +7,12 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/svdo/swift-RichString/blob/master/LICENSE)
 
+iOS ![iOS build status](https://www.bitrise.io/app/be72b9e151cd07b0.svg?token=uNzPxW7-U72W8caT90H4-Q)
+| tvOS ![tvOS build status](https://www.bitrise.io/app/3cb0152b1c621436.svg?token=enlInfw6qhO19_0agJgvKQ)
+| watchOS ![watchOS build status](https://www.bitrise.io/app/a86fb3ebe514205f.svg?token=sxbknzRtbt8oxi92Jqpang)
+| macOS ![macOS build status](https://www.bitrise.io/app/ac72d77b90795a96.svg?token=I2foSCluNAsaxKyujIvFMQ)
+
+
 ## Introduction
 This Swift framework was built to simplify working with `NSAttributedString`. It does
 so without adding additional types; it just extends the existing types that you already have,
