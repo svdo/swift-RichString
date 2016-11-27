@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F8D2EAD71DEAE1B200A57F42"
-               BuildableName = "RichString watchOS.framework"
+               BuildableName = "RichString.framework"
                BlueprintName = "RichString watchOS"
                ReferencedContainer = "container:RichString.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F8D2EAD71DEAE1B200A57F42"
-            BuildableName = "RichString watchOS.framework"
+            BuildableName = "RichString.framework"
             BlueprintName = "RichString watchOS"
             ReferencedContainer = "container:RichString.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F8D2EAD71DEAE1B200A57F42"
-            BuildableName = "RichString watchOS.framework"
+            BuildableName = "RichString.framework"
             BlueprintName = "RichString watchOS"
             ReferencedContainer = "container:RichString.xcodeproj">
          </BuildableReference>

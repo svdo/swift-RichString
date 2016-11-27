@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Demo_watchOS" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Label" id="4kO-7o-nvb"/>
+                        <label alignment="left" text="Label" numberOfLines="0" id="VBs-fX-pqA"/>
+                        <label alignment="left" text="Label" numberOfLines="0" id="HgS-PG-aFg"/>
+                    </items>
+                    <connections>
+                        <outlet property="label1" destination="4kO-7o-nvb" id="lDy-XY-2gZ"/>
+                        <outlet property="label2" destination="VBs-fX-pqA" id="XtR-BM-d6u"/>
+                        <outlet property="label3" destination="HgS-PG-aFg" id="4ht-Gr-lhv"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
