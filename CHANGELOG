@@ -1,3 +1,9 @@
+1.2.1
+=====
+No changes; just making another version hoping that CocoaDocs generation will now work correctly.
+See also: https://github.com/svdo/swift-RichString/issues/1.
+
+
 1.2.0
 =====
 Added support for tvOS and watchOS.
