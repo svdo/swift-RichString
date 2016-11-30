@@ -2235,6 +2235,7 @@
 				F8D2EB4A1DEAF6C100A57F42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8DAC4281DCDEC87002CF542 /* Build configuration list for PBXNativeTarget "RichStringTests iOS" */ = {
 			isa = XCConfigurationList;
