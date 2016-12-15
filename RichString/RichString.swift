@@ -165,7 +165,7 @@ public protocol RichString {
 
     /**
      * Configures the stroke.
-     * 
+     *
      * - Parameter width: The width of the stroke.
      * - Parameter color: The color of the stroke.
      * - Returns: A new attributed string that has the given stroke attributes applied.

@@ -11,8 +11,13 @@ import Foundation
 /**
  * Protocol used to add all functionality to both `String` and `NSString`.
  * You normally don't need to use this directly yourself.
+ *
+ * Please note: I would have preferred for this protocol to be internal.
+ * That doesn't work with Swift 3 however; when doing release builds you
+ * get 'undefined symbol' linker errors. More info:
+ * https://bugs.swift.org/browse/SR-2925
  */
-protocol NonAttributedString: RichString {
+public protocol NonAttributedString: RichString {
     var rich: RichString { get }
 }
 
@@ -122,13 +127,13 @@ extension NonAttributedString {
 }
 
 extension String: NonAttributedString {
-    var rich: RichString {
+    public var rich: RichString {
         return NSAttributedString(string: self)
     }
 }
 
 extension NSString: NonAttributedString {
-    var rich: RichString {
+    public var rich: RichString {
         return NSAttributedString(string: self as String)
     }
 }
