@@ -18,6 +18,12 @@ import Foundation
  * https://bugs.swift.org/browse/SR-2925
  */
 public protocol NonAttributedString: RichString {
+    /**
+     * Create a `NSAttributedString` version of the string. Should be internal, not public;
+     * see remark above.
+     *
+     * - Returns: `NSAttributedString` version of this string. 
+     */
     var rich: RichString { get }
 }
 
