@@ -1,7 +1,14 @@
+1.2.4
+=====
+Changed the documentation URL to point to github pages, because CocoaDocs is not generating the docs
+properly. So documentation is now at https://svdo.github.io/swift-RichString.
+
+
 1.2.3
 =====
 Fixed an issue where release builds of projects using RichString would
 give 'undefined symbol' linker errors.
+
 
 1.2.2
 =====
