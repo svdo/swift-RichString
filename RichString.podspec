@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   s.homepage                  = "https://github.com/svdo/swift-RichString"
   s.license                   = { :type => "MIT", :file => "LICENSE" }
   s.author                    = "Stefan van den Oord"
+  s.documentation_url         = "https://svdo.github.io/swift-RichString/"
 
   s.ios.deployment_target     = "10.0"
   # Just to be on the safe side; I haven't tested this with older versions of macOS:
