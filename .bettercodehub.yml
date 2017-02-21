@@ -1,4 +1,11 @@
 exclude:
-- /Pods
+- /Pods/.*
 languages:
-- swift
+- name: swift
+  production:
+    exclude:
+      - .*Tests/.*
+  test:
+    include:
+      - .*Tests/.*
+
