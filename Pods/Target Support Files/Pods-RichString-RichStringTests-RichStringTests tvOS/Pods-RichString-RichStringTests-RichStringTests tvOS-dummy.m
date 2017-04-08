@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_RichString_RichStringTests_RichStringTests_tvOS : NSObject
+@end
+@implementation PodsDummy_Pods_RichString_RichStringTests_RichStringTests_tvOS
+@end
