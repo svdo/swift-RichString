@@ -15,8 +15,8 @@ abstract_target 'RichString' do
   end
 
   abstract_target 'RichStringTests' do
-    pod 'Quick', '~> 0.10'
-    pod 'Nimble', '~> 5.1'
+    pod 'Quick', '~> 1.2'
+    pod 'Nimble', '~> 7.0'
 
     target 'RichStringTests iOS' do
       platform :ios, '10.0'
