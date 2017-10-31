@@ -908,11 +908,13 @@
 					};
 					02BA12811DD900AE00215490 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					02BA129A1DD90B5C00215490 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 38HP5T8ATC;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					F8D2EAD71DEAE1B200A57F42 = {
@@ -1833,7 +1835,8 @@
 				PRODUCT_NAME = RichString;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1857,7 +1860,8 @@
 				PRODUCT_NAME = RichString;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1875,7 +1879,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.RichStringTests-macOS";
 				PRODUCT_NAME = "RichStringTests-macOS";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1893,7 +1898,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.RichStringTests-macOS";
 				PRODUCT_NAME = "RichStringTests-macOS";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
