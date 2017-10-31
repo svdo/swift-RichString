@@ -1,3 +1,8 @@
+2.0.0
+=====
+Converted to Swift 4.
+
+
 1.2.4
 =====
 Changed the documentation URL to point to github pages, because CocoaDocs is not generating the docs
