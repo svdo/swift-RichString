@@ -19,11 +19,11 @@
         public func fontSize(_ size: CGFloat) -> NSAttributedString {
             let attrs = self.attributes(at: 0, effectiveRange: nil)
             let fontAttrs = attrs.filter {
-                $0.0 == NSFontAttributeName
+                $0.0 == NSAttributedStringKey.font
             }
 
             let font: Font
-            if fontAttrs.count > 0, let f = fontAttrs[0].1 as? Font {
+            if fontAttrs.count > 0, let f = fontAttrs.first?.1 as? Font {
                 font = f
             } else {
                 font = Font.systemFont(ofSize: size)
