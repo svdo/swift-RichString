@@ -32,7 +32,7 @@ matrix:
         - ACTION=test
 script:
   - set -o pipefail &&xcodebuild -workspace RichString.xcworkspace -scheme "${SCHEME}" -sdk "${SDK}" -destination "${DESTINATION}" ${ACTION} | xcpretty
-  - jazzy
+  - bundle exec jazzy
 deploy:
   provider: pages
   skip_cleanup: true
