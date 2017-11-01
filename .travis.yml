@@ -31,7 +31,7 @@ before_install:
   - gem install xcpretty
   - gem install jazzy
 script:
-  - set -o pipefail &&xcodebuild -workspace RichString.xcworkspace -scheme ${SCHEME} -sdk ${SDK} -destination ${DESTINATION} ${ACTION} | xcpretty
+  - set -o pipefail &&xcodebuild -workspace RichString.xcworkspace -scheme "${SCHEME}" -sdk "${SDK}" -destination "${DESTINATION}" ${ACTION} | xcpretty
   - jazzy
 deploy:
   provider: pages
