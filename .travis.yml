@@ -1,6 +1,9 @@
 sudo: false
 language: swift
 osx_image: xcode9
+cache:
+  - bundler
+  - cocoapods
 matrix:
   include:
     - os: osx
@@ -27,9 +30,6 @@ matrix:
         - SDK="appletvsimulator"
         - DESTINATION="platform=tvOS Simulator,name=Apple TV 4K"
         - ACTION=test
-before_install:
-  - gem install xcpretty
-  - gem install jazzy
 script:
   - set -o pipefail &&xcodebuild -workspace RichString.xcworkspace -scheme "${SCHEME}" -sdk "${SDK}" -destination "${DESTINATION}" ${ACTION} | xcpretty
   - jazzy
