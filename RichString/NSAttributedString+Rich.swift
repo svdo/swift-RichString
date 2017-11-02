@@ -152,7 +152,7 @@ extension NSAttributedString {
     }
 
     func entireString() -> NSRange {
-        return NSRange(location: 0, length: self.string.characters.count)
+        return NSRange(location: 0, length: self.string.count)
     }
 }
 
