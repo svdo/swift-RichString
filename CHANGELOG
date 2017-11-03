@@ -1,3 +1,8 @@
+2.1.0
+=====
+Removed use of deprecated `String.characters` property, gets rid of compiler warning.
+
+
 2.0.0
 =====
 Converted to Swift 4.
