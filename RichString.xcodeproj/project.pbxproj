@@ -955,9 +955,8 @@
 					};
 					02BA129A1DD90B5C00215490 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 38HP5T8ATC;
 						LastSwiftMigration = 1010;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					F8D2EAD71DEAE1B200A57F42 = {
 						CreatedOnToolsVersion = 8.1;
@@ -1873,10 +1872,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B42D485431FF535FA0CB317A /* Pods-RichString-RichStringTests-RichStringTests macOS.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 38HP5T8ATC;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RichStringTests/macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -1892,10 +1890,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9970583D3E825CA5BBE0569C /* Pods-RichString-RichStringTests-RichStringTests macOS.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 38HP5T8ATC;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RichStringTests/macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
