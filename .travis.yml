@@ -28,10 +28,11 @@ matrix:
       env:
         - SCHEME="RichString tvOS"
         - SDK="appletvsimulator"
-        - DESTINATION="platform=tvOS Simulator,name=Apple TV 4K,OS=12.1"
+        - DESTINATION="platform=tvOS Simulator,name=Apple TV,OS=12.1"
         - ACTION=test
 script:
-  - set -o pipefail &&xcodebuild -workspace RichString.xcworkspace -scheme "${SCHEME}" -sdk "${SDK}" -destination "${DESTINATION}" ${ACTION} | xcpretty
+  - xcodebuild -workspace RichString.xcworkspace -scheme "${SCHEME}" -showdestinations
+  - set -o pipefail && xcodebuild -workspace RichString.xcworkspace -scheme "${SCHEME}" -sdk "${SDK}" -destination "${DESTINATION}" ${ACTION} | xcpretty
   - bundle exec jazzy
 deploy:
   provider: pages
