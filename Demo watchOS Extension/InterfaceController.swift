@@ -13,7 +13,7 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
 
-        let text1 = "This is some text".fontSize(17).color(.blue).strikeThrough(style: .styleDouble)
+        let text1 = "This is some text".fontSize(17).color(.blue).strikeThrough(style: .double)
         let text2 = "This is some text".fontSize(17).color(.red).obliqueness(0.5).expansion(0.5)
         let text3 = text1 + text2.color(.red)
 

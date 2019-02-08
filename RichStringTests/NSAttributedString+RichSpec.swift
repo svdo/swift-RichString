@@ -74,8 +74,8 @@ class RichSpec: QuickConfiguration {
             }
 
             it("can add strike through style") {
-                let result = richString.strikeThrough(style: .styleDouble)
-                expect(result.strikeThroughStyle) == .styleDouble
+                let result = richString.strikeThrough(style: .double)
+                expect(result.strikeThroughStyle) == .double
             }
 
             it("can add strike through color") {
@@ -84,9 +84,9 @@ class RichSpec: QuickConfiguration {
             }
 
             it("can add strike through style and color") {
-                let result = richString.strikeThrough(color: .cyan, style: .styleDouble)
+                let result = richString.strikeThrough(color: .cyan, style: .double)
                 expect(result.strikeThroughColor) == .cyan
-                expect(result.strikeThroughStyle) == .styleDouble
+                expect(result.strikeThroughStyle) == .double
             }
 
             it("can add underline style") {

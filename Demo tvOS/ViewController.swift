@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var label4: UILabel!
 
     override func viewWillAppear(_ animated: Bool) {
-        let text1 = "This is some text".fontSize(27).color(.blue).strikeThrough(style: .styleDouble)
+        let text1 = "This is some text".fontSize(27).color(.blue).strikeThrough(style: .double)
         let text2 = "This is some text".fontSize(27).color(.red).obliqueness(0.5).expansion(0.5)
         let text3 = text1 + text2.color(.red)
         let text4 = loremIpsum.paragraphStyle {

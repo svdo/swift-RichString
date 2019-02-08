@@ -934,30 +934,34 @@
 				TargetAttributes = {
 					02BA12391DCD206300215490 = {
 						CreatedOnToolsVersion = 8.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					02BA124A1DCD21E400215490 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					02BA126B1DD8FDE400215490 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 38HP5T8ATC;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					02BA12811DD900AE00215490 = {
 						CreatedOnToolsVersion = 8.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					02BA129A1DD90B5C00215490 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 38HP5T8ATC;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					F8D2EAD71DEAE1B200A57F42 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					F8D2EAE81DEAE75600A57F42 = {
@@ -966,23 +970,27 @@
 					};
 					F8D2EAF41DEAE75700A57F42 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					F8D2EB161DEAF3B500A57F42 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					F8D2EB1E1DEAF3B500A57F42 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					F8D2EB3C1DEAF6C100A57F42 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					F8DAC41F1DCDEC87002CF542 = {
 						CreatedOnToolsVersion = 8.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1724,7 +1732,7 @@
 				PRODUCT_NAME = RichString;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1745,7 +1753,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.RichString-iOS";
 				PRODUCT_NAME = RichString;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1759,7 +1767,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.Demo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1773,7 +1781,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.Demo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1784,14 +1792,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 38HP5T8ATC;
 				INFOPLIST_FILE = Demo_macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.Demo-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1802,14 +1810,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 38HP5T8ATC;
 				INFOPLIST_FILE = Demo_macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.Demo-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1833,7 +1841,7 @@
 				PRODUCT_NAME = RichString;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1857,7 +1865,7 @@
 				PRODUCT_NAME = RichString;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1865,7 +1873,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B42D485431FF535FA0CB317A /* Pods-RichString-RichStringTests-RichStringTests macOS.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 38HP5T8ATC;
 				INFOPLIST_FILE = RichStringTests/macOS/Info.plist;
@@ -1873,8 +1882,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.RichStringTests-macOS";
 				PRODUCT_NAME = "RichStringTests-macOS";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1882,7 +1892,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9970583D3E825CA5BBE0569C /* Pods-RichString-RichStringTests-RichStringTests macOS.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 38HP5T8ATC;
 				INFOPLIST_FILE = RichStringTests/macOS/Info.plist;
@@ -1890,8 +1901,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.RichStringTests-macOS";
 				PRODUCT_NAME = "RichStringTests-macOS";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1913,7 +1925,7 @@
 				PRODUCT_NAME = RichString;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1937,7 +1949,7 @@
 				PRODUCT_NAME = RichString;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1954,7 +1966,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.1;
 			};
@@ -1971,7 +1983,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.1;
 			};
@@ -2032,7 +2044,7 @@
 				PRODUCT_NAME = RichString;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
@@ -2055,7 +2067,7 @@
 				PRODUCT_NAME = RichString;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
@@ -2070,7 +2082,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.RichStringTests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
@@ -2084,7 +2096,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.RichStringTests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
@@ -2101,7 +2113,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.Demo-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
@@ -2119,7 +2131,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.Demo-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
@@ -2134,7 +2146,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.RichStringTests-iOS";
 				PRODUCT_NAME = "RichStringTests-iOS";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -2147,7 +2159,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vandenoord.RichStringTests-iOS";
 				PRODUCT_NAME = "RichStringTests-iOS";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
