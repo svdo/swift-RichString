@@ -29,7 +29,7 @@ matrix:
         - SCHEME="RichString tvOS"
         - SDK="appletvsimulator"
         - DESTINATION="platform=tvOS Simulator,name=Apple TV 4K (at 1080p),OS=12.1"
-        - ACTION=test
+        - ACTION=build
 script:
   - xcodebuild -workspace RichString.xcworkspace -scheme "${SCHEME}" -showdestinations
   - set -o pipefail && xcodebuild -workspace RichString.xcworkspace -scheme "${SCHEME}" -sdk "${SDK}" -destination "${DESTINATION}" ${ACTION} | xcpretty
