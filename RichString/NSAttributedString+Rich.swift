@@ -93,8 +93,8 @@ extension NSAttributedString: RichString {
 
         public func shadow(configure: (NSShadow) -> Void) -> NSAttributedString {
             let shadow: NSShadow
-            if let s = self.shadow {
-                shadow = s
+            if let myShadow = self.shadow {
+                shadow = myShadow
             } else {
                 shadow = NSShadow()
             }
@@ -141,10 +141,10 @@ extension NSAttributedString: RichString {
 extension NSAttributedString {
     func addingAttribute(_ name: String, value: Any)
             -> NSAttributedString {
-        let m = makeMutable()
-        let r = entireString()
-        m.addAttribute(NSAttributedStringKey(rawValue: name), value: value, range: r)
-        return NSAttributedString(attributedString: m)
+        let mutableMe = makeMutable()
+        let range = entireString()
+        mutableMe.addAttribute(NSAttributedStringKey(rawValue: name), value: value, range: range)
+        return NSAttributedString(attributedString: mutableMe)
     }
 
     func makeMutable() -> NSMutableAttributedString {

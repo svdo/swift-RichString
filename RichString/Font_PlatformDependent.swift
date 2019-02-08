@@ -23,8 +23,8 @@
             }
 
             let font: Font
-            if fontAttrs.count > 0, let f = fontAttrs.first?.1 as? Font {
-                font = f
+            if fontAttrs.count > 0, let fst = fontAttrs.first?.1 as? Font {
+                font = fst
             } else {
                 font = Font.systemFont(ofSize: size)
             }
@@ -63,8 +63,8 @@
             }
 
             let font: Font
-            if fontAttrs.count > 0, let f = fontAttrs.first?.1 as? Font {
-                font = f
+            if fontAttrs.count > 0, let fst = fontAttrs.first?.1 as? Font {
+                font = fst
             } else {
                 font = Font.systemFont(ofSize: 0)
             }
