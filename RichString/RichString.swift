@@ -260,3 +260,7 @@ public protocol RichString {
      */
     func expansion(_ expansion: Float) -> NSAttributedString
 }
+
+private func xcodeBugWorkaround() {
+    print("https://stackoverflow.com/a/54510891")
+}
