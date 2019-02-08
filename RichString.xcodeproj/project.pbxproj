@@ -696,7 +696,6 @@
 				02BA12371DCD206300215490 /* Headers */,
 				02BA12381DCD206300215490 /* Resources */,
 				F87673381DCDEBB100191D62 /* SwiftLint */,
-				8D810FD4894056242D4A5E30 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -757,7 +756,6 @@
 				02BA127F1DD900AE00215490 /* Headers */,
 				02BA12801DD900AE00215490 /* Resources */,
 				F85671BE1DDAF6E8009640D3 /* SwiftLint */,
-				1E0899ABE251632B6741491F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -777,7 +775,6 @@
 				02BA12981DD90B5C00215490 /* Frameworks */,
 				02BA12991DD90B5C00215490 /* Resources */,
 				A595EB24B02F235680FFC141 /* [CP] Embed Pods Frameworks */,
-				A3B6D678703A94DB7300DE9B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -798,7 +795,6 @@
 				F8D2EAD41DEAE1B200A57F42 /* Frameworks */,
 				F8D2EAD51DEAE1B200A57F42 /* Headers */,
 				F8D2EAD61DEAE1B200A57F42 /* Resources */,
-				78967A4EDDA9C99BF5CF812A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -857,7 +853,6 @@
 				F8D2EB131DEAF3B500A57F42 /* Frameworks */,
 				F8D2EB141DEAF3B500A57F42 /* Headers */,
 				F8D2EB151DEAF3B500A57F42 /* Resources */,
-				2F910B235789B5D69EAE4AC6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -877,7 +872,6 @@
 				F8D2EB1C1DEAF3B500A57F42 /* Frameworks */,
 				F8D2EB1D1DEAF3B500A57F42 /* Resources */,
 				DBB1C0ABDB613A622644A566 /* [CP] Embed Pods Frameworks */,
-				8382BDB5C4EDA2BCFC00E3D5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -917,7 +911,6 @@
 				F8DAC41D1DCDEC87002CF542 /* Frameworks */,
 				F8DAC41E1DCDEC87002CF542 /* Resources */,
 				0F9644B6D962D624021CFFE5 /* [CP] Embed Pods Frameworks */,
-				A5DABEEAF3E65BAAFC7983F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1127,7 +1120,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RichString-RichStringTests-RichStringTests iOS/Pods-RichString-RichStringTests-RichStringTests iOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-RichString-RichStringTests-RichStringTests iOS/Pods-RichString-RichStringTests-RichStringTests iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble-iOS/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick-iOS/Quick.framework",
 			);
@@ -1138,7 +1131,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichString-RichStringTests-RichStringTests iOS/Pods-RichString-RichStringTests-RichStringTests iOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RichString-RichStringTests-RichStringTests iOS/Pods-RichString-RichStringTests-RichStringTests iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		136F544B927FA88DBDF9ECE9 /* [CP] Check Pods Manifest.lock */ = {
@@ -1157,36 +1150,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1E0899ABE251632B6741491F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichString-RichString macOS/Pods-RichString-RichString macOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2F910B235789B5D69EAE4AC6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichString-RichString tvOS/Pods-RichString-RichString tvOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		300D948107B702A1849CF3DE /* [CP] Check Pods Manifest.lock */ = {
@@ -1225,21 +1188,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		78967A4EDDA9C99BF5CF812A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichString-RichString watchOS/Pods-RichString-RichString watchOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8152892F49B11FDD4461ACCA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1256,36 +1204,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8382BDB5C4EDA2BCFC00E3D5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichString-RichStringTests-RichStringTests tvOS/Pods-RichString-RichStringTests-RichStringTests tvOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8D810FD4894056242D4A5E30 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichString-RichString iOS/Pods-RichString-RichString iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		96F72A9EA78169F6EF20488F /* [CP] Check Pods Manifest.lock */ = {
@@ -1306,28 +1224,13 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A3B6D678703A94DB7300DE9B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichString-RichStringTests-RichStringTests macOS/Pods-RichString-RichStringTests-RichStringTests macOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A595EB24B02F235680FFC141 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RichString-RichStringTests-RichStringTests macOS/Pods-RichString-RichStringTests-RichStringTests macOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-RichString-RichStringTests-RichStringTests macOS/Pods-RichString-RichStringTests-RichStringTests macOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble-macOS/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick-macOS/Quick.framework",
 			);
@@ -1338,22 +1241,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichString-RichStringTests-RichStringTests macOS/Pods-RichString-RichStringTests-RichStringTests macOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A5DABEEAF3E65BAAFC7983F9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichString-RichStringTests-RichStringTests iOS/Pods-RichString-RichStringTests-RichStringTests iOS-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RichString-RichStringTests-RichStringTests macOS/Pods-RichString-RichStringTests-RichStringTests macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE45B38B1CF85FA4F45F971A /* [CP] Check Pods Manifest.lock */ = {
@@ -1398,7 +1286,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RichString-RichStringTests-RichStringTests tvOS/Pods-RichString-RichStringTests-RichStringTests tvOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-RichString-RichStringTests-RichStringTests tvOS/Pods-RichString-RichStringTests-RichStringTests tvOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble-tvOS/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick-tvOS/Quick.framework",
 			);
@@ -1409,7 +1297,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichString-RichStringTests-RichStringTests tvOS/Pods-RichString-RichStringTests-RichStringTests tvOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RichString-RichStringTests-RichStringTests tvOS/Pods-RichString-RichStringTests-RichStringTests tvOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F85671BE1DDAF6E8009640D3 /* SwiftLint */ = {
