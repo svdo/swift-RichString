@@ -146,7 +146,7 @@ extension NSAttributedString {
     }
 
     func entireString() -> NSRange {
-        return NSRange(location: 0, length: self.string.count)
+        NSRange(string.startIndex..<string.endIndex, in: string)
     }
 }
 
