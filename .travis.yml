@@ -22,7 +22,7 @@ matrix:
       env:
         - SCHEME="RichString watchOS"
         - SDK=watchsimulator
-        - DESTINATION="platform=watchOS Simulator,name=Apple Watch Series 3 - 42mm,OS=6.2"
+        - DESTINATION="platform=watchOS Simulator,name=Apple Watch Series 5 - 44mm,OS=6.2.1"
         - ACTION=build
     - os: osx
       env:
