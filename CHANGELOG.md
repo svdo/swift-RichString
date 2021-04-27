@@ -1,3 +1,8 @@
+2.2.1
+=====
+Fixes issue #3: `entireString` method for unicode characters. Thanks @rapidfireworks!
+
+
 2.2.0
 =====
 Converted to Swift 4.2.
