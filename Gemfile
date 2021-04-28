@@ -3,5 +3,5 @@ source 'https://rubygems.org' do
     gem 'xcpretty'
 end
 
-gem 'jazzy', '0.9.5'
+gem 'jazzy'
 

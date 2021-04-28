@@ -8,3 +8,4 @@ module: RichString
 module_version: 2.2.1
 readme: README.md
 copyright: Copyright © 2016 [Stefan van den Oord](https://github.com/svdo). All rights reserved
+podspec: RichString.podspec
