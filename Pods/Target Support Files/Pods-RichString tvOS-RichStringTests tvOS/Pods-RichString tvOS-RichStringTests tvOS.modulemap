@@ -1,0 +1,6 @@
+module Pods_RichString_tvOS_RichStringTests_tvOS {
+  umbrella header "Pods-RichString tvOS-RichStringTests tvOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
