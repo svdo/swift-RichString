@@ -13,6 +13,8 @@ Pod::Spec.new do |s|
   s.author                    = "Stefan van den Oord"
   s.documentation_url         = "https://svdo.github.io/swift-RichString/"
 
+  s.swift_version             = "4.2"
+
   s.ios.deployment_target     = "10.0"
   # Just to be on the safe side; I haven't tested this with older versions of macOS:
   s.osx.deployment_target     = "10.11"
