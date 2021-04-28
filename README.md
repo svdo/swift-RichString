@@ -1,4 +1,5 @@
 # RichString
+
 *The easiest way to work with attributed strings in Swift*
 
 ![Swift Version 4](https://img.shields.io/badge/Swift-v4-yellow.svg)
@@ -9,16 +10,16 @@
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/svdo/swift-RichString/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/svdo/swift-RichString.svg?branch=master)](https://travis-ci.org/svdo/swift-RichString)
 
-
 ## Introduction
-This Swift framework was built to simplify working with `NSAttributedString`. It does
-so without adding additional types; it just extends the existing types that you already have,
-ensuring that it is fully interoperable with any other method of using `NSAttributedString`.
 
-The core assumption this framework makes, is that you
-set up your attributed strings by first configuring
-all components appropriately, and then concatenating
-them.
+This Swift framework was built to simplify working with `NSAttributedString`. It
+does so without adding additional types; it just extends the existing types that
+you already have, ensuring that it is fully interoperable with any other method
+of using `NSAttributedString`.
+
+The core assumption this framework makes, is that you set up your attributed
+strings by first configuring all components appropriately, and then
+concatenating them.
 
 It allows you to do things like this:
 
@@ -31,13 +32,13 @@ let content = title + text
 ```
 
 ## Overview
-This framework provides the following primitives.
-There are unit tests; have a look at them for more
-examples.
+
+This framework provides the following primitives. There are unit tests; have a
+look at them for more examples.
 
 ### Operator `+` For Concatenating Attributed Strings
-Given two strings, you can append one to the other
-using the `+` operator:
+
+Given two strings, you can append one to the other using the `+` operator:
 
 ```swift
 let s1 = NSAttributedString()
@@ -48,30 +49,33 @@ let concatenated = s1 + s2
 ### `RichString` protocol for `String`, `NSString` and `NSAttributedString`
 
 #### font(_:)
-Apply the given font. The type `Font` is a type
-alias of `UIFont` on iOS, and of `NSFont` on macOS.
+
+Apply the given font. The type `Font` is a type alias of `UIFont` on iOS, and of
+`NSFont` on macOS.
 
 ```swift
 let attributedString = "text".font(.systemFont(ofSize: 12))
 ```
-#### fontSize(_:)
-Applies the given font size. If no font was set on
-the attributed string yet, `Font.systemFont` will be
-assumed.
 
-Note: unlike on iOS, on macOS this returns an
-*optional* attributed string instead.
+#### fontSize(_:)
+
+Applies the given font size. If no font was set on the attributed string yet,
+`Font.systemFont` will be assumed.
+
+Note: unlike on iOS, on macOS this returns an *optional* attributed string
+instead.
 
 ```swift
 let attributedString = "text".fontSize(12)
 ```
 
 #### paragraphStyle(configure:)
-Applies a paragraph style, configuring it with the
-given closure. If the attributed string already had
-a paragraph style attribute, the `configure` closure
-is called on that paragraph style; otherwise a new
+
+Applies a paragraph style, configuring it with the given closure. If the
+attributed string already had a paragraph style attribute, the `configure`
+closure is called on that paragraph style; otherwise a new
 `NSMutableParagraphStyle` is used.
+
 ```swift
 let attributedString = "Hello World".paragraphStyle {
     $0.firstLineHeadIndent = 10
@@ -79,6 +83,7 @@ let attributedString = "Hello World".paragraphStyle {
 ```
 
 #### paragraphStyle(_:)
+
 Applies the given paragraph style.
 
 ```swift
@@ -88,6 +93,7 @@ let attributedString = "text".paragraphStyle(paragraphStyle)
 ```
 
 #### color(_:)
+
 Applies the given (foreground) color.
 
 ```swift
@@ -95,6 +101,7 @@ let attributedString = "text".color(.blue)
 ```
 
 #### backgroundColor(_:)
+
 Applies the given background color.
 
 ```swift
@@ -102,78 +109,78 @@ let attributedString = "text".backgroundColor(.yellow)
 ```
 
 #### ligature(_:)
-Configures whether or not to use ligatures. Default
-is that they are used.
+
+Configures whether or not to use ligatures. Default is that they are used.
 
 ```swift
 let attributedString = "text".ligature(false)
 ```
 
 #### kern(_:)
-Configures the amount with which to modify the
-default kerning. The default `0` means that no
-kerning change is applied.
+
+Configures the amount with which to modify the default kerning. The default `0`
+means that no kerning change is applied.
 
 ```swift
 let attributedString = "text".kern(0.1)
 ```
 
 #### strikeThrough(style:)
-Configures the strike through style.
 
-Please note that depending on OS and version not all
-styles may actually work.
+Configures the strike through style. Please note that depending on OS and
+version not all styles may actually work.
 
 ```swift
 let attributedString = "text".strikeThrough(style: .styleSingle)
 ```
 
 #### strikeThrough(color:)
-Configures the strike through color.
-Only setting the color has no effect, the style must
-be configured as well.
+
+Configures the strike through color. Only setting the color has no effect, the
+style must be configured as well.
 
 ```swift
 let attributedString = "text".strikeThrough(color: .red)
 ```
 
 #### strikeThrough(color:, style:)
-Configures both the strike through color and style.
-Please note that depending on OS and version not all
-styles may actually work.
+
+Configures both the strike through color and style. Please note that depending
+on OS and version not all styles may actually work.
 
 ```swift
 let attributedString = "text".strikeThrough(color: .red, style: .styleDouble)
 ```
 
 #### underline(style:)
-Configures the underline style.
-Please note that depending on OS and version not all
-styles may actually work.
+
+Configures the underline style. Please note that depending on OS and version not
+all styles may actually work.
 
 ```swift
 let attributedString = "text".underline(style: .styleSingle)
 ```
 
 #### underline(color:)
-Configures the underline color.
-Only setting the color has no effect, the style must
-be configured as well.
+
+Configures the underline color. Only setting the color has no effect, the style
+must be configured as well.
 
 ```swift
 let attributedString = "text".underline(color: .blue)
 ```
 
 #### underline(color:, style:)
-Configures both the underline color and style.
-Please note that depending on OS and version not all
-styles may actually work.
+
+Configures both the underline color and style. Please note that depending on OS
+and version not all styles may actually work.
 
 ```swift
 let attributedString = "text".underline(color: .blue, style: .styleSingle)
 ```
 
 #### stroke(width:, color:)
+
 Configures the stroke.
 
 ```swift
@@ -181,6 +188,7 @@ let attributedString = "text".stroke(width: 2, color: .green)
 ```
 
 #### shadow(configure:)
+
 Configures the shadow using a closure that receives
 an `NSShadow` instance. Not available on watchOS.
 
@@ -193,8 +201,9 @@ let result = "Hello World".shadow {
 ```
 
 #### shadow(_:)
-Configures the shadow by setting an `NSShadow`
-instance. Not available on watchOS.
+
+Configures the shadow by setting an `NSShadow` instance. Not available on
+watchOS.
 
 ```swift
 let shadow = NSShadow()
@@ -205,6 +214,7 @@ let attributedString = "text".shadow(shadow)
 ```
 
 #### letterPressed()
+
 Adds the "letter pressed" text effect.
 
 ```swift
@@ -212,8 +222,8 @@ let attributedString = "text".letterPressed()
 ```
 
 #### link(url:)
-Creates hyperlink to the given URL with the receiver
-as text.
+
+Creates hyperlink to the given URL with the receiver as text.
 
 ```swift
 let url = URL(string: "https://example.com")
@@ -221,8 +231,8 @@ let attributedString = "text".link(url: url)
 ```
 
 #### link(string:)
-Creates hyperlink to the given URL with the receiver
-as text.
+
+Creates hyperlink to the given URL with the receiver as text.
 
 ```swift
 let urlString = "https://example.com"
@@ -230,8 +240,9 @@ let attributedString = "text".link(string: urlString)
 ```
 
 #### attachment(configure:)
-Creates a new `NSTextAttachment` and passes it to the
-`configure` closure. Not available on watchOS.
+
+Creates a new `NSTextAttachment` and passes it to the `configure` closure. Not
+available on watchOS.
 
 ```swift
 let attributedString = NSAttributedString().attachment {
@@ -241,6 +252,7 @@ let attributedString = NSAttributedString().attachment {
 ```
 
 #### baselineOffset(_:)
+
 Configures the baseline offset.
 
 ```swift
@@ -248,6 +260,7 @@ let attributedString = "text".baselineOffset(-0.5)
 ```
 
 #### obliqueness(_:)
+
 Configures the skew to be applied to glyphs.
 
 ```swift
@@ -255,6 +268,7 @@ let attributedString = "text".obliqueness(1.5)
 ```
 
 #### expansion(_:)
+
 Configures the expansion to be applied to glyphs.
 
 ```swift
@@ -263,13 +277,12 @@ let attributedString = "text".expansion(2)
 
 ### `NSAttributedString` Extension for Getting Attribute Values
 
-All of the above methods have corresponding getters
-to retrieve the attribute values from the attributed
-string. The all return an optional; if the attribute
-is not configured on the attributed string, `nil`
-will be returned.
+All of the above methods have corresponding getters to retrieve the attribute
+values from the attributed string. The all return an optional; if the attribute
+is not configured on the attributed string, `nil` will be returned.
 
 The getters are:
+
 - `attachment: NSTextAttachment?` (not available on watchOS)
 - `backgroundColor: Color?`
 - `baselineOffset: Float?`
@@ -291,23 +304,28 @@ The getters are:
 - `underlineStyle: NSUnderlineStyle?`
 
 ## Usage
-You can use the library any way you like, but two
-easy ways are Carthage and CocoaPods. For CocoaPods,
-put `pod RichString` in your `Podfile`.
+
+You can use the library any way you like, but two easy ways are Carthage and
+CocoaPods. For CocoaPods, put `pod RichString` in your `Podfile`.
 
 ## Alternative Frameworks
-I found a couple other frameworks that have the same goal as this one: simplifying using
-`NSAttributedString`. I like mine better, mostly because it has a simpler API that doesn't
-use any additional types. But I'll let you choose for yourself.
 
-[TextAttributes](https://github.com/delba/TextAttributes) is similar to this framework, but it
-introduces a new type that you have to set up the attributes, instead of working directly on
-the strings themselves. It doesn't feature the cool closure-based way of setting up
-`shadow { ... }` and `paragraphStyle { ... }` that this framework has. And it doesn't provide
-the super-convenient `+` operator that this framework does. Finally, I didn't test this framework
-on tvOS and watchOS. I'm rather confident that those will work as well, but you'll have to try.
-Pull requests are wellcome of course.
+Back when I started, I found a couple other frameworks that have the same goal
+as this one: simplifying using `NSAttributedString`. I like mine better, mostly
+because it has a simpler API that doesn't use any additional types. But I'll let
+you choose for yourself. I haven't researched this anymore after that, so this
+is probably outdated.
 
-[TextAttributesUtil](https://github.com/muukii/TextAttributesUtil) also introduces a new type
-for setting up the attributes. Also, it's API forces you to have more levels of nesting in your
-source code. It only supports iOS, not macOS.
+[TextAttributes](https://github.com/delba/TextAttributes) is similar to this
+framework, but it introduces a new type that you have to set up the attributes,
+instead of working directly on the strings themselves. It doesn't feature the
+cool closure-based way of setting up `shadow { ... }` and `paragraphStyle { ...
+}` that this framework has. And it doesn't provide the super-convenient `+`
+operator that this framework does. Finally, I didn't test this framework on tvOS
+and watchOS. I'm rather confident that those will work as well, but you'll have
+to try. Pull requests are wellcome of course.
+
+[TextAttributesUtil](https://github.com/muukii/TextAttributesUtil) also
+introduces a new type for setting up the attributes. Also, it's API forces you
+to have more levels of nesting in your source code. It only supports iOS, not
+macOS.
