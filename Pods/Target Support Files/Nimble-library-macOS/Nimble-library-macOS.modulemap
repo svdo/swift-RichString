@@ -1,0 +1,7 @@
+module Nimble {
+  umbrella header "Nimble-library-macOS-umbrella.h"
+  exclude header "Nimble-library-tvOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

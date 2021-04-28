@@ -1,0 +1,7 @@
+module Quick {
+  umbrella header "Quick-library-tvOS-umbrella.h"
+  exclude header "Quick-library-macOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

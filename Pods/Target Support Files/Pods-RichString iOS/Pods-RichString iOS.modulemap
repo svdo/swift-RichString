@@ -1,0 +1,6 @@
+framework module Pods_RichString_iOS {
+  umbrella header "Pods-RichString iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

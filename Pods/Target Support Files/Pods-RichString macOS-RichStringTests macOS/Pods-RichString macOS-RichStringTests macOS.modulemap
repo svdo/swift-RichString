@@ -1,0 +1,6 @@
+module Pods_RichString_macOS_RichStringTests_macOS {
+  umbrella header "Pods-RichString macOS-RichStringTests macOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
