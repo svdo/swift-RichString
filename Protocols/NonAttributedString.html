@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NonAttributedString Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/NonAttributedString" class="dashAnchor"></a>
+    <a title="NonAttributedString Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RichString 2.2.1 Docs</a> (96% documented)</p>
+        <p class="header-right"><a href="https://github.com/svdo/swift-RichText"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RichString Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        NonAttributedString Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/NSAttributedString.html">NSAttributedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSAttributedString.html">NSAttributedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSString.html">NSString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NonAttributedString.html">NonAttributedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:10RichString1poiySo012NSAttributedB0CAD_ADtF">+(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/NonAttributedString.html">NonAttributedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RichString.html">RichString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/Color">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RichString5Colora">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/Font">Font</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RichString4Fonta">Font</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>NonAttributedString</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">NonAttributedString</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/RichString.html">RichString</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Protocol used to add all functionality to both <code>String</code> and <code>NSString</code>.
+ You normally don&rsquo;t need to use this directly yourself.</p>
+
+<p>Please note: I would have preferred for this protocol to be internal.
+ That doesn&rsquo;t work with Swift 3 however; when doing release builds you
+ get &lsquo;undefined symbol&rsquo; linker errors. More info:
+ <a href="https://bugs.swift.org/browse/SR-2925">https://bugs.swift.org/browse/SR-2925</a></p>
+
+              <div class="slightly-smaller">
+                <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L20-L28">Show on GitHub</a>
+              </div>
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichString013NonAttributedB0P4richA2A_pvp"></a>
+                    <a name="//apple_ref/swift/Property/rich" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichString013NonAttributedB0P4richA2A_pvp">rich</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a <code>NSAttributedString</code> version of the string. Should be internal, not public;
+ see remark above.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">rich</span><span class="p">:</span> <span class="kt"><a href="../Protocols/RichString.html">RichString</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>NSAttributedString</code> version of this string.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L27">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/iOS"></a>
+                <a name="//apple_ref/swift/Section/iOS" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/iOS"></a>
+                  <h3 class="section-name"><p>iOS</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP8fontSizeySo012NSAttributedB0C12CoreGraphics7CGFloatVF"></a>
+                    <a name="//apple_ref/swift/Method/fontSize(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP8fontSizeySo012NSAttributedB0C12CoreGraphics7CGFloatVF">fontSize(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fontSize</span><span class="p">(</span><span class="n">_</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/Font_PlatformDependent.swift#L38-L40">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP4fontySo012NSAttributedB0CSo6UIFontCF"></a>
+                    <a name="//apple_ref/swift/Method/font(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP4fontySo012NSAttributedB0CSo6UIFontCF">font(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">font</span><span class="p">(</span><span class="n">_</span> <span class="nv">font</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RichString4Fonta">Font</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L35-L37">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP5colorySo012NSAttributedB0CSo7UIColorCF"></a>
+                    <a name="//apple_ref/swift/Method/color(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP5colorySo012NSAttributedB0CSo7UIColorCF">color(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">color</span><span class="p">(</span><span class="n">_</span> <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RichString5Colora">Color</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L39-L41">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP15backgroundColorySo012NSAttributedB0CSo7UIColorCF"></a>
+                    <a name="//apple_ref/swift/Method/backgroundColor(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP15backgroundColorySo012NSAttributedB0CSo7UIColorCF">backgroundColor(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">backgroundColor</span><span class="p">(</span><span class="n">_</span> <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RichString5Colora">Color</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L43-L45">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP14paragraphStyleySo012NSAttributedB0CSo011NSParagraphD0CF"></a>
+                    <a name="//apple_ref/swift/Method/paragraphStyle(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP14paragraphStyleySo012NSAttributedB0CSo011NSParagraphD0CF">paragraphStyle(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">paragraphStyle</span><span class="p">(</span><span class="n">_</span> <span class="nv">paragraphStyle</span><span class="p">:</span> <span class="kt">NSParagraphStyle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L47-L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP14paragraphStyle9configureSo012NSAttributedB0CySo018NSMutableParagraphD0CXE_tF"></a>
+                    <a name="//apple_ref/swift/Method/paragraphStyle(configure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP14paragraphStyle9configureSo012NSAttributedB0CySo018NSMutableParagraphD0CXE_tF">paragraphStyle(configure:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">paragraphStyle</span><span class="p">(</span><span class="nv">configure</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSMutableParagraphStyle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L51-L54">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP8ligatureySo012NSAttributedB0CSbF"></a>
+                    <a name="//apple_ref/swift/Method/ligature(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP8ligatureySo012NSAttributedB0CSbF">ligature(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ligature</span><span class="p">(</span><span class="n">_</span> <span class="nv">ligature</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L56-L58">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP4kernySo012NSAttributedB0CSfF"></a>
+                    <a name="//apple_ref/swift/Method/kern(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP4kernySo012NSAttributedB0CSfF">kern(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">kern</span><span class="p">(</span><span class="n">_</span> <span class="nv">kern</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L60-L62">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP13strikeThrough5styleSo012NSAttributedB0CSo16NSUnderlineStyleV_tF"></a>
+                    <a name="//apple_ref/swift/Method/strikeThrough(style:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP13strikeThrough5styleSo012NSAttributedB0CSo16NSUnderlineStyleV_tF">strikeThrough(style:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">strikeThrough</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="kt">NSUnderlineStyle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L64-L66">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP13strikeThrough5colorSo012NSAttributedB0CSo7UIColorC_tF"></a>
+                    <a name="//apple_ref/swift/Method/strikeThrough(color:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP13strikeThrough5colorSo012NSAttributedB0CSo7UIColorC_tF">strikeThrough(color:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">strikeThrough</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RichString5Colora">Color</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L68-L70">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP13strikeThrough5color5styleSo012NSAttributedB0CSo7UIColorC_So16NSUnderlineStyleVtF"></a>
+                    <a name="//apple_ref/swift/Method/strikeThrough(color:style:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP13strikeThrough5color5styleSo012NSAttributedB0CSo7UIColorC_So16NSUnderlineStyleVtF">strikeThrough(color:<wbr>style:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">strikeThrough</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RichString5Colora">Color</a></span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">NSUnderlineStyle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L72-L74">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP9underline5styleSo012NSAttributedB0CSo16NSUnderlineStyleV_tF"></a>
+                    <a name="//apple_ref/swift/Method/underline(style:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP9underline5styleSo012NSAttributedB0CSo16NSUnderlineStyleV_tF">underline(style:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">underline</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="kt">NSUnderlineStyle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L76-L78">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP9underline5colorSo012NSAttributedB0CSo7UIColorC_tF"></a>
+                    <a name="//apple_ref/swift/Method/underline(color:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP9underline5colorSo012NSAttributedB0CSo7UIColorC_tF">underline(color:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">underline</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RichString5Colora">Color</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L80-L82">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP9underline5color5styleSo012NSAttributedB0CSo7UIColorC_So16NSUnderlineStyleVtF"></a>
+                    <a name="//apple_ref/swift/Method/underline(color:style:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP9underline5color5styleSo012NSAttributedB0CSo7UIColorC_So16NSUnderlineStyleVtF">underline(color:<wbr>style:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">underline</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RichString5Colora">Color</a></span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">NSUnderlineStyle</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L84-L87">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP6stroke5width5colorSo012NSAttributedB0CSf_So7UIColorCtF"></a>
+                    <a name="//apple_ref/swift/Method/stroke(width:color:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP6stroke5width5colorSo012NSAttributedB0CSf_So7UIColorCtF">stroke(width:<wbr>color:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stroke</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RichString5Colora">Color</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L89-L91">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP6shadowySo012NSAttributedB0CSo8NSShadowCF"></a>
+                    <a name="//apple_ref/swift/Method/shadow(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP6shadowySo012NSAttributedB0CSo8NSShadowCF">shadow(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shadow</span><span class="p">(</span><span class="n">_</span> <span class="nv">shadow</span><span class="p">:</span> <span class="kt">NSShadow</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L95-L97">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP6shadow9configureSo012NSAttributedB0CySo8NSShadowCXE_tF"></a>
+                    <a name="//apple_ref/swift/Method/shadow(configure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP6shadow9configureSo012NSAttributedB0CySo8NSShadowCXE_tF">shadow(configure:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shadow</span><span class="p">(</span><span class="nv">configure</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSShadow</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L99-L101">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP10attachment9configureSo012NSAttributedB0CySo16NSTextAttachmentCXE_tF"></a>
+                    <a name="//apple_ref/swift/Method/attachment(configure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP10attachment9configureSo012NSAttributedB0CySo16NSTextAttachmentCXE_tF">attachment(configure:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">attachment</span><span class="p">(</span><span class="nv">configure</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSTextAttachment</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L103-L106">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP13letterPressedSo012NSAttributedB0CyF"></a>
+                    <a name="//apple_ref/swift/Method/letterPressed()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP13letterPressedSo012NSAttributedB0CyF">letterPressed()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">letterPressed</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L110-L112">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP4link3urlSo012NSAttributedB0CSo5NSURLC_tF"></a>
+                    <a name="//apple_ref/swift/Method/link(url:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP4link3urlSo012NSAttributedB0CSo5NSURLC_tF">link(url:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">link</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L114-L116">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP4link6stringSo012NSAttributedB0CSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/link(string:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP4link6stringSo012NSAttributedB0CSS_tF">link(string:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">link</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L118-L120">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP14baselineOffsetySo012NSAttributedB0CSfF"></a>
+                    <a name="//apple_ref/swift/Method/baselineOffset(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP14baselineOffsetySo012NSAttributedB0CSfF">baselineOffset(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">baselineOffset</span><span class="p">(</span><span class="n">_</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L122-L124">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP11obliquenessySo012NSAttributedB0CSfF"></a>
+                    <a name="//apple_ref/swift/Method/obliqueness(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP11obliquenessySo012NSAttributedB0CSfF">obliqueness(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">obliqueness</span><span class="p">(</span><span class="n">_</span> <span class="nv">obliqueness</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L126-L128">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP9expansionySo012NSAttributedB0CSfF"></a>
+                    <a name="//apple_ref/swift/Method/expansion(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP9expansionySo012NSAttributedB0CSfF">expansion(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">expansion</span><span class="p">(</span><span class="n">_</span> <span class="nv">expansion</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L130-L132">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/macOS"></a>
+                <a name="//apple_ref/swift/Section/macOS" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/macOS"></a>
+                  <h3 class="section-name"><p>macOS</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP8fontSizeySo012NSAttributedB0CSg12CoreGraphics7CGFloatVF"></a>
+                    <a name="//apple_ref/swift/Method/fontSize(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP8fontSizeySo012NSAttributedB0CSg12CoreGraphics7CGFloatVF">fontSize(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fontSize</span><span class="p">(</span><span class="n">_</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/Font_PlatformDependent.swift#L80-L82">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP4fontySo012NSAttributedB0CSo6NSFontCF"></a>
+                    <a name="//apple_ref/swift/Method/font(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP4fontySo012NSAttributedB0CSo6NSFontCF">font(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">font</span><span class="p">(</span><span class="n">_</span> <span class="nv">font</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RichString4Fonta">Font</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L35-L37">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP5colorySo012NSAttributedB0CSo7NSColorCF"></a>
+                    <a name="//apple_ref/swift/Method/color(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP5colorySo012NSAttributedB0CSo7NSColorCF">color(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">color</span><span class="p">(</span><span class="n">_</span> <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RichString5Colora">Color</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L39-L41">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP15backgroundColorySo012NSAttributedB0CSo7NSColorCF"></a>
+                    <a name="//apple_ref/swift/Method/backgroundColor(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP15backgroundColorySo012NSAttributedB0CSo7NSColorCF">backgroundColor(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">backgroundColor</span><span class="p">(</span><span class="n">_</span> <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RichString5Colora">Color</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L43-L45">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP13strikeThrough5colorSo012NSAttributedB0CSo7NSColorC_tF"></a>
+                    <a name="//apple_ref/swift/Method/strikeThrough(color:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP13strikeThrough5colorSo012NSAttributedB0CSo7NSColorC_tF">strikeThrough(color:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">strikeThrough</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RichString5Colora">Color</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L68-L70">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP13strikeThrough5color5styleSo012NSAttributedB0CSo7NSColorC_So16NSUnderlineStyleVtF"></a>
+                    <a name="//apple_ref/swift/Method/strikeThrough(color:style:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP13strikeThrough5color5styleSo012NSAttributedB0CSo7NSColorC_So16NSUnderlineStyleVtF">strikeThrough(color:<wbr>style:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">strikeThrough</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RichString5Colora">Color</a></span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">NSUnderlineStyle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L72-L74">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP9underline5colorSo012NSAttributedB0CSo7NSColorC_tF"></a>
+                    <a name="//apple_ref/swift/Method/underline(color:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP9underline5colorSo012NSAttributedB0CSo7NSColorC_tF">underline(color:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">underline</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RichString5Colora">Color</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L80-L82">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP9underline5color5styleSo012NSAttributedB0CSo7NSColorC_So16NSUnderlineStyleVtF"></a>
+                    <a name="//apple_ref/swift/Method/underline(color:style:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP9underline5color5styleSo012NSAttributedB0CSo7NSColorC_So16NSUnderlineStyleVtF">underline(color:<wbr>style:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">underline</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RichString5Colora">Color</a></span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">NSUnderlineStyle</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L84-L87">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RichStringAAP6stroke5width5colorSo012NSAttributedB0CSf_So7NSColorCtF"></a>
+                    <a name="//apple_ref/swift/Method/stroke(width:color:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RichStringAAP6stroke5width5colorSo012NSAttributedB0CSf_So7NSColorCtF">stroke(width:<wbr>color:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stroke</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RichString5Colora">Color</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/svdo/swift-RichText/tree/master/RichString/String+Rich.swift#L89-L91">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/shadow(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">shadow(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/shadow(configure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">shadow(configure:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/attachment(configure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">attachment(configure:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>Copyright © 2016 <a class="link" href="https://github.com/svdo" target="_blank" rel="external">Stefan van den Oord</a>. All rights reserved</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

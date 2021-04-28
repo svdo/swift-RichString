@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RichString  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="RichString  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">RichString 2.2.1 Docs</a> (96% documented)</p>
+        <p class="header-right"><a href="https://github.com/svdo/swift-RichText"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">RichString Reference</a>
+        <img id="carat" src="img/carat.png" />
+        RichString  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/NSAttributedString.html">NSAttributedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSAttributedString.html">NSAttributedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSString.html">NSString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NonAttributedString.html">NonAttributedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:10RichString1poiySo012NSAttributedB0CAD_ADtF">+(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/NonAttributedString.html">NonAttributedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/RichString.html">RichString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/Color">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RichString5Colora">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/Font">Font</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RichString4Fonta">Font</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='richstring' class='heading'>RichString</h1>
+
+<p><em>The easiest way to work with attributed strings in Swift</em></p>
+
+<p><img src="https://img.shields.io/badge/Swift-v4-yellow.svg" alt="Swift Version 4">
+<a href="http://svdo.github.io/swift-RichString/"><img src="http://svdo.github.io/swift-RichString/badge.svg" alt="Percentage Documented Badge"></a>
+<a href="https://cocoapods.org/pods/RichString"><img src="https://img.shields.io/cocoapods/v/RichString.svg" alt="CocoaPods Version Badge"></a>
+<img src="https://img.shields.io/cocoapods/p/RichString.svg" alt="Supported Platforms Badge">
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://github.com/svdo/swift-RichString/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license"></a>
+<a href="https://travis-ci.org/svdo/swift-RichString"><img src="https://travis-ci.org/svdo/swift-RichString.svg?branch=master" alt="Build Status"></a></p>
+<h2 id='introduction' class='heading'>Introduction</h2>
+
+<p>This Swift framework was built to simplify working with <code>NSAttributedString</code>. It
+does so without adding additional types; it just extends the existing types that
+you already have, ensuring that it is fully interoperable with any other method
+of using <code>NSAttributedString</code>.</p>
+
+<p>The core assumption this framework makes, is that you set up your attributed
+strings by first configuring all components appropriately, and then
+concatenating them.</p>
+
+<p>It allows you to do things like this:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">title</span> <span class="o">=</span> <span class="s">"This is a title"</span><span class="o">.</span><span class="nf">fontSize</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span><span class="o">.</span><span class="nf">color</span><span class="p">(</span><span class="o">.</span><span class="n">blue</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">text</span> <span class="o">=</span> <span class="s">"This is some text"</span><span class="o">.</span><span class="n">paragraphStyle</span> <span class="p">{</span>
+    <span class="nv">$0</span><span class="o">.</span><span class="n">firstLineHeadIndent</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="p">}</span>
+<span class="k">let</span> <span class="nv">content</span> <span class="o">=</span> <span class="n">title</span> <span class="o">+</span> <span class="n">text</span>
+</code></pre>
+<h2 id='overview' class='heading'>Overview</h2>
+
+<p>This framework provides the following primitives. There are unit tests; have a
+look at them for more examples.</p>
+<h3 id='operator-code-code-for-concatenating-attributed-strings' class='heading'>Operator <code>+</code> For Concatenating Attributed Strings</h3>
+
+<p>Given two strings, you can append one to the other using the <code>+</code> operator:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">s1</span> <span class="o">=</span> <span class="kt">NSAttributedString</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">s2</span> <span class="o">=</span> <span class="kt">NSAttributedString</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">concatenated</span> <span class="o">=</span> <span class="n">s1</span> <span class="o">+</span> <span class="n">s2</span>
+</code></pre>
+<h3 id='code-richstring-code-protocol-for-code-string-code-code-nsstring-code-and-code-nsattributedstring-code' class='heading'><code><a href="Protocols/RichString.html">RichString</a></code> protocol for <code>String</code>, <code>NSString</code> and <code>NSAttributedString</code></h3>
+<h4 id='font-_' class='heading'>font(_:)</h4>
+
+<p>Apply the given font. The type <code><a href="Typealiases.html#/s:10RichString4Fonta">Font</a></code> is a type alias of <code>UIFont</code> on iOS, and of
+<code>NSFont</code> on macOS.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">font</span><span class="p">(</span><span class="o">.</span><span class="nf">systemFont</span><span class="p">(</span><span class="nv">ofSize</span><span class="p">:</span> <span class="mi">12</span><span class="p">))</span>
+</code></pre>
+<h4 id='fontsize-_' class='heading'>fontSize(_:)</h4>
+
+<p>Applies the given font size. If no font was set on the attributed string yet,
+<code>Font.systemFont</code> will be assumed.</p>
+
+<p>Note: unlike on iOS, on macOS this returns an <em>optional</em> attributed string
+instead.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">fontSize</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+</code></pre>
+<h4 id='paragraphstyle-configure' class='heading'>paragraphStyle(configure:)</h4>
+
+<p>Applies a paragraph style, configuring it with the given closure. If the
+attributed string already had a paragraph style attribute, the <code>configure</code>
+closure is called on that paragraph style; otherwise a new
+<code>NSMutableParagraphStyle</code> is used.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"Hello World"</span><span class="o">.</span><span class="n">paragraphStyle</span> <span class="p">{</span>
+    <span class="nv">$0</span><span class="o">.</span><span class="n">firstLineHeadIndent</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="p">}</span>
+</code></pre>
+<h4 id='paragraphstyle-_' class='heading'>paragraphStyle(_:)</h4>
+
+<p>Applies the given paragraph style.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">paragraphStyle</span> <span class="o">=</span> <span class="kt">NSMutableParagraphStyle</span><span class="p">()</span>
+<span class="n">paragraphStyle</span><span class="o">.</span><span class="n">firstLineHeadIndent</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">paragraphStyle</span><span class="p">(</span><span class="n">paragraphStyle</span><span class="p">)</span>
+</code></pre>
+<h4 id='color-_' class='heading'>color(_:)</h4>
+
+<p>Applies the given (foreground) color.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">color</span><span class="p">(</span><span class="o">.</span><span class="n">blue</span><span class="p">)</span>
+</code></pre>
+<h4 id='backgroundcolor-_' class='heading'>backgroundColor(_:)</h4>
+
+<p>Applies the given background color.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">backgroundColor</span><span class="p">(</span><span class="o">.</span><span class="n">yellow</span><span class="p">)</span>
+</code></pre>
+<h4 id='ligature-_' class='heading'>ligature(_:)</h4>
+
+<p>Configures whether or not to use ligatures. Default is that they are used.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">ligature</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
+</code></pre>
+<h4 id='kern-_' class='heading'>kern(_:)</h4>
+
+<p>Configures the amount with which to modify the default kerning. The default <code>0</code>
+means that no kerning change is applied.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">kern</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+</code></pre>
+<h4 id='strikethrough-style' class='heading'>strikeThrough(style:)</h4>
+
+<p>Configures the strike through style. Please note that depending on OS and
+version not all styles may actually work.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">strikeThrough</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">styleSingle</span><span class="p">)</span>
+</code></pre>
+<h4 id='strikethrough-color' class='heading'>strikeThrough(color:)</h4>
+
+<p>Configures the strike through color. Only setting the color has no effect, the
+style must be configured as well.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">strikeThrough</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="o">.</span><span class="n">red</span><span class="p">)</span>
+</code></pre>
+<h4 id='strikethrough-color-style' class='heading'>strikeThrough(color:, style:)</h4>
+
+<p>Configures both the strike through color and style. Please note that depending
+on OS and version not all styles may actually work.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">strikeThrough</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="o">.</span><span class="n">red</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">styleDouble</span><span class="p">)</span>
+</code></pre>
+<h4 id='underline-style' class='heading'>underline(style:)</h4>
+
+<p>Configures the underline style. Please note that depending on OS and version not
+all styles may actually work.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">underline</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">styleSingle</span><span class="p">)</span>
+</code></pre>
+<h4 id='underline-color' class='heading'>underline(color:)</h4>
+
+<p>Configures the underline color. Only setting the color has no effect, the style
+must be configured as well.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">underline</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="o">.</span><span class="n">blue</span><span class="p">)</span>
+</code></pre>
+<h4 id='underline-color-style' class='heading'>underline(color:, style:)</h4>
+
+<p>Configures both the underline color and style. Please note that depending on OS
+and version not all styles may actually work.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">underline</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="o">.</span><span class="n">blue</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">styleSingle</span><span class="p">)</span>
+</code></pre>
+<h4 id='stroke-width-color' class='heading'>stroke(width:, color:)</h4>
+
+<p>Configures the stroke.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">stroke</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="o">.</span><span class="n">green</span><span class="p">)</span>
+</code></pre>
+<h4 id='shadow-configure' class='heading'>shadow(configure:)</h4>
+
+<p>Configures the shadow using a closure that receives
+an <code>NSShadow</code> instance. Not available on watchOS.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="s">"Hello World"</span><span class="o">.</span><span class="n">shadow</span> <span class="p">{</span>
+    <span class="nv">$0</span><span class="o">.</span><span class="n">shadowOffset</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="nv">$0</span><span class="o">.</span><span class="n">shadowBlurRadius</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="nv">$0</span><span class="o">.</span><span class="n">shadowColor</span> <span class="o">=</span> <span class="kt">Color</span><span class="o">.</span><span class="n">gray</span>
+<span class="p">}</span>
+</code></pre>
+<h4 id='shadow-_' class='heading'>shadow(_:)</h4>
+
+<p>Configures the shadow by setting an <code>NSShadow</code> instance. Not available on
+watchOS.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">shadow</span> <span class="o">=</span> <span class="kt">NSShadow</span><span class="p">()</span>
+<span class="n">shadow</span><span class="o">.</span><span class="n">shadowColor</span> <span class="o">=</span> <span class="o">.</span><span class="n">green</span>
+<span class="n">shadow</span><span class="o">.</span><span class="n">shadowBlurRadius</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">shadow</span><span class="o">.</span><span class="n">shadowOffset</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">shadow</span><span class="p">(</span><span class="n">shadow</span><span class="p">)</span>
+</code></pre>
+<h4 id='letterpressed' class='heading'>letterPressed()</h4>
+
+<p>Adds the &ldquo;letter pressed&rdquo; text effect.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">letterPressed</span><span class="p">()</span>
+</code></pre>
+<h4 id='link-url' class='heading'>link(url:)</h4>
+
+<p>Creates hyperlink to the given URL with the receiver as text.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://example.com"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">link</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+</code></pre>
+<h4 id='link-string' class='heading'>link(string:)</h4>
+
+<p>Creates hyperlink to the given URL with the receiver as text.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">urlString</span> <span class="o">=</span> <span class="s">"https://example.com"</span>
+<span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">link</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="n">urlString</span><span class="p">)</span>
+</code></pre>
+<h4 id='attachment-configure' class='heading'>attachment(configure:)</h4>
+
+<p>Creates a new <code>NSTextAttachment</code> and passes it to the <code>configure</code> closure. Not
+available on watchOS.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="kt">NSAttributedString</span><span class="p">()</span><span class="o">.</span><span class="n">attachment</span> <span class="p">{</span>
+    <span class="nv">$0</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="nv">$0</span><span class="o">.</span><span class="n">bounds</span> <span class="o">=</span> <span class="kt">CGRect</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<h4 id='baselineoffset-_' class='heading'>baselineOffset(_:)</h4>
+
+<p>Configures the baseline offset.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">baselineOffset</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
+</code></pre>
+<h4 id='obliqueness-_' class='heading'>obliqueness(_:)</h4>
+
+<p>Configures the skew to be applied to glyphs.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">obliqueness</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+</code></pre>
+<h4 id='expansion-_' class='heading'>expansion(_:)</h4>
+
+<p>Configures the expansion to be applied to glyphs.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="s">"text"</span><span class="o">.</span><span class="nf">expansion</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre>
+<h3 id='code-nsattributedstring-code-extension-for-getting-attribute-values' class='heading'><code>NSAttributedString</code> Extension for Getting Attribute Values</h3>
+
+<p>All of the above methods have corresponding getters to retrieve the attribute
+values from the attributed string. The all return an optional; if the attribute
+is not configured on the attributed string, <code>nil</code> will be returned.</p>
+
+<p>The getters are:</p>
+
+<ul>
+<li><code>attachment: NSTextAttachment?</code> (not available on watchOS)</li>
+<li><code>backgroundColor: Color?</code></li>
+<li><code>baselineOffset: Float?</code></li>
+<li><code>color: Color?</code></li>
+<li><code>expansion: Float?</code></li>
+<li><code>fontSize: CGFloat?</code></li>
+<li><code>isLetterPressed: Bool?</code></li>
+<li><code>kern: Float?</code></li>
+<li><code>ligature: Bool?</code></li>
+<li><code>link: NSURL?</code></li>
+<li><code>obliqueness: Float?</code></li>
+<li><code>paragraphStyle: NSParagraphStyle?</code></li>
+<li><code>shadow: NSShadow?</code> (not available on watchOS)</li>
+<li><code>strikeThroughColor: Color?</code></li>
+<li><code>strikeThroughStyle: NSUnderlineStyle?</code></li>
+<li><code>strokeColor: Color?</code></li>
+<li><code>strokeWidth: Float?</code></li>
+<li><code>underlineColor: Color?</code></li>
+<li><code>underlineStyle: NSUnderlineStyle?</code></li>
+</ul>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>You can use the library any way you like, but two easy ways are Carthage and
+CocoaPods. For CocoaPods, put <code>pod RichString</code> in your <code>Podfile</code>.</p>
+<h2 id='alternative-frameworks' class='heading'>Alternative Frameworks</h2>
+
+<p>Back when I started, I found a couple other frameworks that have the same goal
+as this one: simplifying using <code>NSAttributedString</code>. I like mine better, mostly
+because it has a simpler API that doesn&rsquo;t use any additional types. But I&rsquo;ll let
+you choose for yourself. I haven&rsquo;t researched this anymore after that, so this
+is probably outdated.</p>
+
+<p><a href="https://github.com/delba/TextAttributes">TextAttributes</a> is similar to this
+framework, but it introduces a new type that you have to set up the attributes,
+instead of working directly on the strings themselves. It doesn&rsquo;t feature the
+cool closure-based way of setting up <code>shadow { ... }</code> and <code>paragraphStyle { ...
+}</code> that this framework has. And it doesn&rsquo;t provide the super-convenient <code>+</code>
+operator that this framework does. Finally, I didn&rsquo;t test this framework on tvOS
+and watchOS. I&rsquo;m rather confident that those will work as well, but you&rsquo;ll have
+to try. Pull requests are wellcome of course.</p>
+
+<p><a href="https://github.com/muukii/TextAttributesUtil">TextAttributesUtil</a> also
+introduces a new type for setting up the attributes. Also, it&rsquo;s API forces you
+to have more levels of nesting in your source code. It only supports iOS, not
+macOS.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>Copyright © 2016 <a class="link" href="https://github.com/svdo" target="_blank" rel="external">Stefan van den Oord</a>. All rights reserved</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
