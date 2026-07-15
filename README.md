@@ -1,3 +1,5 @@
+*This repo has been archived, because it is not maintained. If you still find this useful, please let me know.*
+
 # RichString
 
 *The easiest way to work with attributed strings in Swift*
